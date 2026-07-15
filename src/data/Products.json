@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Cotton Panjabi",
+    "category": "Panjabi",
+    "price": 1490,
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    "rating": 4.8,
+    "colors": ["White", "Navy", "Black"],
+    "sizes": ["M", "L", "XL"],
+    "inStock": true,
+    "description": "Premium cotton Panjabi designed for comfort and elegance. Perfect for festivals and casual occasions."
+  },
+  {
+    "id": 2,
+    "name": "Slim Fit Denim Jacket",
+    "category": "Jacket",
+    "price": 2890,
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&q=80",
+    "rating": 4.7,
+    "colors": ["Blue", "Black"],
+    "sizes": ["S", "M", "L", "XL"],
+    "inStock": true,
+    "description": "Modern slim-fit denim jacket with durable fabric and timeless style."
+  },
+  {
+    "id": 3,
+    "name": "Premium Polo Shirt",
+    "category": "T-Shirt",
+    "price": 990,
+    "image": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&q=80",
+    "rating": 4.6,
+    "colors": ["White", "Gray", "Black"],
+    "sizes": ["M", "L", "XL"],
+    "inStock": true,
+    "description": "Soft breathable polo shirt made from premium cotton for everyday wear."
+  },
+  {
+    "id": 4,
+    "name": "Elegant Women's Dress",
+    "category": "Dress",
+    "price": 3290,
+    "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&q=80",
+    "rating": 4.9,
+    "colors": ["Red", "Black", "Green"],
+    "sizes": ["S", "M", "L"],
+    "inStock": true,
+    "description": "Elegant long dress crafted for parties, weddings, and special occasions."
+  },
+  {
+    "id": 5,
+    "name": "Casual Hoodie",
+    "category": "Hoodie",
+    "price": 2190,
+    "image": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800&q=80",
+    "rating": 4.5,
+    "colors": ["Black", "Gray", "Olive"],
+    "sizes": ["M", "L", "XL"],
+    "inStock": true,
+    "description": "Warm fleece hoodie featuring a relaxed fit and minimalist design."
+  },
+  {
+    "id": 6,
+    "name": "Formal White Shirt",
+    "category": "Shirt",
+    "price": 1790,
+    "image": "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800&q=80",
+    "rating": 4.8,
+    "colors": ["White", "Sky Blue"],
+    "sizes": ["M", "L", "XL", "XXL"],
+    "inStock": true,
+    "description": "Classic formal shirt tailored for office wear and business meetings."
+  },
+  {
+    "id": 7,
+    "name": "Men's Chino Pants",
+    "category": "Pants",
+    "price": 1990,
+    "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80",
+    "rating": 4.6,
+    "colors": ["Khaki", "Black", "Navy"],
+    "sizes": ["30", "32", "34", "36"],
+    "inStock": true,
+    "description": "Stretchable chino pants offering comfort and a clean modern look."
+  },
+  {
+    "id": 8,
+    "name": "Leather Sneakers",
+    "category": "Shoes",
+    "price": 3990,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+    "rating": 4.9,
+    "colors": ["White", "Black"],
+    "sizes": ["40", "41", "42", "43"],
+    "inStock": true,
+    "description": "Premium leather sneakers with cushioned soles for all-day comfort."
+  },
+  {
+    "id": 9,
+    "name": "Women's Handbag",
+    "category": "Accessories",
+    "price": 2590,
+    "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=80",
+    "rating": 4.7,
+    "colors": ["Brown", "Black"],
+    "sizes": ["Standard"],
+    "inStock": true,
+    "description": "Stylish handbag crafted with premium leather for everyday fashion."
+  },
+  {
+    "id": 10,
+    "name": "Classic Wrist Watch",
+    "category": "Watch",
+    "price": 4990,
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80",
+    "rating": 4.9,
+    "colors": ["Silver", "Black"],
+    "sizes": ["Standard"],
+    "inStock": true,
+    "description": "Luxury-inspired wrist watch featuring a stainless steel finish and premium craftsmanship."
+  }
+]
