@@ -142,20 +142,18 @@ const Naveber = () => {
     },
   ];
 
-  // Common CSS
+
   const navStyle = 'flex items-center gap-2 text-gray-700 hover:text-blue-600';
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b">
       <div className="max-w-[90%] mx-auto">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link to="/" className="text-3xl font-bold">
             OXI<span className="text-gray-400">STYLE</span>
           </Link>
-
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* for big display */}
+          <nav className="hidden md:flex items-center gap-8 dmsans">
             {menus.map((menu) => (
               <Link key={menu.path} to={menu.path} className={navStyle}>
                 {menu.icon}
@@ -166,7 +164,6 @@ const Naveber = () => {
 
           {/* here is the cart section in right site  */}
           <div className="flex items-center gap-5">
-           
             <Link
               to="/cart"
               className="relative flex items-center justify-center w-10 h-10 border rounded-full"
@@ -183,14 +180,17 @@ const Naveber = () => {
               className="md:hidden text-2xl"
               onClick={() => setOpen(!open)}
             >
-              {open ? <FaTimes className='hover:cursor-pointer hover:text-red-500' /> : <FaBars className='hover:cursor-pointer' />}
+              {open ? (
+                <FaTimes className="hover:cursor-pointer hover:text-red-500" />
+              ) : (
+                <FaBars className="hover:cursor-pointer" />
+              )}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {open && (
-          <nav className="md:hidden flex flex-col gap-5 py-5 border-t">
+          <nav className="md:hidden flex flex-col gap-5 py-5 border-t dmsans">
             {menus.map((menu) => (
               <Link
                 key={menu.path}

@@ -44,27 +44,29 @@ const HomeSlider = () => {
               }}
             >
               <div className="absolute inset-0 bg-black/40 z-10"></div>
-<div className='max-w-[87%] mx-auto'> <div
-                className="absolute bottom-10 z-20 
+              <div className="max-w-[87%] mx-auto">
+                {' '}
+                <div
+                  className="absolute bottom-10 z-20 
                text-white  "
-              >
-                <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium border border-white/30 mb-4">
-                  {product.category}
-                </span>
+                >
+                  <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium border border-white/30 mb-4 dmsans">
+                    {product.category}
+                  </span>
 
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
-                  {product.name}
-                </h1>
+                  <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4 font arbutus-slab">
+                    {product.name}
+                  </h1>
 
-                <p className="text-gray-200 text-lg  leading-8 mb-8">
-                  {product.description}
-                </p>
+                  <p className="text-gray-200 text-lg  leading-8 mb-8 dmsans ">
+                    {product.description}
+                  </p>
 
-                <button className="px-7 py-3 bg-white text-black font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-pointer">
-                  View More Products
-                </button>
-              </div></div>
-             
+                  <button className="px-7 py-3 bg-white text-black font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-pointer dmsans">
+                    View More Products
+                  </button>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         ))}
