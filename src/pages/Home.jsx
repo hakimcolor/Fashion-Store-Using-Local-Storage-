@@ -4,8 +4,9 @@ import HomeSlider from '../Components/HomeSlider';
 const Home = () => {
   return (
     <div>
-      it's home page ............
+    
       <HomeSlider />
+      <div className='mt-100'>dlsfl;dskfl;</div>
     </div>
   );
 };
