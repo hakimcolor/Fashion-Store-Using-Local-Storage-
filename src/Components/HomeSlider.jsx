@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
 const HomeSlider = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const [products, setProducts] = useState([]);
 
-export default HomeSlider
+  useEffect(() => {
+    fetch('/data/products.json')
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error('Error fetching products:', error));
+  }, []);
+
+  console.log('All Products:', products);
+  console.log('Total Products:', products.length);
+;
+
+  return <div></div>;
+};
+
+export default HomeSlider;
