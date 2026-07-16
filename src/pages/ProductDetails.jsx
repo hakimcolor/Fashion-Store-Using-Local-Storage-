@@ -38,91 +38,180 @@
 // };
 
 // export default ProductDetails;
-
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaMinus, FaPlus, FaShoppingCart } from 'react-icons/fa';
 
 const ProductDetails = () => {
   const product = useLoaderData();
 
+  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
+  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const [quantity, setQuantity] = useState(1);
+
+  const increase = () => {
+    if (quantity < 10) {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const decrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    const cartItem = {
+      ...product,
+      selectedColor,
+      selectedSize,
+      quantity,
+    };
+
+    console.log(cartItem);
+    alert('Product Added To Cart');
+  };
+
   return (
-    <div className="max-w-7xl mx-auto py-10 px-5">
-      <div className="grid md:grid-cols-2 gap-10">
+    <div className="w-[90%] max-w-7xl mx-auto py-10 lg:py-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Image */}
-        <div>
+        <div className="overflow-hidden rounded-3xl bg-gray-100 shadow-xl">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full rounded-2xl shadow-lg"
+            className="w-full h-full object-cover transition duration-500 hover:scale-105"
           />
         </div>
 
-        {/* Details */}
+        {/* Product Details */}
         <div>
-          <h1 className="text-4xl font-bold arbutus-slab">{product.name}</h1>
+          {/* Name */}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold arbutus-slab leading-tight">
+            {product.name}
+          </h1>
 
-          <div className="mt-4 flex items-center gap-3">
-            <span className="rounded-full bg-gray-900 px-4 py-1 text-sm font-semibold text-white">
+          {/* Category & Rating */}
+          <div className="flex flex-wrap items-center gap-4 mt-5">
+            <span className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium dmsans">
               {product.category}
             </span>
 
-            <div className="flex items-center gap-1 rounded-full bg-yellow-100 px-3 py-1">
+            <div className="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full">
               <FaStar className="text-yellow-500" />
-              <span className="font-semibold">{product.rating}</span>
+              <span className="font-semibold dmsans">{product.rating}</span>
             </div>
           </div>
 
-          <p className="mt-6 text-gray-600 dmsans">{product.description}</p>
+          {/* Price */}
+          <h2 className="mt-8 text-3xl lg:text-4xl font-bold">
+            ৳ {product.price}
+          </h2>
 
-          <h2 className="text-4xl font-bold mt-8">৳ {product.price}</h2>
-
-          <p className="mt-4">
-            <span className="font-semibold">Stock :</span>{' '}
-            <span
-              className={product.inStock ? 'text-green-600' : 'text-red-500'}
-            >
-              {product.inStock ? 'In Stock' : 'Out of Stock'}
-            </span>
+          {/* Description */}
+          <p className="mt-6 text-gray-600 leading-8 text-[15px] sm:text-base dmsans">
+            {product.description}
           </p>
 
-          {/* clolor  */}
+          {/* Stock */}
           <div className="mt-8">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-600 dmsans">
-              Colors
-            </p>
+            <p className="text-lg dmsans">
+              <span className="font-semibold">Stock : </span>
 
-            {/* every color show that's why i use map function for every color show in the product  */}
-            <div className="flex flex-wrap gap-3">
-              {product.colors.map((color, index) => (
-                <span
-                  key={index}
-                  title={color}
-                  className="h-10 w-10 cursor-pointer rounded-full border-2 border-gray-300 transition-all duration-300 hover:scale-110 hover:border-black"
-                  style={{ backgroundColor: color }}
-                />
-              ))}
-            </div>
+              <span
+                className={`font-semibold ${
+                  product.inStock ? 'text-green-600' : 'text-red-500'
+                }`}
+              >
+                {product.inStock ? 'In Stock' : 'Out of Stock'}
+              </span>
+            </p>
           </div>
 
-          {/* for showing size for every product */}
-          <div className="mt-8">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-600 dmsans">
-              Sizes
-            </p>
+          {/* Colors | Sizes | Quantity */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {/* Colors */}
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[2px] text-gray-500 dmsans">
+                Colors
+              </p>
 
-            {/* same map for every size show in the product */}
-            <div className="flex flex-wrap gap-3">
-              {product.sizes.map((size, index) => (
-                <span
-                  key={index}
-                  className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-lg border border-gray-300 text-sm font-semibold transition-all duration-300 hover:border-black hover:bg-black hover:text-white dmsans"
+              <div className="flex flex-wrap gap-3">
+                {product.colors.map((color, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedColor(color)}
+                    title={color}
+                    style={{ backgroundColor: color }}
+                    className={`h-11 w-11 rounded-full border-[3px] transition-all duration-300 cursor-pointer hover:scale-110 ${
+                      selectedColor === color
+                        ? 'border-black scale-110'
+                        : 'border-gray-300'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Sizes */}
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[2px] text-gray-500 dmsans">
+                Sizes
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                {product.sizes.map((size, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedSize(size)}
+                    className={`h-11 w-11 rounded-lg border text-sm font-semibold transition-all duration-300 cursor-pointer ${
+                      selectedSize === size
+                        ? 'bg-black text-white border-black'
+                        : 'border-gray-300 hover:border-black hover:bg-black hover:text-white'
+                    }`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Quantity */}
+            <div>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[2px] text-gray-500 dmsans">
+                Quantity
+              </p>
+
+              <div className="flex items-center w-fit rounded-xl border border-gray-300 overflow-hidden shadow-sm">
+                <button
+                  onClick={decrease}
+                  className="px-4 py-3 hover:bg-gray-100 transition cursor-pointer"
                 >
-                  {size}
-                </span>
-              ))}
+                  <FaMinus />
+                </button>
+
+                <span className="px-6 text-lg font-bold">{quantity}</span>
+
+                <button
+                  onClick={increase}
+                  className="px-4 py-3 hover:bg-gray-100 transition cursor-pointer"
+                >
+                  <FaPlus />
+                </button>
+              </div>
             </div>
           </div>
+
+          {/* Add To Cart */}
+          <button
+            onClick={handleAddToCart}
+            disabled={!product.inStock}
+            className="mt-10 w-full sm:w-auto bg-black text-white px-10 py-4 rounded-xl font-semibold flex items-center justify-center gap-3 hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
+          >
+            <FaShoppingCart />
+            Add To Cart
+          </button>
         </div>
       </div>
     </div>
