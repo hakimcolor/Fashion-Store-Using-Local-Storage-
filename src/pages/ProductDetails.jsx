@@ -188,7 +188,7 @@ const ProductDetails = () => {
               <div className="flex items-center rounded-xl border w-fit overflow-hidden">
                 <button
                   onClick={decrease}
-                  className="px-3 py-2 hover:bg-gray-100"
+                  className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
                 >
                   <FaMinus />
                 </button>
