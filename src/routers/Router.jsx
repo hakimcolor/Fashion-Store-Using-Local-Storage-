@@ -17,7 +17,12 @@ const router = createBrowserRouter([
       },
       {
         path: 'products',
-        element: <Product />,
+        element: <Product />, 
+        loader: async () => {
+          const res=await fetch("/data/products.json")
+          const products=await res.json()
+          return products
+        }
       },
       {
         path: 'products/:id',

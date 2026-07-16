@@ -142,11 +142,10 @@ const Naveber = () => {
     },
   ];
 
-
   const navStyle = 'flex items-center gap-2 text-gray-700 hover:text-blue-600';
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b">
+    <header className="sticky top-0 z-50 backdrop-blur-3xl bg-white/60 border-b">
       <div className="max-w-[90%] mx-auto">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="text-3xl font-bold">
