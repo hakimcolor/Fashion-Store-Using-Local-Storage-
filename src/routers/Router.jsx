@@ -31,6 +31,8 @@ const router = createBrowserRouter([
           const products = await fetch('/data/products.json').then((res) =>
             res.json()
           );
+
+          return products.find((product) => product.id == params.id);
         },
       },
       {
