@@ -116,7 +116,7 @@
     "rating": 4.9,
     "colors": ["Silver", "Black"],
     "sizes": ["Standard"],
-    "inStock": true,
+    "inStock":false,
     "description": "Luxury-inspired wrist watch featuring a stainless steel finish and premium craftsmanship."
   }
 ]

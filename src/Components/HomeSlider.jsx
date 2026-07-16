@@ -46,7 +46,7 @@ const HomeSlider = () => {
               <div className="absolute inset-0 bg-black/40 z-10"></div>
               <div className="absolute inset-0 z-20 max-w-[90%] mx-auto flex items-center">
                 <div className="text-white max-w-2xl">
-                  <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium border border-white/30 mb-4 dmsans">
+                  <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full  font-medium border border-white/30 mb-4 dmsans text-5xl">
                     {product.category}
                   </span>
 
