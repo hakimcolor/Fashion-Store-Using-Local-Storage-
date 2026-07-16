@@ -25,7 +25,6 @@ const CartStyle = ({ products }) => {
               </span>
             </div>
 
-          
             <div className="p-4">
               {/* Name & Rating... */}
               <div className="mb-2 flex items-start justify-between gap-3">
@@ -51,7 +50,7 @@ const CartStyle = ({ products }) => {
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-600 dmsans">
                   Colors
                 </p>
-{/* every color show that's why i use map function for every color show in the product  */}
+                {/* every color show that's why i use map function for every color show in the product  */}
                 <div className="flex flex-wrap gap-2">
                   {product.colors.map((color, index) => (
                     <span
@@ -69,7 +68,7 @@ const CartStyle = ({ products }) => {
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-600 dmsans">
                   Sizes
                 </p>
-{/* same map for every size show in the product */}
+                {/* same map for every size show in the product */}
                 <div className="flex flex-wrap gap-2">
                   {product.sizes.map((size, index) => (
                     <span
@@ -97,10 +96,10 @@ const CartStyle = ({ products }) => {
                     {product.inStock ? 'In Stock' : 'Out of Stock'}
                   </span>
                 </div>
-{/* if want to show the product details page then we use link for that and also we use the product id for every product */}
+                {/* if want to show the product details page then we use link for that and also we use the product id for every product */}
                 <Link
                   to={`/products/${product.id}`}
-                  className="rounded-xl bg-black px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-indigo-600 dmsans"
+                  className="rounded-xl bg-black px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-600"
                 >
                   View Details
                 </Link>

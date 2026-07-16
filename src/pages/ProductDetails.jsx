@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const ProductDetails = () => {
-  return (
-    <div>
-      it's product details page ............
-    </div>
-  )
-}
+  const product = useLoaderData();
+  console.log(product);
 
-export default ProductDetails
+  return <div>it's product details page ............</div>;
+};
+
+export default ProductDetails;
