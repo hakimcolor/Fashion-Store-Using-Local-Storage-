@@ -17,16 +17,21 @@ const router = createBrowserRouter([
       },
       {
         path: 'products',
-        element: <Product />, 
+        element: <Product />,
         loader: async () => {
-          const res=await fetch("/data/products.json")
-          const products=await res.json()
-          return products
-        }
+          const res = await fetch('/data/products.json');
+          const products = await res.json();
+          return products;
+        },
       },
       {
         path: 'products/:id',
         element: <ProductDetails />,
+        loader: async ({ params }) => {
+          const products = await fetch('/data/products.json').then((res) =>
+            res.json()
+          );
+        },
       },
       {
         path: 'cart',
