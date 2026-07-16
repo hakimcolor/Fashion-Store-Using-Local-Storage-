@@ -9,7 +9,7 @@
     "colors": ["White", "Navy", "Black"],
     "sizes": ["M", "L", "XL"],
     "inStock": true,
-    "description": "Premium cotton Panjabi designed for comfort and elegance. Perfect for festivals and casual occasions."
+    "description": "Premium cotton Panjabi designed for comfort and elegance. Crafted with soft, breathable fabric to keep you comfortable throughout the day. Perfect for festivals, family gatherings, and casual occasions. A timeless design that combines traditional style with modern craftsmanship."
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "colors": ["Blue", "Black"],
     "sizes": ["S", "M", "L", "XL"],
     "inStock": true,
-    "description": "Modern slim-fit denim jacket with durable fabric and timeless style."
+    "description": "Modern slim-fit denim jacket with durable fabric and timeless style. Designed for everyday wear with a comfortable fit that moves with you. Features premium stitching and quality materials for long-lasting performance. Easily pairs with jeans, chinos, or casual outfits for a stylish look."
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "colors": ["White", "Gray", "Black"],
     "sizes": ["M", "L", "XL"],
     "inStock": true,
-    "description": "Soft breathable polo shirt made from premium cotton for everyday wear."
+    "description": "Soft breathable polo shirt made from premium cotton for everyday wear. The lightweight fabric provides excellent comfort during warm weather. Its classic collar and modern fit make it suitable for both casual and semi-formal occasions. A wardrobe essential that offers style and durability."
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "colors": ["Red", "Black", "Green"],
     "sizes": ["S", "M", "L"],
     "inStock": true,
-    "description": "Elegant long dress crafted for parties, weddings, and special occasions."
+    "description": "Elegant long dress crafted for parties, weddings, and special occasions. Made with premium-quality fabric that offers both comfort and sophistication. Its graceful silhouette enhances your overall appearance while ensuring a flattering fit. Perfect for creating a stylish and memorable look."
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "colors": ["Black", "Gray", "Olive"],
     "sizes": ["M", "L", "XL"],
     "inStock": true,
-    "description": "Warm fleece hoodie featuring a relaxed fit and minimalist design."
+    "description": "Warm fleece hoodie featuring a relaxed fit and minimalist design. The soft inner lining keeps you cozy during cooler days and evenings. Built with durable fabric and a spacious hood for added comfort. A versatile choice for casual outings, travel, or lounging at home."
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "colors": ["White", "Sky Blue"],
     "sizes": ["M", "L", "XL", "XXL"],
     "inStock": true,
-    "description": "Classic formal shirt tailored for office wear and business meetings."
+    "description": "Classic formal shirt tailored for office wear and business meetings. Made from breathable, wrinkle-resistant fabric for all-day comfort. Its clean design and precise stitching deliver a polished professional appearance. Ideal for pairing with formal trousers or blazers."
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "colors": ["Khaki", "Black", "Navy"],
     "sizes": ["30", "32", "34", "36"],
     "inStock": true,
-    "description": "Stretchable chino pants offering comfort and a clean modern look."
+    "description": "Stretchable chino pants offering comfort and a clean modern look. Designed with flexible fabric that allows easy movement throughout the day. Their versatile style works well for both casual and smart-casual outfits. A perfect combination of durability, comfort, and elegance."
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "colors": ["White", "Black"],
     "sizes": ["40", "41", "42", "43"],
     "inStock": true,
-    "description": "Premium leather sneakers with cushioned soles for all-day comfort."
+    "description": "Premium leather sneakers with cushioned soles for all-day comfort. Crafted using high-quality materials for durability and a premium finish. The lightweight construction provides excellent support for everyday activities. Perfect for casual wear while maintaining a modern, stylish appearance."
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "colors": ["Brown", "Black"],
     "sizes": ["Standard"],
     "inStock": true,
-    "description": "Stylish handbag crafted with premium leather for everyday fashion."
+    "description": "Stylish handbag crafted with premium leather for everyday fashion. Features a spacious interior to keep your essentials organized and easily accessible. The elegant design complements both casual and formal outfits effortlessly. Built for durability while adding a touch of sophistication."
   },
   {
     "id": 10,
@@ -116,7 +116,7 @@
     "rating": 4.9,
     "colors": ["Silver", "Black"],
     "sizes": ["Standard"],
-    "inStock":false,
-    "description": "Luxury-inspired wrist watch featuring a stainless steel finish and premium craftsmanship."
+    "inStock": false,
+    "description": "Luxury-inspired wrist watch featuring a stainless steel finish and premium craftsmanship. Designed with precision movement to ensure reliable and accurate timekeeping. Its elegant appearance makes it suitable for business meetings, formal events, and daily wear. A sophisticated accessory that enhances any outfit."
   }
 ]
