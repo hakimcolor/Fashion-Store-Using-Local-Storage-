@@ -36,7 +36,7 @@ const HomeSlider = () => {
         {products.slice(0, 4).map((product) => (
           <SwiperSlide key={product.id}>
             <div
-              className="relative h-[500px] md:h-[700px] 2xl:h-[800px] w-full  overflow-hidden"
+              className="relative h-[529px] md:h-[829px] xl:h-[829px] 2xl:h-[829px] w-full  overflow-hidden"
               style={{
                 backgroundImage: `url(${product.image})`,
                 backgroundSize: 'cover',
@@ -44,8 +44,10 @@ const HomeSlider = () => {
               }}
             >
               <div className="absolute inset-0 bg-black/40 z-10"></div>
-
-              <div className="absolute bottom-10 left-8 md:left-16 z-20 max-w-[90%] mx-auto  text-white">
+<div className='max-w-[87%] mx-auto'> <div
+                className="absolute bottom-10 z-20 
+               text-white  "
+              >
                 <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium border border-white/30 mb-4">
                   {product.category}
                 </span>
@@ -61,7 +63,8 @@ const HomeSlider = () => {
                 <button className="px-7 py-3 bg-white text-black font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-pointer">
                   View More Products
                 </button>
-              </div>
+              </div></div>
+             
             </div>
           </SwiperSlide>
         ))}
