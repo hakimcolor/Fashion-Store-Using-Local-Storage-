@@ -41,6 +41,8 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaStar, FaMinus, FaPlus, FaShoppingCart } from 'react-icons/fa';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const ProductDetails = () => {
   const product = useLoaderData();
@@ -63,7 +65,7 @@ const ProductDetails = () => {
       setQuantity(quantity - 1);
     }
   };
-
+  const { addToCart } = useContext(CartContext);
   const handleAddToCart = () => {
     const cartItem = {
       ...product,
@@ -73,7 +75,8 @@ const ProductDetails = () => {
       totalAmount,
     };
 
-    console.log(cartItem);
+    addToCart(cartItem);
+
     alert('Product Added To Cart');
   };
 
