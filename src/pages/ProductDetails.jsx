@@ -49,6 +49,9 @@ const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
   const [quantity, setQuantity] = useState(1);
 
+  // Dynamic Total Amount
+  const totalAmount = product.price * quantity;
+
   const increase = () => {
     if (quantity < 10) {
       setQuantity(quantity + 1);
@@ -67,6 +70,7 @@ const ProductDetails = () => {
       selectedColor,
       selectedSize,
       quantity,
+      totalAmount,
     };
 
     console.log(cartItem);
@@ -74,49 +78,48 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="w-[90%] max-w-7xl mx-auto py-10 lg:py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div className="w-[90%] max-w-7xl mx-auto py-8 lg:py-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Image */}
-        <div className="overflow-hidden rounded-3xl bg-gray-100 shadow-xl">
+        <div className="overflow-hidden rounded-3xl bg-gray-100 shadow-lg h-[420px] lg:h-[500px]">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover transition duration-500 hover:scale-105"
+            className="w-full h-full object-cover hover:scale-105 transition duration-500"
           />
         </div>
 
-        {/* Product Details */}
+        {/* Right Side */}
         <div>
-          {/* Name */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold arbutus-slab leading-tight">
+          <h1 className="text-3xl lg:text-4xl font-bold arbutus-slab leading-tight">
             {product.name}
           </h1>
 
           {/* Category & Rating */}
-          <div className="flex flex-wrap items-center gap-4 mt-5">
-            <span className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium dmsans">
+          <div className="flex flex-wrap items-center gap-3 mt-3 dmsans">
+            <span className="bg-black text-white px-4 py-2 rounded-full text-sm dmsans">
               {product.category}
             </span>
 
             <div className="flex items-center gap-2 bg-yellow-100 px-4 py-2 rounded-full">
-              <FaStar className="text-yellow-500" />
-              <span className="font-semibold dmsans">{product.rating}</span>
+              <FaStar className="text-yellow-500 dmsans" />
+              <span>{product.rating}</span>
             </div>
           </div>
 
           {/* Price */}
-          <h2 className="mt-8 text-3xl lg:text-4xl font-bold">
-            ৳ {product.price}
+          <h2 className="mt-5 text-3xl font-bold ">
+            ৳ {product.price.toLocaleString()}
           </h2>
 
           {/* Description */}
-          <p className="mt-6 text-gray-600 leading-8 text-[15px] sm:text-base dmsans">
+          <p className="mt-4 text-gray-600 leading-7 dmsans">
             {product.description}
           </p>
 
           {/* Stock */}
-          <div className="mt-8">
-            <p className="text-lg dmsans">
+          <div className="mt-5 dmsans">
+            <p>
               <span className="font-semibold">Stock : </span>
 
               <span
@@ -129,22 +132,21 @@ const ProductDetails = () => {
             </p>
           </div>
 
-          {/* Colors | Sizes | Quantity */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {/* Colors Sizes Quantity */}
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {/* Colors */}
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[2px] text-gray-500 dmsans">
+              <p className="text-xs uppercase tracking-[2px] text-gray-500 mb-2 dmsans">
                 Colors
               </p>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {product.colors.map((color, index) => (
                   <button
                     key={index}
                     onClick={() => setSelectedColor(color)}
-                    title={color}
                     style={{ backgroundColor: color }}
-                    className={`h-11 w-11 rounded-full border-[3px] transition-all duration-300 cursor-pointer hover:scale-110 ${
+                    className={`w-9 h-9 rounded-full border-[3px] transition cursor-pointer ${
                       selectedColor === color
                         ? 'border-black scale-110'
                         : 'border-gray-300'
@@ -156,19 +158,19 @@ const ProductDetails = () => {
 
             {/* Sizes */}
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[2px] text-gray-500 dmsans">
+              <p className="text-xs uppercase tracking-[2px] text-gray-500 mb-2 dmsans">
                 Sizes
               </p>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {product.sizes.map((size, index) => (
                   <button
                     key={index}
                     onClick={() => setSelectedSize(size)}
-                    className={`h-11 w-11 rounded-lg border text-sm font-semibold transition-all duration-300 cursor-pointer ${
+                    className={`w-10 h-10 rounded-lg border font-semibold transition cursor-pointer ${
                       selectedSize === size
                         ? 'bg-black text-white border-black'
-                        : 'border-gray-300 hover:border-black hover:bg-black hover:text-white'
+                        : 'border-gray-300 hover:bg-black hover:text-white'
                     }`}
                   >
                     {size}
@@ -179,23 +181,23 @@ const ProductDetails = () => {
 
             {/* Quantity */}
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[2px] text-gray-500 dmsans">
+              <p className="text-xs uppercase tracking-[2px] text-gray-500 mb-2 dmsans">
                 Quantity
               </p>
 
-              <div className="flex items-center w-fit rounded-xl border border-gray-300 overflow-hidden shadow-sm">
+              <div className="flex items-center rounded-xl border w-fit overflow-hidden">
                 <button
                   onClick={decrease}
-                  className="px-4 py-3 hover:bg-gray-100 transition cursor-pointer"
+                  className="px-3 py-2 hover:bg-gray-100"
                 >
                   <FaMinus />
                 </button>
 
-                <span className="px-6 text-lg font-bold">{quantity}</span>
+                <span className="px-5 font-bold">{quantity}</span>
 
                 <button
                   onClick={increase}
-                  className="px-4 py-3 hover:bg-gray-100 transition cursor-pointer"
+                  className="px-3 py-2 cursor-pointer hover:bg-gray-100"
                 >
                   <FaPlus />
                 </button>
@@ -203,11 +205,28 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Add To Cart */}
+          {/* Total */}
+          <div className="mt-6">
+            <p className="text-xs uppercase tracking-[2px] text-gray-500 mb-2 dmsans">
+              Total Amount
+            </p>
+
+            <div className="w-full sm:w-[260px] rounded-xl border bg-gray-50 px-5 py-4">
+              <h2 className="text-2xl font-bold dmsans">
+                ৳ {totalAmount.toLocaleString()}
+              </h2>
+
+              <p className="text-sm text-gray-500 mt-1 ">
+                {quantity} × ৳ {product.price.toLocaleString()}
+              </p>
+            </div>
+          </div>
+
+          {/* Button */}
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
-            className="mt-10 w-full sm:w-auto bg-black text-white px-10 py-4 rounded-xl font-semibold flex items-center justify-center gap-3 hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="mt-6 w-full sm:w-auto bg-black text-white px-8 py-3 rounded-xl flex items-center justify-center gap-3 hover:bg-gray-800 transition cursor-pointer disabled:bg-gray-400 dmsans"
           >
             <FaShoppingCart />
             Add To Cart
