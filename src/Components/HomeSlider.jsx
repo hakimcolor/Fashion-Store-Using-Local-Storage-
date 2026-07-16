@@ -7,7 +7,7 @@ const HomeSlider = () => {
     fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => setProducts(data))
-      .catch((error) => console.error('Error fetching products:', error));
+      .catch((error) => console.error('for fatcing data , the error is :', error));
   }, []);
 
   console.log('All Products:', products);
