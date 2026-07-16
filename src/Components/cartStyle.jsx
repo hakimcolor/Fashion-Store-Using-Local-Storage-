@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const cartStyle = () => {
+const CartStyle = ({ products }) => {
   return (
     <div>
-      
+      {products.map((product) => (
+        <div key={product.id}>
+          <h2>{product.name}</h2>
+          <p>${product.price}</p>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default cartStyle
+export default CartStyle;

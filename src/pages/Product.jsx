@@ -3,7 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 
 const Product = () => {
   const products = useLoaderData();
-  return <div>it's product page ............</div>;
+  console.log(products);
+  return <div></div>;
 };
 
 export default Product;
