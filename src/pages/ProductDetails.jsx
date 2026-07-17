@@ -22,7 +22,7 @@
 
 //           <p className="mt-4 text-gray-600">{product.description}</p>
 
-//           <h2 className="text-3xl font-bold mt-6">৳ {product.price}</h2>
+//           <h2 className="text-3xl font-bold mt-6">  <TbCurrencyTaka className="text-2xl" /> {product.price}</h2>
 
 //           <p className="mt-4">Category : {product.category}</p>
 
@@ -43,7 +43,7 @@ import { useLoaderData } from 'react-router-dom';
 import { FaStar, FaMinus, FaPlus, FaShoppingCart } from 'react-icons/fa';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-
+import { TbCurrencyTaka } from 'react-icons/tb';
 const ProductDetails = () => {
   const product = useLoaderData();
 
@@ -112,7 +112,8 @@ const ProductDetails = () => {
 
           {/* Price */}
           <h2 className="mt-5 text-3xl font-bold ">
-            ৳ {product.price.toLocaleString()}
+            <TbCurrencyTaka className="text-2xl" />{' '}
+            {product.price.toLocaleString()}
           </h2>
 
           {/* Description */}
@@ -216,11 +217,13 @@ const ProductDetails = () => {
 
             <div className="w-full sm:w-[260px] rounded-xl border bg-gray-50 px-5 py-4">
               <h2 className="text-2xl font-bold dmsans">
-                ৳ {totalAmount.toLocaleString()}
+                <TbCurrencyTaka className="text-2xl" />{' '}
+                {totalAmount.toLocaleString()}
               </h2>
 
               <p className="text-sm text-gray-500 mt-1 ">
-                {quantity} × ৳ {product.price.toLocaleString()}
+                {quantity} × <TbCurrencyTaka className="text-2xl" />{' '}
+                {product.price.toLocaleString()}
               </p>
             </div>
           </div>

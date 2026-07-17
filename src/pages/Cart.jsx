@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { TbCurrencyTaka } from 'react-icons/tb';
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
@@ -71,16 +72,20 @@ const Cart = () => {
                 <div className="flex flex-col justify-between items-start lg:items-end gap-5">
                   <div className="space-y-3">
                     <p className="dmsans font-semibold text-xl">
-                      Price : ৳ {item.price}
+                      Price : <TbCurrencyTaka className="text-2xl" />{' '}
+                      {item.price}
                     </p>
 
                     <div className="bg-gray-100 border rounded-xl px-6 py-4 shadow text-center">
                       <p className="dmsans text-lg">
-                        {item.quantity} × ৳{item.price}
+                        {item.quantity} ×{' '}
+                        <TbCurrencyTaka className="text-2xl" />
+                        {item.price}
                       </p>
 
                       <h2 className="arbutus-slab text-2xl mt-2">
-                        ৳ {item.quantity * item.price}
+                        <TbCurrencyTaka className="text-2xl" />{' '}
+                        {item.quantity * item.price}
                       </h2>
                     </div>
                   </div>
@@ -106,7 +111,7 @@ const Cart = () => {
               </h1>
 
               <h2 className="text-center text-4xl font-bold text-green-600 dmsans">
-                ৳ {totalCost}
+                <TbCurrencyTaka className="text-2xl" /> {totalCost}
               </h2>
             </div>
           </div>

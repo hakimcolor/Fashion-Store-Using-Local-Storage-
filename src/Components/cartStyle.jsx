@@ -85,7 +85,7 @@
 //               <div className="mt-5 flex items-center justify-between">
 //                 <div>
 //                   <h3 className="text-2xl font-bold text-black">
-//                     ৳ {product.price}
+//                       <TbCurrencyTaka className="text-2xl" /> {product.price}
 //                   </h3>
 
 //                   <span
@@ -117,6 +117,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
+import { TbCurrencyTaka } from 'react-icons/tb';
 
 const CartStyle = ({ products }) => {
   return (
@@ -165,7 +166,7 @@ const CartStyle = ({ products }) => {
               <div className="mt-5 flex items-center justify-between">
                 <div>
                   <h3 className="text-2xl font-bold text-black">
-                    ৳ {product.price}
+                      <TbCurrencyTaka className="text-2xl" /> {product.price}
                   </h3>
 
                   <span
