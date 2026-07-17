@@ -14,7 +14,6 @@
 
 // export default Product;
 
-
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import CartStyle from '../Components/CartStyle';
@@ -49,7 +48,7 @@ const Product = () => {
   return (
     <div className="max-w-[90%] mx-auto py-10">
       {/* search throuth name and catagory....... */}
-      <div className="mb-10 flex justify-center md:ml-52">
+      <div className="mb-10 flex justify-center ">
         <input
           type="text"
           placeholder="Search products..."
@@ -60,12 +59,30 @@ const Product = () => {
       </div>
 
       <div className="flex flex-col gap-8 lg:flex-row">
-        {/*  sidebar   for catagory */}
-        <aside className="lg:w-[250px] lg:flex-shrink-0 lg:-mt-[82px]">
+        {/* mobile categories — horizontal scrollable flex row */}
+        <div className="flex lg:hidden overflow-x-auto gap-2 pb-2 scrollbar-hide -mx-1 px-1">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`shrink-0 cursor-pointer rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                selectedCategory === category
+                  ? 'text-white shadow-md'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+              style={
+                selectedCategory === category ? { background: '#155dfc' } : {}
+              }
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/*  sidebar — only visible on desktop */}
+        <aside className="hidden lg:block lg:w-[250px] lg:shrink-0 lg:mt-[-82px]">
           <div className="sticky top-24 rounded-2xl border border-gray-200 bg-white p-5 shadow-lg">
-            <h2 className="mb-5 text-2xl font-bold arbutus-slab">
-              Categories
-            </h2>
+            <h2 className="mb-5 text-2xl font-bold arbutus-slab">Categories</h2>
 
             <div className="space-y-2">
               {categories.map((category) => (
@@ -74,9 +91,14 @@ const Product = () => {
                   onClick={() => setSelectedCategory(category)}
                   className={`w-full cursor-pointer rounded-xl px-4 py-3 text-left font-medium transition-all duration-300 ${
                     selectedCategory === category
-                      ? 'bg-black text-white shadow-md'
+                      ? 'text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-black hover:text-white'
                   }`}
+                  style={
+                    selectedCategory === category
+                      ? { background: '#155dfc' }
+                      : {}
+                  }
                 >
                   {category}
                 </button>
