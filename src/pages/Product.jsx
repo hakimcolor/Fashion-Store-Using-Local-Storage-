@@ -48,7 +48,7 @@ const Product = () => {
 
   return (
     <div className="max-w-[90%] mx-auto py-10">
-      {/* search */}
+      {/* search throuth name and catagory....... */}
       <div className="mb-10 flex justify-center md:ml-52">
         <input
           type="text"
@@ -60,7 +60,7 @@ const Product = () => {
       </div>
 
       <div className="flex flex-col gap-8 lg:flex-row">
-        {/*  Sidebar   for catagory */}
+        {/*  sidebar   for catagory */}
         <aside className="lg:w-[250px] lg:flex-shrink-0 lg:-mt-[82px]">
           <div className="sticky top-24 rounded-2xl border border-gray-200 bg-white p-5 shadow-lg">
             <h2 className="mb-5 text-2xl font-bold arbutus-slab">

@@ -2,7 +2,14 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
+  // remove any item click remove button
+  const handleRemove = (id) => {
+    const updateCart = cart.filter((item) => item.id !== id);
+    setCart(updateCart);
+  };
+  //after deleate of again all calculation or total cost
+  const totalCost = cart.reduce((total, item) => total + item.totalAmount);
 
   console.log(cart);
   return (
@@ -24,8 +31,20 @@ const Cart = () => {
                     <h2>{item.name}</h2>
                     <p>Cattgory:{item.category}</p>
                     <p>Color:{item.selectedColor}</p>
-                    <p>size:{item.selectedSize }</p>
+                    <p>size:{item.selectedSize}</p>
+                    <p>Quantity:{item.quantity}</p>
                   </div>
+                </div>
+
+                {/* rightsite */}
+                <div>
+                  <p>Price: {item.price}</p>
+                  <p>{item.totalAmout}</p>
+                  <button
+                    onClick={() => {
+                      handleR;
+                    }}
+                  ></button>
                 </div>
               </div>
             ))}
