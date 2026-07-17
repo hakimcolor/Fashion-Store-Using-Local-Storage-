@@ -14,7 +14,7 @@ const Home = () => {
     <div>
       <HomeSlider />
 
-      {/* featured products */}
+      {/* featured productss */}
       <div className="mt-20 max-w-[90%] mx-auto">
         <div className="text-center mb-8" data-aos="fade-up">
           <p
