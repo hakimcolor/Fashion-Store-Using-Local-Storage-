@@ -8,8 +8,8 @@ const Cart = () => {
     const updateCart = cart.filter((item) => item.id !== id);
     setCart(updateCart);
   };
-  //after deleate of again all calculation or total cost
-  const totalCost = cart.reduce((total, item) => total + item.totalAmount);
+  //after deleate or again all calculation or total cost
+  const totalCost = cart.reduce((total, item) =>  item.totalAmount,0);
 
   console.log(cart);
   return (
@@ -33,22 +33,30 @@ const Cart = () => {
                     <p>Color:{item.selectedColor}</p>
                     <p>size:{item.selectedSize}</p>
                     <p>Quantity:{item.quantity}</p>
+                    
                   </div>
                 </div>
 
                 {/* rightsite */}
                 <div>
                   <p>Price: {item.price}</p>
-                  <p>{item.totalAmout}</p>
+                  <p>{item.totalAmout}</p> {item.quantity * item.price}<br/>
                   <button
                     onClick={() => {
-                      handleR;
+                    handleRemove(item.id)
                     }}
-                  ></button>
+                    
+                  >Remove</button>
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+            
+            {/* the cart ....total cost */}
+            <div>
+              <h1>Total Cost</h1>
+              <h2>{totalCost }</h2>
+            </div>
         </div>
       )}
     </div>
