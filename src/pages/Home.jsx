@@ -1,11 +1,11 @@
 import React from 'react';
 import HomeSlider from '../Components/HomeSlider';
 import { useLoaderData } from 'react-router-dom';
-import CartStyle from '../Components/CartStyle';
 import WhyChooseUs from '../Components/WhyChooseUs';
 import CustomerReviews from '../Components/CustomerReviews';
 import FAQ from '../Components/FAQ';
 import Newsletter from '../Components/Newsletter';
+import CartStyle from '../Components/CartStyle';
 
 const Home = () => {
   const products = useLoaderData();
