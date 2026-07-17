@@ -6,17 +6,17 @@ import { Toaster } from 'react-hot-toast';
 import router from './routers/Router.jsx';
 import CartProvider from './context/CartProvider.jsx';
 
-
-// AOS
+// aos — animate on scroll
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Initialize AOS
+// initialize aos once before the app mounts
 AOS.init({
-  duration: 900, 
+  duration: 900,
   once: true,
   easing: 'ease-out',
 });
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartProvider>
