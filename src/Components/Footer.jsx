@@ -117,7 +117,7 @@ const Footer = () => {
           {/* contact / info column */}
           <div className="space-y-4">
             <h3 className="arbutus-slab text-lg font-semibold tracking-wide">
-              Get in Touch
+            Contact Info.
             </h3>
             <ul className="space-y-3 dmsans text-sm text-gray-400">
               <li>

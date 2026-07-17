@@ -50,7 +50,7 @@ const Naveber = () => {
             OXI<span className="text-blue-500">STYLE</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8 dmsans">
+          <nav className="hidden md:flex items-center gap-8 dmsans font-bold">
             {menus.map((menu) => (
               <Link
                 key={menu.path}
