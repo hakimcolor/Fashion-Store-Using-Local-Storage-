@@ -44,6 +44,7 @@ import { FaStar, FaMinus, FaPlus, FaShoppingCart } from 'react-icons/fa';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { TbCurrencyTaka } from 'react-icons/tb';
+import toast from 'react-hot-toast';
 const ProductDetails = () => {
   const product = useLoaderData();
 
@@ -77,7 +78,7 @@ const ProductDetails = () => {
 
     addToCart(cartItem);
 
-    alert('Product Added To Cart');
+    toast.success('Your cart added successfully');
   };
 
   return (
