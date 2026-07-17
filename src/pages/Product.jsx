@@ -24,7 +24,7 @@ const Product = () => {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Products');
 
-  // get all unique categories
+  // get all unique categories..
   const categories = [
     'All Products',
     ...new Set(products.map((product) => product.category)),
