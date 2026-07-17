@@ -143,9 +143,9 @@ const Naveber = () => {
             <div className="relative" ref={cartRef}>
               <button
                 onClick={() => setShowCart((prev) => !prev)}
-                className="relative flex items-center justify-center w-11 h-11 border border-gray-300 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-sm hover:shadow-md"
+                className="relative flex items-center justify-center w-11 h-11 border border-gray-300 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
               >
-                <FaShoppingCart className="text-lg text-gray-700" />
+                <FaShoppingCart className="text-lg text-gray-700 " />
                 <span className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">
                   {cart.length}
                 </span>
