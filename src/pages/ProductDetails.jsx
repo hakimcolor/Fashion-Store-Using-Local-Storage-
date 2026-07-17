@@ -52,7 +52,7 @@ const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
   const [quantity, setQuantity] = useState(1);
 
-  // Dynamic Total Amount
+  //  Total Amount
   const totalAmount = product.price * quantity;
 
   const increase = () => {
@@ -102,7 +102,6 @@ const ProductDetails = () => {
          <div className='text-blue-600 cursor-pointer'>Product Detail{' '}</div> 
         </div>
 
-        {/* Image */}
         <div className="overflow-hidden rounded-3xl bg-gray-100 shadow-lg h-[420px] lg:h-[500px] mt-[-20px]">
           <img
             src={product.image}
@@ -111,13 +110,13 @@ const ProductDetails = () => {
           />
         </div>
 
-        {/* Right Side */}
+        {/* Right Sideber */}
         <div>
           <h1 className="text-3xl lg:text-4xl font-bold arbutus-slab leading-tight">
             {product.name}
           </h1>
 
-          {/* Category & Rating */}
+
           <div className="flex flex-wrap items-center gap-3 mt-3 dmsans">
             <span className="bg-black text-white px-4 py-2 rounded-full text-sm dmsans">
               {product.category}
@@ -135,12 +134,12 @@ const ProductDetails = () => {
             {product.price.toLocaleString()}
           </h2>
 
-          {/* Description */}
+         
           <p className="mt-4 text-gray-600 leading-7 dmsans">
             {product.description}
           </p>
 
-          {/* Stock */}
+       
           <div className="mt-5 dmsans">
             <p>
               <span className="font-semibold">Stock : </span>
@@ -155,9 +154,8 @@ const ProductDetails = () => {
             </p>
           </div>
 
-          {/* Colors Sizes Quantity */}
+         
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-            {/* Colors */}
             <div>
               <p className="text-xs uppercase tracking-[2px] text-gray-500 mb-2 dmsans">
                 Colors
@@ -179,7 +177,7 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            {/* Sizes */}
+            
             <div>
               <p className="text-xs uppercase tracking-[2px] text-gray-500 mb-2 dmsans">
                 Sizes
@@ -202,7 +200,7 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            {/* Quantity */}
+            {/* quantity */}
             <div>
               <p className="text-xs uppercase tracking-[2px] text-gray-500 mb-2 dmsans">
                 Quantity
@@ -247,7 +245,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Button */}
+          {/* add to cart */}
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
