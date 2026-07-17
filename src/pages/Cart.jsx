@@ -131,16 +131,30 @@ import { CartContext } from '../context/CartContext';
 import { TbCurrencyTaka } from 'react-icons/tb';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import toast from 'react-hot-toast';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
 
   // remove any item click remove button
   const handleRemove = (id) => {
-    const updateCart = cart.filter((item) => item.id !== id);
-    setCart(updateCart);
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'This item will be removed from your cart!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#155DFC',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, remove it',
+      cancelButtonText: 'No, keep it',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const updateCart = cart.filter((item) => item.id !== id);
+        setCart(updateCart);
 
-    toast.success('Your cart Remove successfully');
+        toast.success('Your cart Remove successfully');
+      }
+    });
   };
 
   // quantity increase click plus button
@@ -179,7 +193,7 @@ const Cart = () => {
         </div>
       ) : (
         <div className="space-y-6">
-          <div className="space-y-5">
+          <div className="space-y-5 max-h-[65vh] overflow-y-auto pr-1">
             {cart.map((item) => (
               <div
                 key={item.id}
@@ -287,7 +301,7 @@ const Cart = () => {
           </div>
 
           {/* the cart ....total cost */}
-          <div className="flex justify-end">
+          <div className="sticky bottom-0 flex justify-end bg-white pt-4">
             <div className="border border-gray-100 shadow-lg rounded-2xl p-6 w-full sm:w-[340px] bg-gradient-to-br from-white to-gray-50">
               <h1 className="arbutus-slab text-3xl text-center mb-4">
                 Total Cost
@@ -297,6 +311,13 @@ const Cart = () => {
                 <TbCurrencyTaka className="text-4xl" />
                 {totalCost}
               </h2>
+
+              <button
+                className="w-full mt-5 py-3 rounded-lg text-white dmsans font-semibold text-lg cursor-pointer transition-all duration-300 hover:opacity-90 active:scale-95"
+                style={{ backgroundColor: '#155DFC' }}
+              >
+                Checkout
+              </button>
             </div>
           </div>
         </div>
