@@ -120,14 +120,17 @@
 
 // export default Naveber;
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
 import { HiHome, HiOutlineShoppingBag } from 'react-icons/hi2';
+import { CartContext } from '../context/CartContext';
+
+
 
 const Naveber = () => {
   const [open, setOpen] = useState(false);
-
+  const { cart } = useContext(CartContext);
   // All menu items
   const menus = [
     {
@@ -170,7 +173,7 @@ const Naveber = () => {
               <FaShoppingCart />
 
               <span className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-                0
+                {`${cart.length}`}
               </span>
             </Link>
 
