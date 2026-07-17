@@ -39,7 +39,7 @@
 
 // export default ProductDetails;
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar, FaMinus, FaPlus, FaShoppingCart } from 'react-icons/fa';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
@@ -84,8 +84,26 @@ const ProductDetails = () => {
   return (
     <div className="w-[90%] max-w-7xl mx-auto py-8 lg:py-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="flex items-center gap-2 dmsans text-base">
+          <Link
+            to="/"
+            className="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+          >
+            Home
+          </Link>
+          <span className="text-gray-400">/</span>
+          <Link
+            to="/products"
+            className="font-semibold text-gray-500 hover:text-blue-600"
+          >
+            Products
+          </Link>{' '}
+          <span className="text-gray-400">/</span>
+         <div className='text-blue-600 cursor-pointer'>Product Detail{' '}</div> 
+        </div>
+
         {/* Image */}
-        <div className="overflow-hidden rounded-3xl bg-gray-100 shadow-lg h-[420px] lg:h-[500px]">
+        <div className="overflow-hidden rounded-3xl bg-gray-100 shadow-lg h-[420px] lg:h-[500px] mt-[-20px]">
           <img
             src={product.image}
             alt={product.name}

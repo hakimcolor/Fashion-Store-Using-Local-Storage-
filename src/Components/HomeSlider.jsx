@@ -5,6 +5,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 const HomeSlider = () => {
   const [products, setProducts] = useState([]);
 
@@ -58,9 +59,10 @@ const HomeSlider = () => {
                     {product.description}
                   </p>
 
-                  <button className="px-7 py-3 bg-white text-black font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-pointer dmsans">
+                  <Link to='/products'> <button className="px-7 py-3 bg-white text-black font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-pointer dmsans">
                     View More Products
-                  </button>
+                  </button></Link>
+                 
                 </div>
               </div>
             </div>

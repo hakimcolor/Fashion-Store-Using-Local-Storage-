@@ -7,6 +7,7 @@ const Home = () => {
     
       <HomeSlider />
       <div className='mt-100'>dlsfl;dskfl;</div>
+      
     </div>
   );
 };
