@@ -12,14 +12,13 @@ const Home = () => {
 
   return (
     <div>
-      {/* hero banner */}
       <HomeSlider />
 
       {/* featured products */}
       <div className="mt-20 max-w-[90%] mx-auto">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8" data-aos="fade-up">
           <p
-            className="dmsans text-sm font-semibold uppercase tracking-widest mb-2"
+            className="dmsans text-lg font-semibold uppercase tracking-widest mb-2"
             style={{ color: '#155dfc' }}
           >
             hand picked for you
@@ -28,7 +27,9 @@ const Home = () => {
             Featured Products
           </h1>
         </div>
-        <CartStyle products={products.slice(0, 4)} />
+        <div data-aos="fade-up" data-aos-delay="100">
+          <CartStyle products={products.slice(0, 4)} />
+        </div>
       </div>
 
       {/* why choose us */}

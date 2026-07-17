@@ -37,15 +37,15 @@ const WhyChooseUs = () => {
   return (
     <section className="max-w-[90%] mx-auto py-16">
       {/* section heading */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12" data-aos="fade-up">
         <p
-          className="dmsans text-sm font-semibold uppercase tracking-widest mb-2"
+          className="dmsans text-lg font-semibold uppercase tracking-widest mb-2"
           style={{ color: '#155dfc' }}
         >
           our promise
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900">Why Choose Us</h2>
-        <p className="dmsans text-base text-gray-500 mt-3 max-w-xl mx-auto">
+        <p className="dmsans text-lg text-gray-500 mt-3 max-w-xl mx-auto">
           we are committed to giving you the best shopping experience every
           single time.
         </p>
@@ -53,9 +53,11 @@ const WhyChooseUs = () => {
 
       {/* feature cards grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {features.map((f) => (
+        {features.map((f, i) => (
           <div
             key={f.title}
+            data-aos="fade-up"
+            data-aos-delay={i * 100}
             className="group rounded-2xl p-6 flex flex-col items-center text-center gap-4 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white"
           >
             {/* icon bubble */}
@@ -67,10 +69,12 @@ const WhyChooseUs = () => {
             </div>
 
             {/* title */}
-            <h3 className="arbutus-slab text-lg text-gray-800">{f.title}</h3>
+            <h3 className="arbutus-slab text-lg text-gray-800 font-bold">
+              {f.title}
+            </h3>
 
             {/* description */}
-            <p className="dmsans text-sm text-gray-500 leading-relaxed">
+            <p className="dmsans text-lg text-gray-500 leading-relaxed">
               {f.desc}
             </p>
           </div>

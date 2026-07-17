@@ -34,7 +34,7 @@ const CustomerReviews = () => {
     <section className="py-16" style={{ background: '#f8faff' }}>
       <div className="max-w-[90%] mx-auto">
         {/* section heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <p
             className="dmsans text-sm font-semibold uppercase tracking-widest mb-2"
             style={{ color: '#155dfc' }}
@@ -44,16 +44,18 @@ const CustomerReviews = () => {
           <h2 className="arbutus-slab text-4xl text-gray-900">
             Customer Reviews
           </h2>
-          <p className="dmsans text-base  text-lg text-gray-500 mt-3 max-w-xl mx-auto">
+          <p className="dmsans text-lg text-gray-500 mt-3 max-w-xl mx-auto">
             real words from real customers who love shopping with us.
           </p>
         </div>
 
         {/* review cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {reviews.map((r) => (
+          {reviews.map((r, i) => (
             <div
               key={r.name}
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
               className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 flex flex-col gap-4"
             >
               {/* quote icon */}

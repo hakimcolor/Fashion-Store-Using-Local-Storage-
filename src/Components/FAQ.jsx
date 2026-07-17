@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { FaQuestionCircle } from 'react-icons/fa';
 
-
 const faqs = [
   {
     q: 'How long does delivery take?',
@@ -27,7 +26,6 @@ const faqs = [
 ];
 
 const FAQ = () => {
-  
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
@@ -35,7 +33,7 @@ const FAQ = () => {
   return (
     <section className="max-w-[90%] mx-auto py-16">
       {/* section heading */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12" data-aos="fade-up">
         <p
           className="dmsans text-lg font-semibold uppercase tracking-widest mb-2"
           style={{ color: '#155dfc' }}
@@ -51,7 +49,11 @@ const FAQ = () => {
       </div>
 
       {/* accordion list */}
-      <div className="max-w-2xl mx-auto space-y-3">
+      <div
+        className="max-w-2xl mx-auto space-y-3"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         {faqs.map((faq, i) => (
           <div
             key={i}

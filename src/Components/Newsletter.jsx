@@ -19,7 +19,11 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-16 max-w-[90%] mx-auto">
+    <section
+      className="py-16 max-w-[90%] mx-auto"
+      data-aos="zoom-in"
+      data-aos-delay="50"
+    >
       <div
         className="rounded-3xl px-6 py-14 flex flex-col items-center text-center gap-6 relative overflow-hidden"
         style={{
