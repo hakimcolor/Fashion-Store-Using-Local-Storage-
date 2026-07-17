@@ -7,7 +7,6 @@ import { TbCurrencyTaka } from 'react-icons/tb';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
- 
   const navLinks = [
     { name: 'Home', path: '/', icon: <HiHome /> },
     { name: 'Products', path: '/products', icon: <HiOutlineShoppingBag /> },
@@ -53,7 +52,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* brand column */}
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold arbutus-slab">
+            <h2 className="text-3xl font-bold arbutus-slab flex items-center gap-2">
+              <img
+                src="/logo (2).png"
+                alt="OXISTYLE logo"
+                className="h-10 w-10 object-contain rounded-full"
+              />
               OXI<span style={{ color: '#155dfc' }}>STYLE</span>
             </h2>
             <p className="dmsans text-sm text-gray-400 leading-relaxed max-w-xs">

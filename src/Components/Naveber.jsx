@@ -131,7 +131,12 @@ const Naveber = () => {
     <header className="sticky top-0 z-50 backdrop-blur-3xl bg-white/80 border-b border-gray-200 shadow-sm">
       <div className="max-w-[90%] mx-auto">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="text-3xl font-bold flex items-center gap-1">
+          <Link to="/" className="text-3xl font-bold flex items-center gap-2">
+            <img
+              src="/logo (2).png"
+              alt="OXISTYLE logo"
+              className="h-10 w-10 object-contain rounded-full"
+            />
             OXI<span className="text-blue-500">STYLE</span>
           </Link>
 
