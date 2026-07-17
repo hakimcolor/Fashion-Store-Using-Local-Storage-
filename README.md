@@ -1,16 +1,106 @@
-# React + Vite
+# OXISTYLE - Fashion Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Currently, two official plugins are available:
+A modern fashion e-commerce web app built with React, Vite, and Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live site: https://fashion-store-delta-swart.vercel.app
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## About This Project
 
-## Expanding the Oxlint configuration
+> আমি এই প্রজেক্টে শুধু **functionality** নিয়ে কাজ করেছি। Color বা অন্য কোনো design নিয়ে আমি কাজ করিনি। তবে আমি কোনো AI দিয়ে কোড করিনি - প্রয়োজনে শুধু **documentation** পড়েছি।
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This project focuses entirely on building real working features - cart management, product filtering, routing, loading states, and more.
+
+---
+
+## Features
+
+- Home page with hero slider and featured products
+- Products page with search and category filter sidebar
+- Product details page with color, size, quantity selector and add-to-cart
+- Shopping cart - navbar dropdown panel + standalone page
+- Cart persistence via localStorage
+- Branded loader shown on every page navigation
+- Scroll to top on every route change
+- Empty states for cart and no-results
+- Responsive design - mobile, tablet, desktop
+- Toast notifications on cart add/remove
+- Newsletter, FAQ, Why Choose Us, Customer Reviews sections
+- Footer with social links and quick nav
+
+---
+
+## Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| React 19 | UI framework |
+| Vite 8 | Build tool and dev server |
+| React Router v7 | Routing and data loaders |
+| Tailwind CSS v4 | Styling |
+| react-hot-toast | Toast notifications |
+| react-icons | Icon library |
+| Swiper | Hero slider |
+| AOS | Scroll animations |
+| Vercel | Deployment |
+
+---
+
+## Project Structure
+
+```
+src/
+├── Components/      # Navbar, Footer, Loader, CartStyle, etc.
+├── context/         # Cart context and provider
+├── layouts/         # RootLayout
+├── pages/           # Home, Product, ProductDetails, Cart
+├── routers/         # React Router config with loaders
+└── assets/          # Static images
+public/
+└── data/
+    └── products.json
+```
+
+---
+
+## Installation & Setup
+
+**1. Clone the repo**
+```bash
+git clone https://github.com/hakimcolor/fashion-store.git
+cd fashion-store
+```
+
+**2. Install dependencies**
+```bash
+npm install
+```
+
+**3. Start the dev server**
+```bash
+npm run dev
+```
+
+**4. Build for production**
+```bash
+npm run build
+```
+
+**5. Preview production build**
+```bash
+npm run preview
+```
+
+---
+
+## Deployment
+
+Deployed on **Vercel**. A _redirects file and vercel.json are included to handle client-side routing so direct URL access and page refresh work correctly.
+
+---
+
+## Author
+
+Made with love by [hakimcolor](https://github.com/hakimcolor)
