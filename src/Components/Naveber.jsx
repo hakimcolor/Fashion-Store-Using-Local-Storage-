@@ -90,7 +90,6 @@
 
 // export default Naveber;
 
-
 import { useContext, useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
@@ -152,23 +151,33 @@ const Naveber = () => {
                 </span>
               </button>
 
-              {/* dropdown - 50% width all devices, full screen height */}
+              {/* dropdown panel — opens below navbar, full height minus navbar, responsive width */}
               {showCart && (
-                <div className="fixed right-0 top-0 w-1/2 h-screen bg-white shadow-2xl border-l border-gray-200 z-50 overflow-y-auto">
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-6">
-                      <h2 className="text-2xl font-bold arbutus-slab">
-                        Your Cart
-                      </h2>
-                      <button
-                        onClick={() => setShowCart(false)}
-                        className="text-gray-500 hover:text-gray-700 transition-all duration-300"
+                <div className="fixed right-0 top-[80px] w-full sm:w-[420px] h-[calc(100vh-80px)] bg-white shadow-2xl border-l border-t border-gray-200 z-50 flex flex-col">
+                  {/* panel header */}
+                  <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 shrink-0">
+                    <div className="flex items-center gap-2">
+                      <FaShoppingCart
+                        style={{ color: '#155dfc' }}
+                        className="text-lg"
+                      />
+                      <h2
+                        className="arbutus-slab text-xl"
+                        style={{ color: '#155dfc' }}
                       >
-                        <FaTimes className="text-xl" />
-                      </button>
+                        Shopping Cart
+                      </h2>
                     </div>
-                    <Cart onClose={() => setShowCart(false)} />
+                    <button
+                      onClick={() => setShowCart(false)}
+                      className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-500 hover:text-gray-800 transition-all duration-200 cursor-pointer"
+                    >
+                      <FaTimes />
+                    </button>
                   </div>
+
+                  {/* cart content fills remaining height */}
+                  <Cart onClose={() => setShowCart(false)} />
                 </div>
               )}
             </div>
