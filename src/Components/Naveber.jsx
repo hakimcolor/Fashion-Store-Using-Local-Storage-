@@ -91,7 +91,7 @@
 // export default Naveber;
 
 import { useContext, useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
 import { HiHome, HiOutlineShoppingBag } from 'react-icons/hi2';
 import { CartContext } from '../context/CartContext';
@@ -102,6 +102,7 @@ const Naveber = () => {
   const [showCart, setShowCart] = useState(false);
   const { cart } = useContext(CartContext);
   const cartRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -118,8 +119,13 @@ const Naveber = () => {
     { name: 'Products', path: '/products', icon: <HiOutlineShoppingBag /> },
   ];
 
-  const navStyle =
-    'flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-all duration-300';
+  // returns style based on whether the route is active
+  const navStyle = (path) => {
+    const isActive = location.pathname === path;
+    return `flex items-center gap-2 transition-all duration-300 font-medium ${
+      isActive ? 'font-semibold' : 'text-gray-600 hover:text-[#155dfc]'
+    }`;
+  };
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-3xl bg-white/80 border-b border-gray-200 shadow-sm">
@@ -131,7 +137,14 @@ const Naveber = () => {
 
           <nav className="hidden md:flex items-center gap-8 dmsans">
             {menus.map((menu) => (
-              <Link key={menu.path} to={menu.path} className={navStyle}>
+              <Link
+                key={menu.path}
+                to={menu.path}
+                className={navStyle(menu.path)}
+                style={
+                  location.pathname === menu.path ? { color: '#155dfc' } : {}
+                }
+              >
                 {menu.icon}
                 {menu.name}
               </Link>
@@ -201,7 +214,10 @@ const Naveber = () => {
               <Link
                 key={menu.path}
                 to={menu.path}
-                className={navStyle}
+                className={navStyle(menu.path)}
+                style={
+                  location.pathname === menu.path ? { color: '#155dfc' } : {}
+                }
                 onClick={() => setOpen(false)}
               >
                 {menu.icon}
