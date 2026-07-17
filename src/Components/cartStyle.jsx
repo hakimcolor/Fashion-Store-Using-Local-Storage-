@@ -125,11 +125,12 @@ const CartStyle = ({ products }) => {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product) => (
           <div
+            data-aos="zoom-in"
             key={product.id}
             className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
             {/* the product img  */}
-            <div className="relative overflow-hidden">
+            <div  className="relative overflow-hidden">
               <img
                 src={product.image}
                 alt={product.name}
@@ -166,7 +167,7 @@ const CartStyle = ({ products }) => {
               <div className="mt-5 flex items-center justify-between">
                 <div>
                   <h3 className="text-2xl font-bold text-black">
-                      <TbCurrencyTaka className="text-2xl" /> {product.price}
+                    <TbCurrencyTaka className="text-2xl" /> {product.price}
                   </h3>
 
                   <span

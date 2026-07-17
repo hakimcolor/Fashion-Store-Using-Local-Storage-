@@ -13,7 +13,7 @@ import 'aos/dist/aos.css';
 
 // Initialize AOS
 AOS.init({
-  duration: 1000, // 1 second animation
+  duration: 900, 
   once: true,
   easing: 'ease-out',
 });
