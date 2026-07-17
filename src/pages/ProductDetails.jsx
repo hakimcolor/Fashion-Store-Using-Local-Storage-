@@ -191,7 +191,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Add to Cart Button */}
+          {/* add to Cart Button */}
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
