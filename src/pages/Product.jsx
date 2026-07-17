@@ -112,10 +112,28 @@ const Product = () => {
           {filteredProducts.length > 0 ? (
             <CartStyle products={filteredProducts} />
           ) : (
-            <div className="flex h-72 items-center justify-center rounded-2xl border border-dashed border-gray-300 bg-gray-50">
-              <h2 className="text-3xl font-bold text-gray-500">
-                No Products Found
+            // no results empty state
+            <div className="flex flex-col items-center justify-center gap-4 py-20 rounded-2xl border border-dashed border-gray-200 bg-gray-50">
+              <div className="relative w-20 h-20">
+                <img
+                  src="/logo (2).png"
+                  alt="oxistyle"
+                  className="w-full h-full object-contain rounded-full opacity-20"
+                />
+                {/* magnifier icon overlay */}
+                <span className="absolute inset-0 flex items-center justify-center text-3xl text-[#155dfc]">
+                  🔍
+                </span>
+              </div>
+              <p className="arbutus-slab text-lg font-bold">
+                OXI<span style={{ color: '#155dfc' }}>STYLE</span>
+              </p>
+              <h2 className="arbutus-slab text-xl text-gray-500">
+                no products found
               </h2>
+              <p className="dmsans text-sm text-gray-400">
+                try a different search or category
+              </p>
             </div>
           )}
         </main>

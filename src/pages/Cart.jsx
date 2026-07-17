@@ -47,18 +47,29 @@ const Cart = ({ onClose }) => {
       <div
         className={
           isDropdown
-            ? 'flex flex-col items-center justify-center flex-1 gap-4 py-16'
-            : 'w-[90%] mx-auto py-20 flex flex-col items-center gap-4'
+            ? 'flex flex-col items-center justify-center flex-1 gap-3 py-16'
+            : 'w-[90%] mx-auto py-24 flex flex-col items-center gap-4'
         }
       >
-        <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
-          <FiShoppingCart className="text-3xl text-[#155dfc]" />
+        {/* logo with faded cart icon overlay */}
+        <div className="relative w-20 h-20">
+          <img
+            src="/logo (2).png"
+            alt="oxistyle"
+            className="w-full h-full object-contain rounded-full opacity-20"
+          />
+          <FiShoppingCart className="absolute inset-0 m-auto text-4xl text-[#155dfc]" />
         </div>
+
+        {/* brand + message */}
+        <p className="arbutus-slab text-lg font-bold">
+          OXI<span style={{ color: '#155dfc' }}>STYLE</span>
+        </p>
         <h2 className="arbutus-slab text-xl text-gray-500">
-          Your Cart is Empty
+          your cart is empty
         </h2>
-        <p className="text-sm text-gray-400">
-          Add some products and come back!
+        <p className="dmsans text-sm text-gray-400 text-center max-w-[200px]">
+          add some products and come back!
         </p>
       </div>
     );
