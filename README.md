@@ -1,17 +1,14 @@
 # OXISTYLE - Fashion Store
 
-
-A modern fashion e-commerce web app built with React, Vite, and Tailwind CSS.
-
 Live site: https://fashion-store-delta-swart.vercel.app
 
 ---
 
 ## About This Project
 
-> আমি এই প্রজেক্টে শুধু **functionality** নিয়ে কাজ করেছি। Color বা অন্য কোনো design নিয়ে আমি কাজ করিনি। তবে আমি কোনো AI দিয়ে কোড করিনি - প্রয়োজনে শুধু **documentation** পড়েছি।
+I only worked on the **functionality** of this project. I did not work on colors or any other design decisions. I did not use any AI to write code — I only read the **documentation** when needed.
 
-This project focuses entirely on building real working features - cart management, product filtering, routing, loading states, and more.
+![OXISTYLE Banner](./public/fashon_banner.png)
 
 ---
 
@@ -20,13 +17,13 @@ This project focuses entirely on building real working features - cart managemen
 - Home page with hero slider and featured products
 - Products page with search and category filter sidebar
 - Product details page with color, size, quantity selector and add-to-cart
-- Shopping cart - navbar dropdown panel + standalone page
+- Shopping cart — navbar dropdown panel and standalone page
 - Cart persistence via localStorage
 - Branded loader shown on every page navigation
 - Scroll to top on every route change
 - Empty states for cart and no-results
-- Responsive design - mobile, tablet, desktop
-- Toast notifications on cart add/remove
+- Responsive design — mobile, tablet, desktop
+- Toast notifications on cart add and remove
 - Newsletter, FAQ, Why Choose Us, Customer Reviews sections
 - Footer with social links and quick nav
 
@@ -34,17 +31,17 @@ This project focuses entirely on building real working features - cart managemen
 
 ## Tech Stack
 
-| Tool | Purpose |
-|---|---|
-| React 19 | UI framework |
-| Vite 8 | Build tool and dev server |
-| React Router v7 | Routing and data loaders |
-| Tailwind CSS v4 | Styling |
-| react-hot-toast | Toast notifications |
-| react-icons | Icon library |
-| Swiper | Hero slider |
-| AOS | Scroll animations |
-| Vercel | Deployment |
+| Tool            | Purpose                   |
+| --------------- | ------------------------- |
+| React 19        | UI framework              |
+| Vite 8          | Build tool and dev server |
+| React Router v7 | Routing and data loaders  |
+| Tailwind CSS v4 | Styling                   |
+| react-hot-toast | Toast notifications       |
+| react-icons     | Icon library              |
+| Swiper          | Hero slider               |
+| AOS             | Scroll animations         |
+| Vercel          | Deployment                |
 
 ---
 
@@ -68,27 +65,32 @@ public/
 ## Installation & Setup
 
 **1. Clone the repo**
+
 ```bash
 git clone https://github.com/hakimcolor/fashion-store.git
 cd fashion-store
 ```
 
 **2. Install dependencies**
+
 ```bash
 npm install
 ```
 
 **3. Start the dev server**
+
 ```bash
 npm run dev
 ```
 
 **4. Build for production**
+
 ```bash
 npm run build
 ```
 
 **5. Preview production build**
+
 ```bash
 npm run preview
 ```
@@ -97,7 +99,7 @@ npm run preview
 
 ## Deployment
 
-Deployed on **Vercel**. A _redirects file and vercel.json are included to handle client-side routing so direct URL access and page refresh work correctly.
+Deployed on **Vercel**. A `_redirects` file and `vercel.json` are included to handle client-side routing so direct URL access and page refresh work correctly.
 
 ---
 
