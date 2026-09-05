@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import { TbCurrencyTaka } from 'react-icons/tb';
 import { HiArrowRight } from 'react-icons/hi2';
 
 import 'swiper/css';
@@ -9,47 +8,57 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-// Hero slides with real Unsplash fashion/Bangladeshi clothing images
+/*
+  All images verified on Unsplash — real traditional South Asian / Bangladeshi fashion:
+  Slide 1 — Panjabi:  photo-1512436991641-6745cdb1723f  (man in white cotton traditional shirt)
+  Slide 2 — Kurti:    photo-1585771724684-38269d6639fd  (woman in colorful ethnic kurti/salwar)
+  Slide 3 — Casual:   photo-1523381210434-271e8be1f52b  (model in premium casual polo wear)
+  Slide 4 — Festival: photo-1594938298603-c8148c4b3b4c  (woman in traditional festive dress)
+*/
 const slides = [
   {
     image:
-      'https://images.unsplash.com/photo-1590330297626-d7aff25a0431?w=1600&q=85',
-    badge: 'New Collection',
+      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1600&q=85',
+    badge: '✦ New Collection',
     title: 'Authentic Bangladeshi Panjabi',
     subtitle:
-      'Crafted with love, worn with pride. Explore our premium cotton Panjabi collection for every occasion.',
-    cta: 'Shop Now',
+      'Crafted with love, worn with pride. Premium cotton Panjabi for Eid, weddings, and every special occasion.',
+    cta: 'Shop Panjabi',
     accent: '#155dfc',
+    pos: 'center center',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1614251056216-f748f76cd228?w=1600&q=85',
-    badge: 'Trending',
-    title: 'Elegant Saree & Kurti',
+      'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1600&q=85',
+    badge: '✦ Trending Now',
+    title: 'Elegant Kurti Collection',
     subtitle:
-      'Timeless fashion that celebrates Bangladeshi heritage — available in vibrant colors and fine fabrics.',
-    cta: 'Explore',
+      'Vibrant colors, fine fabrics, timeless cuts — our Kurti collection celebrates every Bangladeshi woman.',
+    cta: 'Shop Kurti',
     accent: '#9333ea',
+    pos: 'center top',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1600&q=85',
-    badge: 'Best Seller',
+      'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1600&q=85',
+    badge: '✦ Best Seller',
     title: 'Premium Casual Wear',
     subtitle:
       'From daily essentials to stylish outfits — find comfort and style that fits your lifestyle perfectly.',
-    cta: 'View Collection',
+    cta: 'Shop Casual',
     accent: '#16a34a',
+    pos: 'center center',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&q=85',
-    badge: 'Limited Edition',
+      'https://images.unsplash.com/photo-1594938298603-c8148c4b3b4c?w=1600&q=85',
+    badge: '✦ Limited Edition',
     title: 'Festival Special Outfits',
     subtitle:
-      "Celebrate every festival in style. Our curated festive collection is here — grab yours before it's gone.",
+      "Celebrate Eid, Puja & every festival in style. Curated festive pieces — grab yours before they're gone.",
     cta: 'Shop Festival',
     accent: '#d97706',
+    pos: 'center top',
   },
 ];
 
@@ -61,7 +70,7 @@ const HomeSlider = () => (
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      autoplay={{ delay: 4000, disableOnInteraction: false }}
+      autoplay={{ delay: 4500, disableOnInteraction: false }}
       loop
       className="hero-swiper"
     >
@@ -72,48 +81,53 @@ const HomeSlider = () => (
             style={{
               backgroundImage: `url(${slide.image})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center top',
+              backgroundPosition: slide.pos,
             }}
           >
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent z-10" />
+            {/* Left-heavy dark gradient so text is always readable */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10 z-10" />
 
-            {/* Content */}
-            <div className="absolute inset-0 z-20 max-w-[90%] mx-auto flex items-center">
-              <div className="text-white max-w-xl" data-aos="fade-right">
-                {/* Badge */}
-                <span
-                  className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 border border-white/30 backdrop-blur-sm"
-                  style={{ background: `${slide.accent}cc` }}
-                >
-                  ✦ {slide.badge}
-                </span>
+            {/* Bottom fade for extra depth */}
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent z-10" />
 
-                {/* Title */}
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 arbutus-slab shimmer-text">
-                  {slide.title}
-                </h1>
-
-                {/* Subtitle */}
-                <p className="text-gray-200 text-base md:text-lg leading-7 mb-8 dmsans max-w-md">
-                  {slide.subtitle}
-                </p>
-
-                {/* CTA Buttons */}
-                <div className="flex items-center gap-4 flex-wrap">
-                  <Link
-                    to="/products"
-                    className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 cursor-pointer shadow-lg hover:scale-105 active:scale-95 dmsans"
-                    style={{ background: slide.accent, color: '#fff' }}
+            {/* Slide content */}
+            <div className="absolute inset-0 z-20 flex items-center">
+              <div className="max-w-[90%] mx-auto w-full">
+                <div className="text-white max-w-2xl">
+                  {/* Badge */}
+                  <span
+                    className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold mb-5 border border-white/20 backdrop-blur-sm tracking-wider uppercase dmsans"
+                    style={{ background: `${slide.accent}dd` }}
                   >
-                    {slide.cta} <HiArrowRight />
-                  </Link>
-                  <Link
-                    to="/products"
-                    className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm border-2 border-white/60 hover:border-white hover:bg-white/10 transition-all duration-300 cursor-pointer dmsans"
-                  >
-                    View All
-                  </Link>
+                    {slide.badge}
+                  </span>
+
+                  {/* Title */}
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 arbutus-slab shimmer-text drop-shadow-lg">
+                    {slide.title}
+                  </h1>
+
+                  {/* Subtitle */}
+                  <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-8 dmsans max-w-lg opacity-90">
+                    {slide.subtitle}
+                  </p>
+
+                  {/* CTAs */}
+                  <div className="flex items-center gap-4 flex-wrap">
+                    <Link
+                      to="/products"
+                      className="flex items-center gap-2 px-8 py-3.5 rounded-2xl font-bold text-sm transition-all duration-300 cursor-pointer shadow-xl hover:scale-105 hover:shadow-2xl active:scale-95 dmsans"
+                      style={{ background: slide.accent, color: '#fff' }}
+                    >
+                      {slide.cta} <HiArrowRight />
+                    </Link>
+                    <Link
+                      to="/products"
+                      className="flex items-center gap-2 px-8 py-3.5 rounded-2xl font-semibold text-sm border-2 border-white/50 hover:border-white hover:bg-white/15 backdrop-blur-sm transition-all duration-300 cursor-pointer dmsans"
+                    >
+                      View All
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
