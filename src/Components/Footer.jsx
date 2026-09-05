@@ -84,10 +84,10 @@ const Footer = () => {
             <h2 className="text-3xl font-bold arbutus-slab flex items-center gap-2">
               <img
                 src="/logo (2).png"
-                alt="OXISTYLE logo"
+                alt="H.K Style logo"
                 className="h-10 w-10 object-contain rounded-full"
               />
-              OXI<span style={{ color: '#155dfc' }}>STYLE</span>
+              H.K <span style={{ color: '#155dfc' }}>Style</span>
             </h2>
             <p className="dmsans text-sm text-gray-400 leading-relaxed max-w-xs">
               Your go-to destination for authentic Bangladeshi fashion. Quality
@@ -223,7 +223,7 @@ const Footer = () => {
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500 dmsans">
           <p>
             © {currentYear}{' '}
-            <span className="text-white font-semibold">OXISTYLE</span>. all
+            <span className="text-white font-semibold">H.K Style</span>. all
             rights reserved.
           </p>
           <p>

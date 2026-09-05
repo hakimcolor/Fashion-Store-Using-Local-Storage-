@@ -7,9 +7,11 @@ import {
   HiOutlineUser,
   HiOutlinePhone,
   HiOutlineSparkles,
+  HiOutlineGlobeAlt,
 } from 'react-icons/hi2';
 import { CartContext } from '../context/CartContext';
 import { useTheme } from '../context/ThemeContext';
+import { useLang } from '../context/LanguageContext';
 import Cart from '../pages/Cart';
 
 const Naveber = () => {
@@ -17,32 +19,47 @@ const Naveber = () => {
   const [showCart, setShowCart] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { cart } = useContext(CartContext);
-  const { dark, toggle } = useTheme();
+  const { dark, toggle: toggleTheme } = useTheme();
+  const { lang, toggle: toggleLang } = useLang();
   const cartRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (cartRef.current && !cartRef.current.contains(e.target)) {
+    const handler = (e) => {
+      if (cartRef.current && !cartRef.current.contains(e.target))
         setShowCart(false);
-      }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
   }, []);
 
   const menus = [
-    { name: 'Home', path: '/', icon: <HiHome /> },
-    { name: 'Products', path: '/products', icon: <HiOutlineShoppingBag /> },
-    { name: 'Styles', path: '/styles', icon: <HiOutlineSparkles /> },
-    { name: 'About', path: '/about', icon: <HiOutlineUser /> },
-    { name: 'Contact', path: '/contact', icon: <HiOutlinePhone /> },
+    { en: 'Home', bn: 'হোম', path: '/', icon: <HiHome /> },
+    {
+      en: 'Products',
+      bn: 'পণ্য',
+      path: '/products',
+      icon: <HiOutlineShoppingBag />,
+    },
+    {
+      en: 'Styles',
+      bn: 'স্টাইল',
+      path: '/styles',
+      icon: <HiOutlineSparkles />,
+    },
+    { en: 'About', bn: 'আমাদের', path: '/about', icon: <HiOutlineUser /> },
+    {
+      en: 'Contact',
+      bn: 'যোগাযোগ',
+      path: '/contact',
+      icon: <HiOutlinePhone />,
+    },
   ];
 
   const navStyle = (path) => {
@@ -64,19 +81,20 @@ const Naveber = () => {
     >
       <div className="max-w-[95%] mx-auto">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-bold flex items-center gap-2">
+          {/* Logo — H.K Style */}
+          <Link to="/" className="flex items-center gap-2 shrink-0">
             <img
               src="/logo (2).png"
-              alt="OXISTYLE logo"
+              alt="H.K Style"
               className="h-10 w-10 object-contain rounded-full"
             />
-            <span className="dark:text-white">OXI</span>
-            <span className="text-[#155dfc]">STYLE</span>
+            <span className="text-2xl font-bold dark:text-white arbutus-slab">
+              H.K <span className="text-[#155dfc]">Style</span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-7 dmsans font-bold">
+          <nav className="hidden md:flex items-center gap-6 dmsans font-bold">
             {menus.map((menu) => (
               <Link
                 key={menu.path}
@@ -87,16 +105,26 @@ const Naveber = () => {
                 }
               >
                 {menu.icon}
-                {menu.name}
+                {lang === 'en' ? menu.en : menu.bn}
               </Link>
             ))}
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLang}
+              title="Switch language"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer text-xs font-bold dmsans text-gray-700 dark:text-gray-300"
+            >
+              <HiOutlineGlobeAlt className="text-base text-[#155dfc]" />
+              {lang === 'en' ? 'বাং' : 'EN'}
+            </button>
+
             {/* Dark Mode Toggle */}
             <button
-              onClick={toggle}
+              onClick={toggleTheme}
               className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer"
               aria-label="Toggle theme"
             >
@@ -110,7 +138,7 @@ const Naveber = () => {
             {/* Cart */}
             <div className="relative" ref={cartRef}>
               <button
-                onClick={() => setShowCart((prev) => !prev)}
+                onClick={() => setShowCart((p) => !p)}
                 className="relative flex items-center justify-center w-10 h-10 border border-gray-200 dark:border-gray-600 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-sm cursor-pointer"
               >
                 <FaShoppingCart className="text-base text-gray-700 dark:text-gray-300" />
@@ -120,12 +148,12 @@ const Naveber = () => {
               </button>
 
               {showCart && (
-                <div className="fixed right-0 top-[80px] w-full sm:w-[420px] h-[calc(100vh-80px)] bg-white dark:bg-gray-900 shadow-2xl border-l border-t border-gray-200 dark:border-gray-700 z-50 flex flex-col">
+                <div className="fixed right-0 top-20 w-full sm:w-[420px] h-[calc(100vh-80px)] bg-white dark:bg-gray-900 shadow-2xl border-l border-t border-gray-200 dark:border-gray-700 z-50 flex flex-col">
                   <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-700 shrink-0">
                     <div className="flex items-center gap-2">
                       <FaShoppingCart className="text-[#155dfc] text-lg" />
                       <h2 className="arbutus-slab text-xl text-[#155dfc]">
-                        Shopping Cart
+                        {lang === 'en' ? 'Shopping Cart' : 'শপিং কার্ট'}
                       </h2>
                     </div>
                     <button
@@ -140,16 +168,16 @@ const Naveber = () => {
               )}
             </div>
 
-            {/* Mobile menu toggle */}
+            {/* Mobile toggle */}
             <button
-              className="md:hidden text-xl text-gray-700 dark:text-gray-300"
+              className="md:hidden text-xl text-gray-700 dark:text-gray-300 cursor-pointer"
               onClick={() => setOpen(!open)}
               aria-label="Menu"
             >
               {open ? (
-                <FaTimes className="hover:cursor-pointer hover:text-red-500 transition-all duration-300" />
+                <FaTimes className="hover:text-red-500 transition-all duration-300" />
               ) : (
-                <FaBars className="hover:cursor-pointer transition-all duration-300" />
+                <FaBars className="transition-all duration-300" />
               )}
             </button>
           </div>
@@ -169,7 +197,7 @@ const Naveber = () => {
                 onClick={() => setOpen(false)}
               >
                 {menu.icon}
-                {menu.name}
+                {lang === 'en' ? menu.en : menu.bn}
               </Link>
             ))}
           </nav>
