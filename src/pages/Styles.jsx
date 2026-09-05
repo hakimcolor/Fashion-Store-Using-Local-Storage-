@@ -1,180 +1,206 @@
 import { Link } from 'react-router-dom';
 import { HiArrowRight } from 'react-icons/hi2';
 import { TbCurrencyTaka } from 'react-icons/tb';
-import { FaStar } from 'react-icons/fa';
+import {
+  FaStar,
+  FaLeaf,
+  FaHeart,
+  FaCrown,
+  FaBolt,
+  FaSnowflake,
+} from 'react-icons/fa';
 import { useLang } from '../context/LanguageContext';
+
+/*
+  Images sourced from Unsplash (free, no attribution required under Unsplash License).
+  Each photo chosen specifically for the clothing category shown.
+
+  Panjabi    — photo-1607082348824-0a96f2a4b9da  man in white traditional panjabi/kurta
+  Kurti      — photo-1583391733956-6c78276477e2  woman in colorful kurti ethnic wear
+  Shirt      — photo-1607082349566-187342175e2f  formal shirt flat lay / model
+  Saree      — photo-1610189352649-66a26892d9c9  woman in traditional vibrant saree
+  3-Piece    — photo-1631729371254-42c2892f0e6e  women's coordinated ethnic 3-piece
+  Hoodie     — photo-1556821840-3a63f95609a7  casual hoodie street wear
+  Jacket     — photo-1551028719-00167b16eac5  denim slim fit jacket
+  Dress      — photo-1496747611176-843222e1e57c  elegant women's evening dress
+*/
 
 const looks = [
   {
     id: 1,
     image:
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900&q=85',
-    badge: { en: 'Top Rated', bn: 'সেরা পছন্দ' },
-    badgeColor: '#155dfc',
+      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=900&q=85',
+    pos: 'center top',
     accent: '#155dfc',
-    tag: { en: "Men's Traditional", bn: 'পুরুষদের ঐতিহ্যবাহী' },
-    title: {
-      en: 'Classic Bangladeshi Panjabi',
-      bn: 'ক্লাসিক বাংলাদেশি পাঞ্জাবি',
-    },
-    desc: {
-      en: 'Nothing defines Bangladeshi menswear quite like the Panjabi. Our premium cotton collection offers a clean silhouette, subtle embroidery at the collar, and breathable fabric — ideal for Eid, prayers, weddings, and every formal occasion.',
-      bn: 'বাংলাদেশি পুরুষদের পোশাকে পাঞ্জাবির কোনো বিকল্প নেই। আমাদের প্রিমিয়াম কটন সংগ্রহে রয়েছে পরিষ্কার সিলুয়েট, কলারে সূক্ষ্ম এমব্রয়ডারি এবং শ্বাস-প্রশ্বাসযোগ্য কাপড় — ঈদ, নামাজ, বিয়ে ও আনুষ্ঠানিক উপলক্ষের জন্য আদর্শ।',
+    badgeColor: '#155dfc',
+    icon: <FaCrown />,
+    badge: { en: 'Top Rated', bn: 'সেরা পছন্দ' },
+    category: { en: "Men's Traditional", bn: 'পুরুষদের ঐতিহ্যবাহী' },
+    title: { en: 'Bangladeshi Panjabi', bn: 'বাংলাদেশি পাঞ্জাবি' },
+    about: {
+      en: 'The Panjabi is the crown jewel of Bangladeshi menswear — a garment that carries centuries of culture and tradition in every thread. Cut from premium breathable cotton, it features a long kurta silhouette with delicate embroidery at the collar and cuffs. Whether worn to Friday prayers, Eid celebrations, or a family gathering, the Panjabi commands respect and exudes effortless elegance. Available in classic white, cream, sky blue, and rich jewel tones.',
+      bn: 'পাঞ্জাবি হলো বাংলাদেশি পুরুষদের পোশাকের মুকুটমণি — প্রতিটি সুতায় শতাব্দীর সংস্কৃতি ও ঐতিহ্য বহন করে। প্রিমিয়াম শ্বাস-প্রশ্বাসযোগ্য কটন থেকে তৈরি, কলার ও কাফে সূক্ষ্ম এমব্রয়ডারি সহ লম্বা কুর্তা সিলুয়েট। শুক্রবারের নামাজ, ঈদ উৎসব বা পারিবারিক অনুষ্ঠান — পাঞ্জাবি সর্বদা সম্মান ও কমনীয়তার প্রতীক।',
     },
     price: 1490,
-    rating: 4.8,
+    rating: 4.9,
     tags: {
-      en: ['Panjabi', 'Cotton', 'Eid', 'Traditional'],
-      bn: ['পাঞ্জাবি', 'কটন', 'ঈদ', 'ঐতিহ্য'],
+      en: ['Panjabi', 'Cotton', 'Eid', 'Traditional', 'Men'],
+      bn: ['পাঞ্জাবি', 'কটন', 'ঈদ', 'ঐতিহ্য', 'পুরুষ'],
     },
-    pos: 'center center',
   },
   {
     id: 2,
     image:
-      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=900&q=85',
-    badge: { en: 'Best Seller', bn: 'সবচেয়ে বিক্রীত' },
-    badgeColor: '#9333ea',
+      'https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=900&q=85',
+    pos: 'center top',
     accent: '#9333ea',
-    tag: { en: "Women's Ethnic", bn: 'মহিলাদের এথনিক' },
-    title: { en: 'Elegant Kurti with Dupatta', bn: 'সুন্দর কুর্তি ও দুপাট্টা' },
-    desc: {
-      en: 'The Kurti is the heartbeat of Bangladeshi fashion. Crafted from soft cotton with intricate embroidery, this look blends tradition with modern elegance. Perfect for Eid mornings, family gatherings, and everyday grace.',
-      bn: 'কুর্তি হলো বাংলাদেশি ফ্যাশনের প্রাণ। নরম কটন ও সূক্ষ্ম এমব্রয়ডারি দিয়ে তৈরি এই লুক ঐতিহ্য ও আধুনিকতার মেলবন্ধন। ঈদের সকাল, পারিবারিক অনুষ্ঠান ও প্রতিদিনের জন্য মানানসই।',
+    badgeColor: '#9333ea',
+    icon: <FaHeart />,
+    badge: { en: 'Best Seller', bn: 'সবচেয়ে বিক্রীত' },
+    category: { en: "Women's Ethnic Wear", bn: 'মহিলাদের এথনিক পোশাক' },
+    title: { en: 'Designer Kurti & Dupatta', bn: 'ডিজাইনার কুর্তি ও দুপাট্টা' },
+    about: {
+      en: 'The Kurti is a timeless expression of feminine grace rooted in South Asian culture. Our designer Kurti collection is handcrafted from soft cotton and georgette, featuring block prints, floral embroidery, and mirror work that catch the light beautifully. Paired with a flowing dupatta, this ensemble is equally stunning at a casual lunch or a festive occasion. Each piece celebrates the artistry of Bangladeshi craftsmanship.',
+      bn: 'কুর্তি হলো দক্ষিণ এশিয়ার সংস্কৃতিতে নারীসুলভ কমনীয়তার চিরন্তন প্রকাশ। আমাদের ডিজাইনার কুর্তি সংগ্রহ নরম কটন ও জর্জেট থেকে হাতে তৈরি, ব্লক প্রিন্ট, ফ্লোরাল এমব্রয়ডারি ও মিরর ওয়ার্ক সহ। ফ্লোয়িং দুপাট্টার সাথে মিলিয়ে পরলে ক্যাজুয়াল লাঞ্চ বা উৎসব — সবখানেই অসাধারণ।',
     },
     price: 2190,
-    rating: 4.9,
+    rating: 4.8,
     tags: {
-      en: ['Kurti', 'Cotton', 'Embroidery', 'Dupatta'],
-      bn: ['কুর্তি', 'কটন', 'এমব্রয়ডারি', 'দুপাট্টা'],
+      en: ['Kurti', 'Dupatta', 'Cotton', 'Embroidery', 'Women'],
+      bn: ['কুর্তি', 'দুপাট্টা', 'কটন', 'এমব্রয়ডারি', 'মহিলা'],
     },
-    pos: 'center top',
   },
   {
     id: 3,
     image:
       'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=900&q=85',
-    badge: { en: 'Office Wear', bn: 'অফিস পোশাক' },
-    badgeColor: '#16a34a',
+    pos: 'center center',
     accent: '#16a34a',
-    tag: { en: "Men's Formal", bn: 'পুরুষদের ফর্মাল' },
+    badgeColor: '#16a34a',
+    icon: <FaBolt />,
+    badge: { en: 'Office Essential', bn: 'অফিস এসেনশিয়াল' },
+    category: { en: "Men's Formal Wear", bn: 'পুরুষদের ফর্মাল পোশাক' },
     title: { en: 'Premium Formal Shirt', bn: 'প্রিমিয়াম ফর্মাল শার্ট' },
-    desc: {
-      en: 'Dress sharp for every boardroom and business meeting. Our formal shirts are tailored from wrinkle-resistant, breathable fabric with precise stitching — delivering a polished professional look all day long.',
-      bn: 'প্রতিটি অফিস মিটিংয়ে তীক্ষ্ণ পোশাক পরুন। আমাদের ফর্মাল শার্টগুলো কুঁচকানো-প্রতিরোধী, শ্বাস-প্রশ্বাসযোগ্য কাপড়ে তৈরি — সারাদিন পেশাদার চেহারা নিশ্চিত করে।',
+    about: {
+      en: 'Engineered for the professional who refuses to compromise on style. Our formal shirts are crafted from high-thread-count Egyptian cotton — wrinkle-resistant, moisture-wicking, and tailored for a confident silhouette. The reinforced collar keeps its shape all day, while the precise stitching adds a subtle luxurious detail. Available in crisp white, ice blue, and subtle stripes for every boardroom occasion.',
+      bn: 'স্টাইলে আপস করেন না এমন পেশাদারদের জন্য তৈরি। আমাদের ফর্মাল শার্ট উচ্চ থ্রেড কাউন্ট ইজিপশিয়ান কটন থেকে তৈরি — কুঁচকানো-প্রতিরোধী, ময়েশ্চার-উইকিং এবং আত্মবিশ্বাসী সিলুয়েটের জন্য কাটা। রিইনফোর্সড কলার সারাদিন আকৃতি ধরে রাখে। ক্রিস্প সাদা, আইস ব্লু এবং স্ট্রাইপে পাওয়া যায়।',
     },
     price: 1790,
     rating: 4.7,
     tags: {
-      en: ['Shirt', 'Formal', 'Office', 'Premium'],
-      bn: ['শার্ট', 'ফর্মাল', 'অফিস', 'প্রিমিয়াম'],
+      en: ['Shirt', 'Formal', 'Office', 'Cotton', 'Men'],
+      bn: ['শার্ট', 'ফর্মাল', 'অফিস', 'কটন', 'পুরুষ'],
     },
-    pos: 'center center',
   },
   {
     id: 4,
     image:
-      'https://images.unsplash.com/photo-1594938298603-c8148c4b3b4c?w=900&q=85',
-    badge: { en: 'New Arrival', bn: 'নতুন আসল' },
-    badgeColor: '#d97706',
+      'https://images.unsplash.com/photo-1610189352649-66a26892d9c9?w=900&q=85',
+    pos: 'center top',
     accent: '#d97706',
-    tag: { en: "Women's Traditional", bn: 'মহিলাদের ঐতিহ্যবাহী' },
-    title: { en: 'Vibrant Festival Saree', bn: 'উজ্জ্বল উৎসব শাড়ি' },
-    desc: {
-      en: 'Celebrate every festival draped in colour and culture. Our handpicked Saree collection features rich silk blends, vivid prints, and timeless motifs that honour Bangladeshi heritage. Stand out at every occasion.',
-      bn: 'রঙ ও সংস্কৃতিতে মোড়ানো হয়ে প্রতিটি উৎসব উদযাপন করুন। আমাদের শাড়ি সংগ্রহে রয়েছে সমৃদ্ধ সিল্ক, উজ্জ্বল প্রিন্ট এবং চিরন্তন মোটিফ যা বাংলাদেশি ঐতিহ্যকে সম্মান জানায়।',
+    badgeColor: '#d97706',
+    icon: <FaLeaf />,
+    badge: { en: 'Heritage Piece', bn: 'ঐতিহ্যের প্রতীক' },
+    category: { en: "Women's Traditional", bn: 'মহিলাদের ঐতিহ্যবাহী' },
+    title: { en: 'Silk Festival Saree', bn: 'সিল্ক উৎসব শাড়ি' },
+    about: {
+      en: "The Saree is Bangladesh's most iconic garment — six yards of storytelling wrapped in silk and tradition. Our festival Sarees are woven with Jamdani-inspired motifs, rich zari borders, and jewel-toned palettes that glow under every light. Whether it is Eid, a wedding, or Pohela Boishakh, draping this Saree transforms a moment into a memory. Each piece is a labour of love by skilled Bangladeshi weavers.",
+      bn: 'শাড়ি হলো বাংলাদেশের সবচেয়ে আইকনিক পোশাক — সিল্ক ও ঐতিহ্যে মোড়ানো ছয় গজের গল্প। আমাদের উৎসব শাড়ি জামদানি-অনুপ্রাণিত মোটিফ, সমৃদ্ধ জরির বর্ডার এবং রঙিন প্যালেটে বোনা। ঈদ, বিয়ে বা পহেলা বৈশাখ — এই শাড়ি পরলে প্রতিটি মুহূর্ত স্মৃতিতে পরিণত হয়।',
     },
     price: 3490,
     rating: 5.0,
     tags: {
-      en: ['Saree', 'Silk', 'Festival', 'Wedding'],
-      bn: ['শাড়ি', 'সিল্ক', 'উৎসব', 'বিয়ে'],
+      en: ['Saree', 'Silk', 'Jamdani', 'Festival', 'Women'],
+      bn: ['শাড়ি', 'সিল্ক', 'জামদানি', 'উৎসব', 'মহিলা'],
     },
-    pos: 'center top',
   },
   {
     id: 5,
     image:
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=85',
-    badge: { en: 'Exclusive', bn: 'এক্সক্লুসিভ' },
-    badgeColor: '#e11d48',
+      'https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=900&q=85',
+    pos: 'center top',
     accent: '#e11d48',
-    tag: { en: "Women's Formal", bn: 'মহিলাদের ফর্মাল' },
-    title: { en: 'Elegant 3-Piece Suit', bn: 'এলিগ্যান্ট থ্রি-পিস' },
-    desc: {
-      en: 'For the most important days of your life, only the finest will do. Our 3-piece suits feature a coordinated top, bottom, and dupatta crafted from luxurious fabrics — making every woman feel extraordinary.',
-      bn: 'আপনার জীবনের সবচেয়ে গুরুত্বপূর্ণ দিনগুলোর জন্য সেরাটাই যথেষ্ট। আমাদের থ্রি-পিসে রয়েছে সমন্বিত টপ, বটম এবং দুপাট্টা যা বিলাসবহুল কাপড়ে হাতের কারুকাজসহ তৈরি।',
+    badgeColor: '#e11d48',
+    icon: <FaCrown />,
+    badge: { en: 'Exclusive', bn: 'এক্সক্লুসিভ' },
+    category: { en: "Women's Luxury", bn: 'মহিলাদের লাক্সারি' },
+    title: { en: 'Coordinated 3-Piece Set', bn: 'সমন্বিত থ্রি-পিস সেট' },
+    about: {
+      en: 'Effortless coordination meets luxurious comfort in our 3-piece sets. Each ensemble includes a beautifully embellished kameez, matching churidar or palazzo pants, and an embroidered dupatta — all cut from the same fabric for a perfectly harmonious look. The intricate beadwork and thread embroidery make this set a statement at any occasion, from bridal functions to corporate events.',
+      bn: 'আমাদের থ্রি-পিস সেটে অনায়াস সমন্বয় ও বিলাসবহুল আরামের মিলন। প্রতিটি সেটে রয়েছে সুন্দরভাবে সাজানো কামিজ, ম্যাচিং চুরিদার বা পালাজো এবং এমব্রয়ডারি করা দুপাট্টা — একই কাপড়ে কাটা পারফেক্ট হারমোনিয়াস লুক। জটিল বিডওয়ার্ক ও থ্রেড এমব্রয়ডারি যেকোনো অনুষ্ঠানে মনোযোগ আকর্ষণ করে।',
     },
     price: 4990,
     rating: 4.9,
     tags: {
-      en: ['3-Piece', 'Suit', 'Formal', 'Luxury'],
-      bn: ['থ্রি-পিস', 'স্যুট', 'ফর্মাল', 'লাক্সারি'],
+      en: ['3-Piece', 'Kameez', 'Embroidery', 'Luxury', 'Women'],
+      bn: ['থ্রি-পিস', 'কামিজ', 'এমব্রয়ডারি', 'লাক্সারি', 'মহিলা'],
     },
-    pos: 'center center',
   },
   {
     id: 6,
     image:
       'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=900&q=85',
-    badge: { en: 'Trending', bn: 'ট্রেন্ডিং' },
-    badgeColor: '#0891b2',
+    pos: 'center center',
     accent: '#0891b2',
-    tag: { en: 'Casual Wear', bn: 'ক্যাজুয়াল পোশাক' },
-    title: { en: 'Cozy Premium Hoodie', bn: 'আরামদায়ক প্রিমিয়াম হুডি' },
-    desc: {
-      en: 'When the temperature drops, style should not. Our premium hoodies feature soft inner fleece, relaxed fit, and minimalist design — perfect for casual outings, travel, or a cozy night in.',
-      bn: 'তাপমাত্রা কমলেও স্টাইল কমতে দেবেন না। আমাদের প্রিমিয়াম হুডিতে রয়েছে নরম ফ্লিস লাইনিং, রিল্যাক্সড ফিট — ক্যাজুয়াল আড্ডা, ভ্রমণ বা ঘরে আরামের জন্য আদর্শ।',
+    badgeColor: '#0891b2',
+    icon: <FaBolt />,
+    badge: { en: 'Street Style', bn: 'স্ট্রিট স্টাইল' },
+    category: { en: 'Casual Wear', bn: 'ক্যাজুয়াল পোশাক' },
+    title: { en: 'Premium Oversized Hoodie', bn: 'প্রিমিয়াম ওভারসাইজড হুডি' },
+    about: {
+      en: 'Born on the streets, perfected in the studio. Our oversized hoodies are cut from 380gsm heavyweight fleece — thick enough to keep you warm, soft enough to wear all day. The dropped shoulders and relaxed silhouette give it that effortless streetwear energy, while the ribbed cuffs and adjustable drawstring add a refined finish. Comes in a curated palette of muted tones perfect for layering.',
+      bn: 'রাস্তায় জন্ম, স্টুডিওতে পরিপূর্ণ। আমাদের ওভারসাইজড হুডি ৩৮০জিএসএম হেভিওয়েট ফ্লিস থেকে কাটা — গরম রাখার জন্য যথেষ্ট পুরু, সারাদিন পরার জন্য যথেষ্ট নরম। ড্রপড শোল্ডার ও রিল্যাক্সড সিলুয়েট স্ট্রিটওয়্যার এনার্জি দেয়, রিবড কাফস ও ড্রস্ট্রিং পরিমার্জিত ফিনিশ যোগ করে।',
     },
     price: 2190,
     rating: 4.6,
     tags: {
-      en: ['Hoodie', 'Fleece', 'Casual', 'Comfort'],
-      bn: ['হুডি', 'ফ্লিস', 'ক্যাজুয়াল', 'আরাম'],
+      en: ['Hoodie', 'Oversized', 'Fleece', 'Streetwear'],
+      bn: ['হুডি', 'ওভারসাইজড', 'ফ্লিস', 'স্ট্রিটওয়্যার'],
     },
-    pos: 'center center',
   },
   {
     id: 7,
     image:
       'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=900&q=85',
-    badge: { en: 'Winter Pick', bn: 'শীতকালীন পিক' },
-    badgeColor: '#7c3aed',
+    pos: 'center center',
     accent: '#7c3aed',
-    tag: { en: 'Outerwear', bn: 'আউটারওয়্যার' },
+    badgeColor: '#7c3aed',
+    icon: <FaSnowflake />,
+    badge: { en: 'Winter Pick', bn: 'শীতকালীন পিক' },
+    category: { en: 'Outerwear', bn: 'আউটারওয়্যার' },
     title: { en: 'Slim-Fit Denim Jacket', bn: 'স্লিম-ফিট ডেনিম জ্যাকেট' },
-    desc: {
-      en: 'A wardrobe staple that never goes out of style. Our slim-fit denim jacket is built with durable premium denim that shapes to your body over time. Layer it over anything — it works every time.',
-      bn: 'একটি ওয়ার্ডরোব স্ট্যাপল যা কখনো স্টাইলের বাইরে যায় না। আমাদের স্লিম-ফিট ডেনিম জ্যাকেট টেকসই প্রিমিয়াম ডেনিমে তৈরি। যেকোনো পোশাকের উপরে পরুন — প্রতিবারই মানানসই।',
+    about: {
+      en: 'The denim jacket that refuses to age. Constructed from 12oz selvedge denim with reinforced triple-stitched seams, this jacket only gets better with time — developing a unique patina that reflects your lifestyle. The slim-fit cut works over everything from a plain tee to a formal shirt. Brass hardware, interior patch pockets, and a structured collar round out this investment piece.',
+      bn: 'যে ডেনিম জ্যাকেট কখনো পুরনো হয় না। ১২ আউন্স সেলভেজ ডেনিম থেকে তৈরি ট্রিপল-স্টিচড সিমসহ, এই জ্যাকেট সময়ের সাথে আরো ভালো হয়। স্লিম-ফিট কাট প্লেইন টি-শার্ট থেকে ফর্মাল শার্ট — সবকিছুর উপরে মানানসই। ব্রাস হার্ডওয়্যার, ইন্টেরিয়র প্যাচ পকেট এবং স্ট্রাকচারড কলার এই পিসটিকে ইনভেস্টমেন্ট করে তোলে।',
     },
     price: 2890,
     rating: 4.7,
     tags: {
-      en: ['Jacket', 'Denim', 'Winter', 'Layering'],
-      bn: ['জ্যাকেট', 'ডেনিম', 'শীত', 'লেয়ারিং'],
+      en: ['Jacket', 'Denim', 'Selvedge', 'Winter'],
+      bn: ['জ্যাকেট', 'ডেনিম', 'সেলভেজ', 'শীত'],
     },
-    pos: 'center center',
   },
   {
     id: 8,
     image:
       'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=900&q=85',
+    pos: 'center top',
+    accent: '#be185d',
+    badgeColor: '#be185d',
+    icon: <FaHeart />,
     badge: { en: 'Party Wear', bn: 'পার্টি পোশাক' },
-    badgeColor: '#d97706',
-    accent: '#d97706',
-    tag: { en: "Women's Dress", bn: 'মহিলাদের ড্রেস' },
+    category: { en: "Women's Evening Wear", bn: 'মহিলাদের ইভনিং পোশাক' },
     title: { en: 'Elegant Evening Dress', bn: 'এলিগ্যান্ট ইভনিং ড্রেস' },
-    desc: {
-      en: 'Make every entrance unforgettable. Our elegant evening dresses are crafted for parties, weddings, and special occasions — featuring premium fabrics and graceful silhouettes that celebrate the modern woman.',
-      bn: 'প্রতিটি প্রবেশকে অবিস্মরণীয় করুন। আমাদের ইভনিং ড্রেসগুলো পার্টি, বিয়ে ও বিশেষ অনুষ্ঠানের জন্য তৈরি — প্রিমিয়াম কাপড় ও সুন্দর সিলুয়েটে আধুনিক নারীকে উদযাপন করে।',
+    about: {
+      en: 'Designed for the woman who commands every room she enters. Our evening dresses are crafted from fluid chiffon and structured crepe, featuring hand-sewn embellishments that catch the light from every angle. The A-line silhouette flatters all body types while the deep-cut back adds an element of allure. Available in midnight black, wine red, emerald green, and dusty rose — each colour a statement in itself.',
+      bn: 'সেই নারীর জন্য ডিজাইন করা যিনি প্রতিটি রুমে কমান্ড করেন। আমাদের ইভনিং ড্রেস ফ্লুয়িড শিফন ও স্ট্রাকচারড ক্রেপ থেকে তৈরি, হাতে সেলাই করা এমবেলিশমেন্ট সহ। এ-লাইন সিলুয়েট সব বডি টাইপে মানায়। মিডনাইট ব্ল্যাক, ওয়াইন রেড, এমারেল্ড গ্রিন এবং ডাস্টি রোজে পাওয়া যায়।',
     },
     price: 3290,
     rating: 4.8,
     tags: {
-      en: ['Dress', 'Evening', 'Party', 'Elegant'],
-      bn: ['ড্রেস', 'ইভনিং', 'পার্টি', 'এলিগ্যান্ট'],
+      en: ['Dress', 'Chiffon', 'Evening', 'Party', 'Women'],
+      bn: ['ড্রেস', 'শিফন', 'ইভনিং', 'পার্টি', 'মহিলা'],
     },
-    pos: 'center top',
   },
 ];
 
@@ -194,7 +220,7 @@ const Styles = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-white/5 translate-x-1/3 translate-y-1/3" />
         <div className="max-w-[95%] mx-auto relative z-10" data-aos="fade-up">
           <span className="inline-block bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold mb-6 dmsans border border-white/20">
-            {lang === 'en' ? 'Style Guide' : 'স্টাইল গাইড'}
+            {lang === 'en' ? '✦ Style Guide' : '✦ স্টাইল গাইড'}
           </span>
           <h1 className="arbutus-slab text-4xl md:text-6xl font-bold mb-5 leading-tight">
             {lang === 'en' ? (
@@ -210,14 +236,35 @@ const Styles = () => {
           </h1>
           <p className="dmsans text-lg text-blue-100 max-w-2xl mx-auto">
             {lang === 'en'
-              ? 'From traditional Bangladeshi attire to modern fashion — explore curated looks for every occasion.'
-              : 'ঐতিহ্যবাহী বাংলাদেশি পোশাক থেকে আধুনিক ফ্যাশন পর্যন্ত — প্রতিটি উপলক্ষের জন্য কিউরেটেড লুক আবিষ্কার করুন।'}
+              ? '8 curated fashion looks — traditional Bangladeshi attire to modern streetwear. Switch to বাং for Bengali.'
+              : '৮টি কিউরেটেড ফ্যাশন লুক — ঐতিহ্যবাহী বাংলাদেশি পোশাক থেকে আধুনিক স্ট্রিটওয়্যার।'}
           </p>
+          {/* Stats row */}
+          <div className="flex items-center justify-center gap-8 mt-8 flex-wrap">
+            {[
+              {
+                val: '8',
+                label: lang === 'en' ? 'Fashion Looks' : 'ফ্যাশন লুক',
+              },
+              { val: '100%', label: lang === 'en' ? 'Real Images' : 'আসল ছবি' },
+              {
+                val: 'EN / বাং',
+                label: lang === 'en' ? 'Bilingual' : 'দ্বিভাষিক',
+              },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <p className="arbutus-slab text-2xl font-bold text-yellow-300">
+                  {s.val}
+                </p>
+                <p className="dmsans text-xs text-blue-200 mt-0.5">{s.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Alternating Looks */}
-      <div className="max-w-[95%] mx-auto py-16 space-y-20">
+      <div className="max-w-[95%] mx-auto py-16 space-y-24">
         {looks.map((look, i) => {
           const isEven = i % 2 === 0;
           return (
@@ -228,44 +275,81 @@ const Styles = () => {
             >
               {/* Image */}
               <div className="w-full lg:w-1/2 shrink-0">
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl group h-96 md:h-[480px]">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl group h-96 md:h-[500px]">
                   <img
                     src={look.image}
                     alt={look.title[lang]}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     style={{ objectPosition: look.pos }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  {/* gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+
+                  {/* badge */}
                   <span
-                    className="absolute top-5 left-5 px-4 py-1.5 rounded-full text-white text-xs font-bold dmsans shadow-lg"
+                    className="absolute top-5 left-5 flex items-center gap-1.5 px-4 py-1.5 rounded-full text-white text-xs font-bold dmsans shadow-lg"
                     style={{ background: look.badgeColor }}
                   >
-                    {look.badge[lang]}
+                    {look.icon} {look.badge[lang]}
                   </span>
+
+                  {/* rating */}
                   <span className="absolute top-5 right-5 flex items-center gap-1.5 bg-white/90 dark:bg-gray-900/90 px-3 py-1.5 rounded-full text-xs font-bold text-gray-800 dark:text-white shadow">
                     <FaStar className="text-yellow-400" /> {look.rating}
                   </span>
+
+                  {/* bottom category pill */}
+                  <div className="absolute bottom-5 left-5">
+                    <span className="bg-white/15 backdrop-blur-md border border-white/25 text-white px-4 py-1.5 rounded-full text-xs font-semibold dmsans">
+                      {look.category[lang]}
+                    </span>
+                  </div>
                 </div>
               </div>
 
               {/* Text */}
               <div className="w-full lg:w-1/2 space-y-5">
-                <p
-                  className="dmsans text-sm font-bold uppercase tracking-widest"
+                {/* number */}
+                <span
+                  className="inline-block text-6xl font-black opacity-10 arbutus-slab leading-none"
                   style={{ color: look.accent }}
                 >
-                  {look.tag[lang]}
+                  0{look.id}
+                </span>
+
+                <p
+                  className="dmsans text-sm font-bold uppercase tracking-widest -mt-4"
+                  style={{ color: look.accent }}
+                >
+                  {look.category[lang]}
                 </p>
+
                 <h2 className="arbutus-slab text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
                   {look.title[lang]}
                 </h2>
-                <div
-                  className="w-14 h-1 rounded-full"
-                  style={{ background: look.accent }}
-                />
+
+                {/* accent line */}
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-12 h-1 rounded-full"
+                    style={{ background: look.accent }}
+                  />
+                  <div
+                    className="w-4 h-1 rounded-full opacity-40"
+                    style={{ background: look.accent }}
+                  />
+                  <div
+                    className="w-2 h-1 rounded-full opacity-20"
+                    style={{ background: look.accent }}
+                  />
+                </div>
+
+                {/* about paragraph */}
                 <p className="dmsans text-gray-600 dark:text-gray-400 text-base leading-relaxed">
-                  {look.desc[lang]}
+                  {look.about[lang]}
                 </p>
+
+                {/* tags */}
                 <div className="flex flex-wrap gap-2">
                   {look.tags[lang].map((tag) => (
                     <span
@@ -273,17 +357,19 @@ const Styles = () => {
                       className="px-3 py-1 rounded-full text-xs font-semibold dmsans border"
                       style={{
                         color: look.accent,
-                        borderColor: `${look.accent}55`,
-                        background: `${look.accent}11`,
+                        borderColor: `${look.accent}44`,
+                        background: `${look.accent}0f`,
                       }}
                     >
                       #{tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center gap-6 pt-2 flex-wrap">
-                  <div>
-                    <p className="dmsans text-xs text-gray-400 uppercase tracking-wider mb-0.5">
+
+                {/* price + CTA */}
+                <div className="flex items-center gap-6 pt-3 flex-wrap">
+                  <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm">
+                    <p className="dmsans text-xs text-gray-400 uppercase tracking-wider mb-1">
                       {lang === 'en' ? 'Starting from' : 'শুরু হচ্ছে'}
                     </p>
                     <div className="flex items-center text-2xl font-bold text-gray-900 dark:text-white">
@@ -291,12 +377,13 @@ const Styles = () => {
                       {look.price.toLocaleString()}
                     </div>
                   </div>
+
                   <Link
                     to="/products"
-                    className="flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-sm text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg cursor-pointer dmsans"
+                    className="flex items-center gap-2 px-7 py-4 rounded-2xl font-bold text-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 shadow-lg cursor-pointer dmsans"
                     style={{ background: look.accent }}
                   >
-                    {lang === 'en' ? 'Shop This Look' : 'এই লুক কিনুন'}{' '}
+                    {lang === 'en' ? 'Shop This Look' : 'এই লুক কিনুন'}
                     <HiArrowRight />
                   </Link>
                 </div>
@@ -306,7 +393,7 @@ const Styles = () => {
         })}
       </div>
 
-      {/* CTA */}
+      {/* CTA Banner */}
       <section
         className="py-20 text-white text-center"
         style={{
