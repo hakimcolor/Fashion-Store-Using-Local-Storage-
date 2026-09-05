@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { HiArrowRight } from 'react-icons/hi2';
 import { useLang } from '../context/LanguageContext';
+import { useRef } from 'react';
 
 const looks = [
   {
@@ -102,6 +102,7 @@ const looks = [
 
 const Styles = () => {
   const { lang } = useLang();
+  const itemRefs = useRef([]);
 
   return (
     <div>
@@ -138,82 +139,76 @@ const Styles = () => {
         </div>
       </section>
 
-      {/* Alternating Looks */}
-      <div className="max-w-[95%] mx-auto py-16 space-y-20">
+      {/* Stacking Looks */}
+      <div className="looks-stack py-16">
         {looks.map((look, i) => {
           const isEven = i % 2 === 0;
           return (
             <div
               key={look.id}
-              data-aos={isEven ? 'fade-right' : 'fade-left'}
-              className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-stretch gap-0 shadow-xl overflow-hidden`}
+              ref={(el) => (itemRefs.current[i] = el)}
+              className="look-sticky-card"
+              style={{ top: `${60 + i * 20}px` }}
             >
-              {/* Image — no rounding, fixed equal height */}
               <div
-                className="w-full lg:w-1/2 shrink-0 overflow-hidden"
-                style={{ height: '480px' }}
+                className={`max-w-[95%] mx-auto flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-stretch shadow-2xl overflow-hidden rounded-2xl`}
               >
-                <img
-                  src={look.image}
-                  alt={look.title[lang]}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  style={{ objectPosition: 'center top' }}
-                />
-              </div>
-
-              {/* Text panel — same height as image */}
-              <div
-                className="w-full lg:w-1/2 flex flex-col justify-center px-10 py-12 bg-white dark:bg-gray-800"
-                style={{ minHeight: '480px' }}
-              >
-                {/* number */}
-                <span
-                  className="text-7xl font-black leading-none arbutus-slab mb-2"
-                  style={{ color: `${look.accent}18` }}
+                {/* Image — full cover, fixed height */}
+                <div
+                  className="w-full lg:w-1/2 shrink-0"
+                  style={{ height: '520px' }}
                 >
-                  {String(look.id).padStart(2, '0')}
-                </span>
-
-                {/* category */}
-                <p
-                  className="dmsans text-xs font-bold uppercase tracking-widest mb-2"
-                  style={{ color: look.accent }}
-                >
-                  {look.category[lang]}
-                </p>
-
-                {/* accent line */}
-                <div className="flex items-center gap-2 mb-4">
-                  <div
-                    className="w-10 h-0.5"
-                    style={{ background: look.accent }}
-                  />
-                  <div
-                    className="w-4 h-0.5 opacity-40"
-                    style={{ background: look.accent }}
+                  <img
+                    src={look.image}
+                    alt={look.title[lang]}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center top',
+                      display: 'block',
+                    }}
+                    className="transition-transform duration-700 hover:scale-105"
                   />
                 </div>
 
-                {/* title */}
-                <h2 className="arbutus-slab text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-5">
-                  {look.title[lang]}
-                </h2>
-
-                {/* about */}
-                <p className="dmsans text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8">
-                  {look.about[lang]}
-                </p>
-
-                {/* CTA */}
-                <div>
-                  <Link
-                    to="/products"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 font-bold text-sm text-white transition-all duration-300 hover:opacity-90 active:scale-95 shadow-md cursor-pointer dmsans"
-                    style={{ background: look.accent }}
+                {/* Text panel */}
+                <div
+                  className="w-full lg:w-1/2 flex flex-col justify-center px-10 py-12 bg-white dark:bg-gray-800"
+                  style={{ minHeight: '520px' }}
+                >
+                  <span
+                    className="text-7xl font-black leading-none arbutus-slab mb-2"
+                    style={{ color: `${look.accent}18` }}
                   >
-                    {lang === 'en' ? 'Shop This Look' : 'এই লুক কিনুন'}
-                    <HiArrowRight />
-                  </Link>
+                    {String(look.id).padStart(2, '0')}
+                  </span>
+
+                  <p
+                    className="dmsans text-xs font-bold uppercase tracking-widest mb-2"
+                    style={{ color: look.accent }}
+                  >
+                    {look.category[lang]}
+                  </p>
+
+                  <div className="flex items-center gap-2 mb-4">
+                    <div
+                      className="w-10 h-0.5"
+                      style={{ background: look.accent }}
+                    />
+                    <div
+                      className="w-4 h-0.5 opacity-40"
+                      style={{ background: look.accent }}
+                    />
+                  </div>
+
+                  <h2 className="arbutus-slab text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-5">
+                    {look.title[lang]}
+                  </h2>
+
+                  <p className="dmsans text-gray-600 dark:text-gray-400 text-base leading-relaxed">
+                    {look.about[lang]}
+                  </p>
                 </div>
               </div>
             </div>

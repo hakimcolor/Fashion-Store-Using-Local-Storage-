@@ -200,3 +200,29 @@ html.dark body {
 [data-aos] {
   transition-property: opacity, transform !important;
 }
+
+/* ─── Style Page — sticky stacking scroll effect ────── */
+.looks-stack {
+  position: relative;
+}
+
+.look-sticky-card {
+  position: sticky;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* ─── Product Cards — scroll-up animation ───────────── */
+.product-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.product-card.card-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
