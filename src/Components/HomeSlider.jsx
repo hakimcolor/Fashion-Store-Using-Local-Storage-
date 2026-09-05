@@ -4,6 +4,8 @@ import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { HiArrowRight } from 'react-icons/hi2';
 import { TbCurrencyTaka } from 'react-icons/tb';
+import { useLang } from '../context/LanguageContext';
+import { tr } from '../context/translations';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -14,15 +16,12 @@ const accents = ['#155dfc', '#9333ea', '#16a34a', '#d97706'];
 
 const HomeSlider = () => {
   const [slides, setSlides] = useState([]);
+  const { lang } = useLang();
 
   useEffect(() => {
     fetch('/data/products.json')
       .then((r) => r.json())
-      .then((data) => {
-        // use the latest 4 products (last 4 in the array)
-        const last4 = data.slice(-4);
-        setSlides(last4);
-      });
+      .then((data) => setSlides(data.slice(-4)));
   }, []);
 
   if (!slides.length) return null;
@@ -49,15 +48,12 @@ const HomeSlider = () => {
                 backgroundPosition: 'center center',
               }}
             >
-              {/* Dark gradient — left heavy so text is always readable */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/10 z-10" />
               <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent z-10" />
 
-              {/* Content */}
               <div className="absolute inset-0 z-20 flex items-center">
                 <div className="max-w-[95%] mx-auto w-full">
                   <div className="text-white max-w-2xl">
-                    {/* Category badge */}
                     <span
                       className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold mb-5 border border-white/20 backdrop-blur-sm tracking-widest uppercase dmsans"
                       style={{ background: `${accents[i]}dd` }}
@@ -65,17 +61,14 @@ const HomeSlider = () => {
                       ✦ {product.category}
                     </span>
 
-                    {/* Product name */}
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 arbutus-slab shimmer-text drop-shadow-lg">
                       {product.name}
                     </h1>
 
-                    {/* Description */}
                     <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-8 dmsans max-w-lg opacity-90 line-clamp-2">
                       {product.description}
                     </p>
 
-                    {/* Price + CTAs */}
                     <div className="flex items-center gap-4 flex-wrap mb-2">
                       <span className="flex items-center text-2xl font-bold text-white dmsans">
                         <TbCurrencyTaka className="text-2xl" />
@@ -89,13 +82,13 @@ const HomeSlider = () => {
                         className="flex items-center gap-2 px-8 py-3.5 rounded-2xl font-bold text-sm transition-all duration-300 cursor-pointer shadow-xl hover:scale-105 hover:shadow-2xl active:scale-95 dmsans"
                         style={{ background: accents[i], color: '#fff' }}
                       >
-                        View Details <HiArrowRight />
+                        {tr('slider_view_details', lang)} <HiArrowRight />
                       </Link>
                       <Link
                         to="/products"
                         className="flex items-center gap-2 px-8 py-3.5 rounded-2xl font-semibold text-sm border-2 border-white/50 hover:border-white hover:bg-white/15 backdrop-blur-sm transition-all duration-300 cursor-pointer dmsans"
                       >
-                        All Products
+                        {tr('slider_all_products', lang)}
                       </Link>
                     </div>
                   </div>

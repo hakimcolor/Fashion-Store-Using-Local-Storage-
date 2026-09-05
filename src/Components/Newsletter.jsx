@@ -2,22 +2,25 @@ import { useState } from 'react';
 import { FiMail, FiSend } from 'react-icons/fi';
 import { FaBell } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import { useLang } from '../context/LanguageContext';
+import { tr } from '../context/translations';
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
+  const { lang } = useLang();
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email || !email.includes('@')) {
-      toast.error('Please enter a valid email address.');
+      toast.error(
+        lang === 'bn'
+          ? 'একটি বৈধ ইমেইল ঠিকানা দিন।'
+          : 'Please enter a valid email address.'
+      );
       return;
     }
-
     setLoading(true);
-
-    // Send subscription email via mailto (opens email client) as fallback
-    // Also notify via Web3Forms / FormSubmit free service
     try {
       const res = await fetch(
         'https://formsubmit.co/ajax/hakimcolor777@gmail.com',
@@ -30,20 +33,24 @@ const Newsletter = () => {
           body: JSON.stringify({
             _subject: '🔔 New Newsletter Subscriber — OXISTYLE',
             subscriber_email: email,
-            message: `New subscriber: ${email} has subscribed to the OXISTYLE newsletter.`,
+            message: `New subscriber: ${email}`,
           }),
         }
       );
-
       if (res.ok) {
-        toast.success('Subscribed! Welcome to OXISTYLE 🎉');
+        toast.success(
+          lang === 'bn'
+            ? 'সাবস্ক্রাইব হয়েছে! OXISTYLE-এ স্বাগতম 🎉'
+            : 'Subscribed! Welcome to OXISTYLE 🎉'
+        );
         setEmail('');
-      } else {
-        throw new Error('Failed');
-      }
+      } else throw new Error('Failed');
     } catch {
-      // fallback — still show success and open mailto
-      toast.success('Subscribed! Welcome to OXISTYLE 🎉');
+      toast.success(
+        lang === 'bn'
+          ? 'সাবস্ক্রাইব হয়েছে! OXISTYLE-এ স্বাগতম 🎉'
+          : 'Subscribed! Welcome to OXISTYLE 🎉'
+      );
       setEmail('');
     } finally {
       setLoading(false);
@@ -62,22 +69,19 @@ const Newsletter = () => {
           background: 'linear-gradient(135deg, #155dfc 0%, #1e40af 100%)',
         }}
       >
-        {/* decorative blobs */}
         <div className="absolute top-0 left-0 w-40 h-40 rounded-full opacity-10 bg-white -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-56 h-56 rounded-full opacity-10 bg-white translate-x-1/3 translate-y-1/3" />
 
-        {/* bell icon */}
         <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center float-anim">
           <FaBell className="text-2xl text-white" />
         </div>
 
         <div className="space-y-2 relative z-10">
           <h2 className="arbutus-slab text-3xl sm:text-4xl text-white">
-            Stay in the Loop
+            {tr('newsletter_title', lang)}
           </h2>
           <p className="dmsans text-lg text-blue-100 max-w-md mx-auto">
-            Subscribe to get notified about new arrivals, exclusive deals, and
-            seasonal sales — straight to your inbox.
+            {tr('newsletter_sub', lang)}
           </p>
         </div>
 
@@ -89,7 +93,7 @@ const Newsletter = () => {
             <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
             <input
               type="email"
-              placeholder="your@email.com"
+              placeholder={tr('newsletter_placeholder', lang)}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full pl-11 pr-4 py-3.5 rounded-2xl bg-white text-gray-800 dmsans text-sm outline-none focus:ring-2 focus:ring-white/50 transition-all duration-200"
@@ -102,7 +106,9 @@ const Newsletter = () => {
             style={{ color: '#155dfc' }}
           >
             <FiSend className="text-base" />
-            {loading ? 'Sending...' : 'Subscribe'}
+            {loading
+              ? tr('newsletter_sending', lang)
+              : tr('newsletter_btn', lang)}
           </button>
         </form>
       </div>

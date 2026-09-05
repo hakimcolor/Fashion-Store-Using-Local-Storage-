@@ -4,6 +4,8 @@ import { FaStar, FaMinus, FaPlus, FaShoppingCart } from 'react-icons/fa';
 import { TbCurrencyTaka } from 'react-icons/tb';
 import { CartContext } from '../context/CartContext';
 import toast from 'react-hot-toast';
+import { useLang } from '../context/LanguageContext';
+import { tr } from '../context/translations';
 
 const ProductDetails = () => {
   const product = useLoaderData();
@@ -11,6 +13,7 @@ const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useContext(CartContext);
+  const { lang } = useLang();
 
   const totalAmount = product.price * quantity;
 
@@ -22,7 +25,9 @@ const ProductDetails = () => {
       quantity,
       totalAmount,
     });
-    toast.success('Added to cart successfully!');
+    toast.success(
+      lang === 'bn' ? 'কার্টে যোগ হয়েছে!' : 'Added to cart successfully!'
+    );
   };
 
   return (
@@ -33,17 +38,19 @@ const ProductDetails = () => {
           to="/"
           className="text-gray-500 dark:text-gray-400 hover:text-[#155dfc] transition-colors"
         >
-          Home
+          {tr('detail_breadcrumb_home', lang)}
         </Link>
         <span className="text-gray-400">/</span>
         <Link
           to="/products"
           className="text-gray-500 dark:text-gray-400 hover:text-[#155dfc] transition-colors"
         >
-          Products
+          {tr('detail_breadcrumb_products', lang)}
         </Link>
         <span className="text-gray-400">/</span>
-        <span className="text-[#155dfc]">Detail</span>
+        <span className="text-[#155dfc]">
+          {tr('detail_breadcrumb_detail', lang)}
+        </span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
@@ -61,7 +68,6 @@ const ProductDetails = () => {
 
         {/* Details */}
         <div className="space-y-5" data-aos="fade-left">
-          {/* Category + rating */}
           <div className="flex flex-wrap items-center gap-3">
             <span className="bg-[#155dfc] text-white px-4 py-1.5 rounded-full text-sm dmsans font-semibold">
               {product.category}
@@ -89,20 +95,21 @@ const ProductDetails = () => {
 
           <p className="dmsans text-sm">
             <span className="font-semibold text-gray-700 dark:text-gray-300">
-              Stock:{' '}
+              {tr('detail_stock_label', lang)}{' '}
             </span>
             <span
               className={`font-bold ${product.inStock ? 'text-green-600' : 'text-red-500'}`}
             >
-              {product.inStock ? '● In Stock' : '● Out of Stock'}
+              {product.inStock
+                ? tr('detail_instock', lang)
+                : tr('detail_outstock', lang)}
             </span>
           </p>
 
-          {/* Color / Size / Quantity */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-2">
             <div>
               <p className="text-xs uppercase tracking-[2px] text-gray-500 dark:text-gray-400 mb-2 dmsans">
-                Colors
+                {tr('detail_colors', lang)}
               </p>
               <div className="flex flex-wrap gap-2">
                 {product.colors.map((color, idx) => (
@@ -141,7 +148,7 @@ const ProductDetails = () => {
 
             <div>
               <p className="text-xs uppercase tracking-[2px] text-gray-500 dark:text-gray-400 mb-2 dmsans">
-                Sizes
+                {tr('detail_sizes', lang)}
               </p>
               <div className="flex flex-wrap gap-2">
                 {product.sizes.map((size, idx) => (
@@ -162,7 +169,7 @@ const ProductDetails = () => {
 
             <div>
               <p className="text-xs uppercase tracking-[2px] text-gray-500 dark:text-gray-400 mb-2 dmsans">
-                Quantity
+                {tr('detail_quantity', lang)}
               </p>
               <div className="flex items-center rounded-xl border border-gray-200 dark:border-gray-600 w-fit overflow-hidden bg-white dark:bg-gray-800">
                 <button
@@ -184,10 +191,9 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Total */}
           <div className="rounded-2xl border border-gray-100 dark:border-gray-700 bg-blue-50/50 dark:bg-blue-900/10 px-5 py-4">
             <p className="dmsans text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1">
-              Total Amount
+              {tr('detail_total', lang)}
             </p>
             <h2 className="text-2xl font-bold flex items-center text-[#155dfc]">
               <TbCurrencyTaka className="text-2xl" />
@@ -198,14 +204,15 @@ const ProductDetails = () => {
             </p>
           </div>
 
-          {/* Add to cart */}
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
             className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#155dfc] hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 cursor-pointer disabled:bg-gray-400 dmsans active:scale-[.98] shadow-lg"
           >
             <FaShoppingCart />
-            {product.inStock ? 'Add to Cart' : 'Out of Stock'}
+            {product.inStock
+              ? tr('detail_add_cart', lang)
+              : tr('detail_outstock', lang)}
           </button>
         </div>
       </div>

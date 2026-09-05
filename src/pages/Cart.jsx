@@ -4,13 +4,18 @@ import { TbCurrencyTaka } from 'react-icons/tb';
 import { FiPlus, FiMinus, FiShoppingCart } from 'react-icons/fi';
 import { MdDeleteOutline } from 'react-icons/md';
 import toast from 'react-hot-toast';
+import { useLang } from '../context/LanguageContext';
+import { tr } from '../context/translations';
 
 const Cart = ({ onClose }) => {
   const { cart, setCart } = useContext(CartContext);
+  const { lang } = useLang();
 
   const handleRemove = (id) => {
     setCart(cart.filter((item) => item.id !== id));
-    toast.success('Item removed from cart');
+    toast.success(
+      lang === 'bn' ? 'কার্ট থেকে সরানো হয়েছে' : 'Item removed from cart'
+    );
   };
 
   const updateQuantity = (id, change) => {
@@ -26,7 +31,6 @@ const Cart = ({ onClose }) => {
   const subtotal = cart.reduce((t, item) => t + item.quantity * item.price, 0);
   const shipping = cart.length > 0 ? 120 : 0;
   const total = subtotal + shipping;
-
   const isDropdown = typeof onClose === 'function';
 
   if (cart.length === 0) {
@@ -50,10 +54,10 @@ const Cart = ({ onClose }) => {
           OXI<span style={{ color: '#155dfc' }}>STYLE</span>
         </p>
         <h2 className="arbutus-slab text-xl text-gray-500 dark:text-gray-400">
-          your cart is empty
+          {tr('cart_empty_title', lang)}
         </h2>
         <p className="dmsans text-sm text-gray-400 text-center max-w-48">
-          add some products and come back!
+          {tr('cart_empty_sub', lang)}
         </p>
       </div>
     );
@@ -121,9 +125,7 @@ const Cart = ({ onClose }) => {
             <FiPlus size={10} strokeWidth={3} />
           </button>
         </div>
-        <p
-          className={`${compact ? 'text-xs' : 'text-xs'} font-bold text-gray-700 dark:text-gray-300 flex items-center`}
-        >
+        <p className="text-xs font-bold text-gray-700 dark:text-gray-300 flex items-center">
           <TbCurrencyTaka className="text-xs" />
           {item.quantity * item.price}
         </p>
@@ -136,14 +138,14 @@ const Cart = ({ onClose }) => {
       className={`space-y-2.5 ${compact ? '' : 'border border-gray-100 dark:border-gray-700 rounded-2xl p-5 shadow-lg bg-white dark:bg-gray-800'}`}
     >
       <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
-        <span>Subtotal</span>
+        <span>{tr('cart_subtotal', lang)}</span>
         <span className="flex items-center font-medium text-gray-800 dark:text-gray-200">
           <TbCurrencyTaka />
           {subtotal}
         </span>
       </div>
       <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
-        <span>Shipping</span>
+        <span>{tr('cart_shipping', lang)}</span>
         <span className="flex items-center font-medium text-gray-800 dark:text-gray-200">
           <TbCurrencyTaka />
           {shipping}
@@ -152,7 +154,7 @@ const Cart = ({ onClose }) => {
       <div className="border-t border-dashed border-gray-200 dark:border-gray-600" />
       <div className="flex justify-between items-center">
         <span className="arbutus-slab text-base dark:text-white">
-          {compact ? 'Total' : <span className="text-lg">Total</span>}
+          {tr('cart_total', lang)}
         </span>
         <span className="arbutus-slab text-lg flex items-center font-bold text-[#155dfc]">
           <TbCurrencyTaka className="text-lg" />
@@ -160,7 +162,7 @@ const Cart = ({ onClose }) => {
         </span>
       </div>
       <button className="w-full text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:opacity-90 active:scale-[.98] cursor-pointer bg-[#155dfc]">
-        Proceed to Checkout
+        {tr('cart_checkout', lang)}
       </button>
     </div>
   );
@@ -169,7 +171,7 @@ const Cart = ({ onClose }) => {
     return (
       <div className="w-[95%] mx-auto py-10">
         <h1 className="arbutus-slab text-4xl text-center mb-10 dark:text-white">
-          Shopping Cart
+          {tr('cart_title', lang)}
         </h1>
         <div className="space-y-4">
           {cart.map((item) => (

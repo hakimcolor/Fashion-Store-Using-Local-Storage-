@@ -1,45 +1,34 @@
 import { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { FaQuestionCircle } from 'react-icons/fa';
-
-const faqs = [
-  {
-    q: 'How long does delivery take?',
-    a: 'Usually 2–5 business days depending on your location. Express delivery options are also available at checkout.',
-  },
-  {
-    q: 'Can I return a product?',
-    a: 'Yes, absolutely. You can return any product within 7 days of delivery for a full refund or exchange — no questions asked.',
-  },
-  {
-    q: 'Do you offer Cash on Delivery?',
-    a: 'Yes, COD is available in selected areas. You can check availability at checkout by entering your delivery address.',
-  },
-  {
-    q: 'How do I track my order?',
-    a: 'Once your order is shipped, you will receive a tracking number via email or SMS so you can follow your package in real time.',
-  },
-  {
-    q: 'Are the products authentic?',
-    a: 'Every product on OXISTYLE is 100% authentic and sourced directly from verified suppliers and brands.',
-  },
-];
+import { useLang } from '../context/LanguageContext';
+import { tr } from '../context/translations';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const { lang } = useLang();
+
+  const faqs = [
+    { qKey: 'faq_q1', aKey: 'faq_a1' },
+    { qKey: 'faq_q2', aKey: 'faq_a2' },
+    { qKey: 'faq_q3', aKey: 'faq_a3' },
+    { qKey: 'faq_q4', aKey: 'faq_a4' },
+    { qKey: 'faq_q5', aKey: 'faq_a5' },
+  ];
+
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
     <section className="max-w-[95%] mx-auto py-16">
       <div className="text-center mb-12" data-aos="fade-up">
         <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
-          got questions?
+          {tr('faq_label', lang)}
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
-          Frequently Asked Questions
+          {tr('faq_title', lang)}
         </h2>
         <p className="dmsans text-lg text-gray-500 dark:text-gray-400 mt-3 max-w-xl mx-auto">
-          Everything you need to know before placing your order.
+          {tr('faq_sub', lang)}
         </p>
       </div>
 
@@ -60,7 +49,7 @@ const FAQ = () => {
               <div className="flex items-center gap-3">
                 <FaQuestionCircle className="text-lg shrink-0 text-[#155dfc]" />
                 <span className="arbutus-slab text-base font-bold text-gray-800 dark:text-white">
-                  {faq.q}
+                  {tr(faq.qKey, lang)}
                 </span>
               </div>
               <span className="shrink-0 text-gray-400 dark:text-gray-500">
@@ -74,7 +63,7 @@ const FAQ = () => {
             {openIndex === i && (
               <div className="px-5 pb-4 pt-1 bg-blue-50/40 dark:bg-blue-900/10 border-t border-gray-100 dark:border-gray-700">
                 <p className="dmsans text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {faq.a}
+                  {tr(faq.aKey, lang)}
                 </p>
               </div>
             )}

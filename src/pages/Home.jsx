@@ -10,32 +10,29 @@ import FeaturedCategories from '../Components/FeaturedCategories';
 import ModelShowcase from '../Components/ModelShowcase';
 import BrandBanner from '../Components/BrandBanner';
 import FashionBanner from '../Components/FashionBanner';
+import { useLang } from '../context/LanguageContext';
+import { tr } from '../context/translations';
 
 const Home = () => {
   const products = useLoaderData();
+  const { lang } = useLang();
 
   return (
     <div>
-      {/* Hero Slider */}
       <HomeSlider />
-
-      {/* Featured Categories */}
       <FeaturedCategories />
-
-      {/* Fashion Image Banner */}
       <FashionBanner />
 
-      {/* Featured Products */}
       <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-8" data-aos="fade-up">
           <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
-            hand picked for you
+            {tr('home_featured_label', lang)}
           </p>
           <h1 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
-            Featured Products
+            {tr('home_featured_title', lang)}
           </h1>
           <p className="dmsans text-gray-500 dark:text-gray-400 mt-2 max-w-md mx-auto">
-            Explore our most loved items — quality fashion curated just for you.
+            {tr('home_featured_sub', lang)}
           </p>
         </div>
         <CartStyle products={products.slice(0, 4)} />
@@ -44,27 +41,16 @@ const Home = () => {
             to="/products"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-[#155dfc] text-white font-semibold dmsans hover:bg-blue-700 active:scale-95 transition-all duration-300 shadow-lg cursor-pointer"
           >
-            View All Products <HiArrowRight />
+            {tr('home_view_all', lang)} <HiArrowRight />
           </Link>
         </div>
       </div>
 
-      {/* Why Choose Us */}
       <WhyChooseUs />
-
-      {/* Brand Sale Banner */}
       <BrandBanner />
-
-      {/* Model Showcase */}
       <ModelShowcase />
-
-      {/* Customer Reviews */}
       <CustomerReviews />
-
-      {/* FAQ */}
       <FAQ />
-
-      {/* Newsletter */}
       <Newsletter />
     </div>
   );

@@ -13,16 +13,27 @@ import {
   HiOutlineUser,
   HiOutlinePhone,
 } from 'react-icons/hi2';
+import { useLang } from '../context/LanguageContext';
+import { tr } from '../context/translations';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { lang } = useLang();
 
   const navLinks = [
-    { name: 'Home', path: '/', icon: <HiHome /> },
-    { name: 'Products', path: '/products', icon: <HiOutlineShoppingBag /> },
-    { name: 'Styles', path: '/styles', icon: <HiOutlineUser /> },
-    { name: 'About Us', path: '/about', icon: <HiOutlineUser /> },
-    { name: 'Contact', path: '/contact', icon: <HiOutlinePhone /> },
+    { nameKey: 'footer_nav_home', path: '/', icon: <HiHome /> },
+    {
+      nameKey: 'footer_nav_products',
+      path: '/products',
+      icon: <HiOutlineShoppingBag />,
+    },
+    { nameKey: 'footer_nav_styles', path: '/styles', icon: <HiOutlineUser /> },
+    { nameKey: 'footer_nav_about', path: '/about', icon: <HiOutlineUser /> },
+    {
+      nameKey: 'footer_nav_contact',
+      path: '/contact',
+      icon: <HiOutlinePhone />,
+    },
   ];
 
   const socials = [
@@ -66,7 +77,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#0f172a] dark:bg-[#020817] text-white mt-16">
-      {/* wave divider */}
       <div className="w-full overflow-hidden leading-none">
         <svg
           viewBox="0 0 1440 60"
@@ -90,8 +100,7 @@ const Footer = () => {
               H.K <span style={{ color: '#155dfc' }}>Style</span>
             </h2>
             <p className="dmsans text-sm text-gray-400 leading-relaxed max-w-xs">
-              Your go-to destination for authentic Bangladeshi fashion. Quality
-              styles, great prices, and fast delivery — all in one place.
+              {tr('footer_desc', lang)}
             </p>
             <div className="flex items-center gap-2 flex-wrap pt-1">
               {socials.map((s) => (
@@ -118,7 +127,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="arbutus-slab text-lg font-semibold tracking-wide">
-              Quick Links
+              {tr('footer_quick_links', lang)}
             </h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -133,7 +142,7 @@ const Footer = () => {
                     >
                       {link.icon}
                     </span>
-                    {link.name}
+                    {tr(link.nameKey, lang)}
                   </Link>
                 </li>
               ))}
@@ -143,7 +152,7 @@ const Footer = () => {
           {/* Developer Links */}
           <div className="space-y-4">
             <h3 className="arbutus-slab text-lg font-semibold tracking-wide">
-              Developer
+              {tr('footer_developer', lang)}
             </h3>
             <ul className="space-y-3 dmsans text-sm text-gray-400">
               <li>
@@ -182,7 +191,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="space-y-4">
             <h3 className="arbutus-slab text-lg font-semibold tracking-wide">
-              Get In Touch
+              {tr('footer_contact', lang)}
             </h3>
             <ul className="space-y-3 dmsans text-sm text-gray-400">
               <li>
@@ -223,11 +232,12 @@ const Footer = () => {
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500 dmsans">
           <p>
             © {currentYear}{' '}
-            <span className="text-white font-semibold">H.K Style</span>. all
-            rights reserved.
+            <span className="text-white font-semibold">H.K Style</span>.{' '}
+            {tr('footer_rights', lang)}
           </p>
           <p>
-            made with <span className="text-red-400">♥</span> by{' '}
+            {tr('footer_made', lang)} <span className="text-red-400">♥</span>{' '}
+            {tr('footer_by', lang)}{' '}
             <a
               href="https://hakimcolorportfolio.vercel.app/"
               target="_blank"
