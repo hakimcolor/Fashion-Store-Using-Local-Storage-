@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { HiArrowRight } from 'react-icons/hi2';
 
 const BrandBanner = () => (
-  <section className="max-w-[90%] mx-auto py-10" data-aos="zoom-in">
+  <section className="max-w-[95%] mx-auto py-10" data-aos="zoom-in">
     <div className="relative overflow-hidden rounded-3xl min-h-[260px] flex items-center">
       {/* Background image */}
       <img

@@ -92,7 +92,7 @@ const About = () => (
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-white/5 -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-white/5 translate-x-1/3 translate-y-1/3" />
       <div
-        className="max-w-[90%] mx-auto text-center text-white relative z-10"
+        className="max-w-[95%] mx-auto text-center text-white relative z-10"
         data-aos="fade-up"
       >
         <span className="inline-block bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold mb-6 dmsans border border-white/20">
@@ -110,7 +110,7 @@ const About = () => (
     </section>
 
     {/* Story section */}
-    <section className="max-w-[90%] mx-auto py-20">
+    <section className="max-w-[95%] mx-auto py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div data-aos="fade-right">
           <div className="relative rounded-3xl overflow-hidden h-80 md:h-[450px] shadow-2xl">
@@ -173,7 +173,7 @@ const About = () => (
 
     {/* Values */}
     <section className="bg-gray-50 dark:bg-gray-900 py-16">
-      <div className="max-w-[90%] mx-auto">
+      <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-12" data-aos="fade-up">
           <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
             what drives us
@@ -209,7 +209,7 @@ const About = () => (
     </section>
 
     {/* Developer / Team card */}
-    <section className="max-w-[90%] mx-auto py-20">
+    <section className="max-w-[95%] mx-auto py-20">
       <div className="text-center mb-12" data-aos="fade-up">
         <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
           the creator
@@ -271,7 +271,7 @@ const About = () => (
       className="bg-[#155dfc] dark:bg-blue-900 py-16 text-white text-center"
       data-aos="zoom-in"
     >
-      <div className="max-w-[90%] mx-auto">
+      <div className="max-w-[95%] mx-auto">
         <h2 className="arbutus-slab text-3xl md:text-4xl font-bold mb-4">
           Ready to Explore Our Collection?
         </h2>

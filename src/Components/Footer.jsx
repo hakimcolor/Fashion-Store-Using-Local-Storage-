@@ -20,6 +20,7 @@ const Footer = () => {
   const navLinks = [
     { name: 'Home', path: '/', icon: <HiHome /> },
     { name: 'Products', path: '/products', icon: <HiOutlineShoppingBag /> },
+    { name: 'Styles', path: '/styles', icon: <HiOutlineUser /> },
     { name: 'About Us', path: '/about', icon: <HiOutlineUser /> },
     { name: 'Contact', path: '/contact', icon: <HiOutlinePhone /> },
   ];
@@ -76,7 +77,7 @@ const Footer = () => {
         </svg>
       </div>
 
-      <div className="max-w-[90%] mx-auto py-12">
+      <div className="max-w-[95%] mx-auto py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4 lg:col-span-1">

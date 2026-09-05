@@ -25,7 +25,7 @@ const Product = () => {
   });
 
   return (
-    <div className="max-w-[90%] mx-auto py-10">
+    <div className="max-w-[95%] mx-auto py-10">
       {/* Page header */}
       <div className="text-center mb-10" data-aos="fade-up">
         <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">

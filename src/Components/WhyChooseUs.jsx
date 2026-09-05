@@ -32,7 +32,7 @@ const features = [
 ];
 
 const WhyChooseUs = () => (
-  <section className="max-w-[90%] mx-auto py-16">
+  <section className="max-w-[95%] mx-auto py-16">
     <div className="text-center mb-12" data-aos="fade-up">
       <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
         our promise

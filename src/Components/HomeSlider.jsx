@@ -55,7 +55,7 @@ const HomeSlider = () => {
 
               {/* Content */}
               <div className="absolute inset-0 z-20 flex items-center">
-                <div className="max-w-[90%] mx-auto w-full">
+                <div className="max-w-[95%] mx-auto w-full">
                   <div className="text-white max-w-2xl">
                     {/* Category badge */}
                     <span

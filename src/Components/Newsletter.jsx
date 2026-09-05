@@ -52,7 +52,7 @@ const Newsletter = () => {
 
   return (
     <section
-      className="py-16 max-w-[90%] mx-auto"
+      className="py-16 max-w-[95%] mx-auto"
       data-aos="zoom-in"
       data-aos-delay="50"
     >

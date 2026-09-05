@@ -9,6 +9,7 @@ import CartStyle from '../Components/CartStyle';
 import FeaturedCategories from '../Components/FeaturedCategories';
 import ModelShowcase from '../Components/ModelShowcase';
 import BrandBanner from '../Components/BrandBanner';
+import FashionBanner from '../Components/FashionBanner';
 
 const Home = () => {
   const products = useLoaderData();
@@ -21,8 +22,11 @@ const Home = () => {
       {/* Featured Categories */}
       <FeaturedCategories />
 
+      {/* Fashion Image Banner */}
+      <FashionBanner />
+
       {/* Featured Products */}
-      <div className="max-w-[90%] mx-auto">
+      <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-8" data-aos="fade-up">
           <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
             hand picked for you

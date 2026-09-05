@@ -35,7 +35,7 @@ const Cart = ({ onClose }) => {
         className={
           isDropdown
             ? 'flex flex-col items-center justify-center flex-1 gap-3 py-16'
-            : 'w-[90%] mx-auto py-24 flex flex-col items-center gap-4'
+            : 'w-[95%] mx-auto py-24 flex flex-col items-center gap-4'
         }
       >
         <div className="relative w-20 h-20">
@@ -167,7 +167,7 @@ const Cart = ({ onClose }) => {
 
   if (!isDropdown) {
     return (
-      <div className="w-[90%] mx-auto py-10">
+      <div className="w-[95%] mx-auto py-10">
         <h1 className="arbutus-slab text-4xl text-center mb-10 dark:text-white">
           Shopping Cart
         </h1>

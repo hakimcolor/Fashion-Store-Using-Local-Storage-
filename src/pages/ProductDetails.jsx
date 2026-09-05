@@ -26,7 +26,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="w-full max-w-[90%] mx-auto py-10">
+    <div className="w-full max-w-[95%] mx-auto py-10">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm dmsans mb-8">
         <Link

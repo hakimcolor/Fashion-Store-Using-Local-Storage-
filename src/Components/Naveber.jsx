@@ -6,6 +6,7 @@ import {
   HiOutlineShoppingBag,
   HiOutlineUser,
   HiOutlinePhone,
+  HiOutlineSparkles,
 } from 'react-icons/hi2';
 import { CartContext } from '../context/CartContext';
 import { useTheme } from '../context/ThemeContext';
@@ -39,6 +40,7 @@ const Naveber = () => {
   const menus = [
     { name: 'Home', path: '/', icon: <HiHome /> },
     { name: 'Products', path: '/products', icon: <HiOutlineShoppingBag /> },
+    { name: 'Styles', path: '/styles', icon: <HiOutlineSparkles /> },
     { name: 'About', path: '/about', icon: <HiOutlineUser /> },
     { name: 'Contact', path: '/contact', icon: <HiOutlinePhone /> },
   ];
@@ -60,7 +62,7 @@ const Naveber = () => {
           : 'backdrop-blur-xl bg-white/80 dark:bg-gray-900/80 border-b border-gray-100 dark:border-gray-800'
       }`}
     >
-      <div className="max-w-[90%] mx-auto">
+      <div className="max-w-[95%] mx-auto">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold flex items-center gap-2">

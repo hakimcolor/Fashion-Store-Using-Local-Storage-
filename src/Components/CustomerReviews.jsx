@@ -29,7 +29,7 @@ const reviews = [
 
 const CustomerReviews = () => (
   <section className="py-16 bg-[#f8faff] dark:bg-gray-900">
-    <div className="max-w-[90%] mx-auto">
+    <div className="max-w-[95%] mx-auto">
       <div className="text-center mb-12" data-aos="fade-up">
         <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
           what people say

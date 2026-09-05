@@ -7,6 +7,7 @@ import ProductDetails from '../pages/ProductDetails';
 import Cart from '../pages/Cart';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
+import Styles from '../pages/Styles';
 import Loader from '../Components/Loader';
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'styles',
+        element: <Styles />,
       },
     ],
   },
