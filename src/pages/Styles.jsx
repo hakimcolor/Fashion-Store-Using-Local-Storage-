@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { HiArrowRight } from 'react-icons/hi2';
 import { useLang } from '../context/LanguageContext';
 import { useRef } from 'react';
 
