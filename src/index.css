@@ -3,76 +3,200 @@
 
 @import 'tailwindcss';
 
+/* Tailwind v4 dark mode — triggered by .dark class on <html> */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ─── Fonts ─────────────────────────────────────────── */
 .arbutus-slab {
   font-family: 'Arbutus Slab', serif;
 }
-
 .dmsans {
   font-family: 'DM Sans', sans-serif;
 }
 
-/* smooth transitions for dark/light mode */
+/* ─── Base ───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Dark body bg */
+html.dark body {
+  background-color: #030712;
+  color: #f3f4f6;
+}
+
+/* ─── Smooth theme transitions ───────────────────────── */
 *,
 *::before,
 *::after {
   transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease;
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* WhatsApp float button pulse */
+/* Exclude transitions that hurt animations */
+.no-transition,
+.no-transition *,
+[data-aos] {
+  transition: none !important;
+}
+
+/* ─── WhatsApp pulse ─────────────────────────────────── */
 @keyframes wa-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
   }
   70% {
-    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
   }
 }
 .wa-pulse {
-  animation: wa-pulse 2s infinite;
+  animation: wa-pulse 2.2s infinite;
 }
 
-/* hero text shimmer */
+/* ─── Shimmer text (hero titles) ─────────────────────── */
 @keyframes shimmer {
   0% {
-    background-position: -200% center;
+    background-position: -300% center;
   }
   100% {
-    background-position: 200% center;
+    background-position: 300% center;
   }
 }
 .shimmer-text {
-  background: linear-gradient(90deg, #fff 25%, #93c5fd 50%, #fff 75%);
-  background-size: 200% auto;
+  background: linear-gradient(
+    90deg,
+    #ffffff 20%,
+    #93c5fd 45%,
+    #dbeafe 55%,
+    #ffffff 80%
+  );
+  background-size: 300% auto;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 3s linear infinite;
+  animation: shimmer 4s linear infinite;
 }
 
-/* floating animation */
+/* ─── Float animation ────────────────────────────────── */
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-14px);
   }
 }
 .float-anim {
   animation: float 3.5s ease-in-out infinite;
 }
 
-/* scrollbar hide utility */
+/* ─── Fade in up ─────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* ─── Scrollbar hide ─────────────────────────────────── */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+/* ─── Custom scrollbar (non-hidden) ──────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #155dfc44;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #155dfc;
+}
+
+/* ─── Swiper overrides ───────────────────────────────── */
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: background 0.2s;
+}
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover {
+  background: rgba(21, 93, 252, 0.7);
+}
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+  font-size: 14px;
+  font-weight: 900;
+}
+.hero-swiper .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+}
+.hero-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #155dfc;
+  width: 24px;
+  border-radius: 99px;
+  transition: width 0.3s;
+}
+
+/* ─── Card hover glow ────────────────────────────────── */
+.card-glow:hover {
+  box-shadow: 0 20px 60px -10px rgba(21, 93, 252, 0.18);
+}
+
+/* ─── Gradient text utility ──────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #155dfc, #3b82f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Glass card ─────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ─── AOS re-enable transitions ──────────────────────── */
+[data-aos] {
+  transition-property: opacity, transform !important;
 }
