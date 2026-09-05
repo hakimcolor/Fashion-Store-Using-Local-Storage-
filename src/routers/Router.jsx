@@ -5,13 +5,14 @@ import Home from '../pages/Home';
 import Product from '../pages/Product';
 import ProductDetails from '../pages/ProductDetails';
 import Cart from '../pages/Cart';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
 import Loader from '../Components/Loader';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
-    // shown while root layout data loads
     HydrateFallback: Loader,
     children: [
       {
@@ -20,8 +21,7 @@ const router = createBrowserRouter([
         HydrateFallback: Loader,
         loader: async () => {
           const res = await fetch('/data/products.json');
-          const products = await res.json();
-          return products;
+          return res.json();
         },
       },
       {
@@ -30,8 +30,7 @@ const router = createBrowserRouter([
         HydrateFallback: Loader,
         loader: async () => {
           const res = await fetch('/data/products.json');
-          const products = await res.json();
-          return products;
+          return res.json();
         },
       },
       {
@@ -39,16 +38,23 @@ const router = createBrowserRouter([
         element: <ProductDetails />,
         HydrateFallback: Loader,
         loader: async ({ params }) => {
-          const products = await fetch('/data/products.json').then((res) =>
-            res.json()
+          const products = await fetch('/data/products.json').then((r) =>
+            r.json()
           );
-
-          return products.find((product) => product.id == params.id);
+          return products.find((p) => p.id == params.id);
         },
       },
       {
         path: 'cart',
         element: <Cart />,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+      {
+        path: 'contact',
+        element: <Contact />,
       },
     ],
   },

@@ -3,7 +3,7 @@
 
 @import 'tailwindcss';
 
-
+@custom-variant dark (&:where(.dark, .dark *));
 
 .arbutus-slab {
   font-family: 'Arbutus Slab', serif;
@@ -11,4 +11,68 @@
 
 .dmsans {
   font-family: 'DM Sans', sans-serif;
+}
+
+/* smooth transitions for dark/light mode */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* WhatsApp float button pulse */
+@keyframes wa-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+.wa-pulse {
+  animation: wa-pulse 2s infinite;
+}
+
+/* hero text shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #fff 25%, #93c5fd 50%, #fff 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.float-anim {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* scrollbar hide utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
