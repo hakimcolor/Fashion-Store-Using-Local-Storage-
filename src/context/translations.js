@@ -311,6 +311,14 @@ const t = {
   contact_send: { en: 'Send Message', bn: 'বার্তা পাঠান' },
   contact_sending: { en: 'Sending...', bn: 'পাঠানো হচ্ছে...' },
 
+  // ProductSugation
+  suggest_label: { en: 'you might also like', bn: 'আপনার পছন্দ হতে পারে' },
+  suggest_title: { en: 'Related Products', bn: 'সম্পর্কিত পণ্য' },
+  suggest_sub: {
+    en: 'Handpicked items from the same category and beyond.',
+    bn: 'একই ক্যাটাগরি ও অন্যান্য থেকে বাছাই করা পণ্য।',
+  },
+
   // Footer
   footer_desc: {
     en: 'Your go-to destination for authentic Bangladeshi fashion. Quality styles, great prices, and fast delivery — all in one place.',

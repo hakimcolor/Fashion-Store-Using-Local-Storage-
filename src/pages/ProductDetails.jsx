@@ -6,6 +6,7 @@ import { CartContext } from '../context/CartContext';
 import toast from 'react-hot-toast';
 import { useLang } from '../context/LanguageContext';
 import { tr } from '../context/translations';
+import ProductSugation from '../Components/ProductSugation';
 
 const ProductDetails = () => {
   const product = useLoaderData();
@@ -57,12 +58,12 @@ const ProductDetails = () => {
         {/* Image */}
         <div
           data-aos="fade-right"
-          className="overflow-hidden rounded-3xl bg-gray-100 dark:bg-gray-800 shadow-xl h-72 sm:h-96 lg:h-[520px]"
+          className="overflow-hidden rounded-3xl bg-gray-100 dark:bg-gray-800 shadow-xl h-[90%] sm:h-96 lg:h-[720px]"
         >
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            className="w-full  object-cover h-full  hover:scale-105 transition-transform duration-500"
           />
         </div>
 
@@ -216,6 +217,8 @@ const ProductDetails = () => {
           </button>
         </div>
       </div>
+
+  <ProductSugation></ProductSugation>
     </div>
   );
 };
