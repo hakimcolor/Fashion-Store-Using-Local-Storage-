@@ -311,6 +311,19 @@ const t = {
   contact_send: { en: 'Send Message', bn: 'বার্তা পাঠান' },
   contact_sending: { en: 'Sending...', bn: 'পাঠানো হচ্ছে...' },
 
+  // Checkout
+  checkout_label: { en: 'secure checkout', bn: 'নিরাপদ চেকআউট' },
+  checkout_title: { en: 'Checkout', bn: 'চেকআউট' },
+  checkout_contact: { en: 'Contact Information', bn: 'যোগাযোগের তথ্য' },
+  checkout_phone: { en: 'Phone Number', bn: 'মোবাইল নম্বর' },
+  checkout_shipping: { en: 'Shipping Address', bn: 'ডেলিভারি ঠিকানা' },
+  checkout_address: { en: 'Full Address', bn: 'সম্পূর্ণ ঠিকানা' },
+  checkout_city: { en: 'City / District', bn: 'শহর / জেলা' },
+  checkout_note: { en: 'Order Note', bn: 'অর্ডার নোট' },
+  checkout_payment: { en: 'Payment Method', bn: 'পেমেন্ট পদ্ধতি' },
+  checkout_summary: { en: 'Order Summary', bn: 'অর্ডার সারসংক্ষেপ' },
+  checkout_place_order: { en: 'Place Order', bn: 'অর্ডার দিন' },
+
   // ProductSugation
   suggest_label: { en: 'you might also like', bn: 'আপনার পছন্দ হতে পারে' },
   suggest_title: { en: 'Related Products', bn: 'সম্পর্কিত পণ্য' },

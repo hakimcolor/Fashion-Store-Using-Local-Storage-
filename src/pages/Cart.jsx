@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { TbCurrencyTaka } from 'react-icons/tb';
 import { FiPlus, FiMinus, FiShoppingCart } from 'react-icons/fi';
@@ -10,6 +11,7 @@ import { tr } from '../context/translations';
 const Cart = ({ onClose }) => {
   const { cart, setCart } = useContext(CartContext);
   const { lang } = useLang();
+  const navigate = useNavigate();
 
   const handleRemove = (id) => {
     setCart(cart.filter((item) => item.id !== id));
@@ -161,7 +163,10 @@ const Cart = ({ onClose }) => {
           {total}
         </span>
       </div>
-      <button className="w-full text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:opacity-90 active:scale-[.98] cursor-pointer bg-[#155dfc]">
+      <button
+        className="w-full text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:opacity-90 active:scale-[.98] cursor-pointer bg-[#155dfc]"
+        onClick={() => navigate('/checkout')}
+      >
         {tr('cart_checkout', lang)}
       </button>
     </div>
