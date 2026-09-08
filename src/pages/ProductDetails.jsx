@@ -143,7 +143,10 @@ const ProductDetails = () => {
                 ))}
               </div>
               <p className="dmsans text-xs text-gray-400 mt-1">
-                {selectedColor}
+                Selected:{' '}
+                <span className="font-semibold text-[#155dfc]">
+                  {selectedColor}
+                </span>
               </p>
             </div>
 
@@ -218,7 +221,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-  <ProductSugation></ProductSugation>
+      <ProductSugation></ProductSugation>
     </div>
   );
 };
