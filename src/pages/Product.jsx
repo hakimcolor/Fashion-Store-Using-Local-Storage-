@@ -10,6 +10,7 @@ const Product = () => {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('default');
+  const [priceRange, setPriceRange] = useState('all');
   const { lang } = useLang();
 
   const categories = ['all', ...new Set(products.map((p) => p.category))];
@@ -22,7 +23,14 @@ const Product = () => {
         product.category.toLowerCase().includes(text);
       const matchCategory =
         selectedCategory === 'all' || product.category === selectedCategory;
-      return matchSearch && matchCategory;
+      const matchPrice =
+        priceRange === 'all' ||
+        (priceRange === 'under1500' && product.price < 1500) ||
+        (priceRange === '1500to3000' &&
+          product.price >= 1500 &&
+          product.price <= 3000) ||
+        (priceRange === 'over3000' && product.price > 3000);
+      return matchSearch && matchCategory && matchPrice;
     })
     .sort((a, b) => {
       if (sortBy === 'price_asc') return a.price - b.price;
@@ -72,6 +80,28 @@ const Product = () => {
           <option value="price_desc">Price: High to Low</option>
           <option value="rating">Top Rated</option>
         </select>
+      </div>
+
+      {/* Price filter pills */}
+      <div className="flex flex-wrap gap-2 justify-center mb-6">
+        {[
+          { key: 'all', label: 'All Prices' },
+          { key: 'under1500', label: 'Under ৳1,500' },
+          { key: '1500to3000', label: '৳1,500 – ৳3,000' },
+          { key: 'over3000', label: 'Over ৳3,000' },
+        ].map((p) => (
+          <button
+            key={p.key}
+            onClick={() => setPriceRange(p.key)}
+            className={`dmsans text-xs px-4 py-2 rounded-full border transition-all duration-200 cursor-pointer ${
+              priceRange === p.key
+                ? 'bg-[#155dfc] text-white border-[#155dfc]'
+                : 'border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-[#155dfc] hover:text-[#155dfc]'
+            }`}
+          >
+            {p.label}
+          </button>
+        ))}
       </div>
 
       <div className="flex flex-col gap-8 lg:flex-row">
