@@ -151,8 +151,14 @@ const ProductDetails = () => {
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-[2px] text-gray-500 dark:text-gray-400 mb-2 dmsans">
+              <p className="text-xs uppercase tracking-[2px] text-gray-500 dark:text-gray-400 mb-2 dmsans flex items-center gap-1">
                 {tr('detail_sizes', lang)}
+                <span
+                  title="S=36, M=38, L=40, XL=42, XXL=44 inches"
+                  className="cursor-help text-[#155dfc] text-xs border border-[#155dfc] rounded-full w-4 h-4 inline-flex items-center justify-center leading-none"
+                >
+                  ?
+                </span>
               </p>
               <div className="flex flex-wrap gap-2">
                 {product.sizes.map((size, idx) => (
