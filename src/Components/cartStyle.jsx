@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { FaStar } from 'react-icons/fa';
+import { FaStar, FaHeart, FaRegHeart } from 'react-icons/fa';
 import { TbCurrencyTaka } from 'react-icons/tb';
 import { HiArrowRight } from 'react-icons/hi2';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLang } from '../context/LanguageContext';
 import { tr } from '../context/translations';
 
@@ -25,6 +25,13 @@ const resolveColor = (c) => colorMap[c.toLowerCase()] ?? c.toLowerCase();
 const CartStyle = ({ products }) => {
   const cardRefs = useRef([]);
   const { lang } = useLang();
+  const [wishlist, setWishlist] = useState([]);
+
+  const toggleWishlist = (id) => {
+    setWishlist((prev) =>
+      prev.includes(id) ? prev.filter((w) => w !== id) : [...prev, id]
+    );
+  };
 
   useEffect(() => {
     const observers = cardRefs.current.map((el) => {
@@ -68,6 +75,21 @@ const CartStyle = ({ products }) => {
                   ★ Top Pick
                 </span>
               )}
+              <button
+                onClick={() => toggleWishlist(product.id)}
+                className="absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 dark:bg-gray-900/90 shadow hover:scale-110 transition-transform cursor-pointer"
+                title={
+                  wishlist.includes(product.id)
+                    ? 'Remove from wishlist'
+                    : 'Add to wishlist'
+                }
+              >
+                {wishlist.includes(product.id) ? (
+                  <FaHeart className="text-red-500 text-sm" />
+                ) : (
+                  <FaRegHeart className="text-gray-400 text-sm" />
+                )}
+              </button>
               <span className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-white/90 dark:bg-gray-900/90 px-2.5 py-1 text-xs font-bold text-gray-800 dark:text-white shadow">
                 <FaStar className="text-yellow-400 text-xs" />
                 {product.rating}
