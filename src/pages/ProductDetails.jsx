@@ -175,6 +175,12 @@ const ProductDetails = () => {
                   </button>
                 ))}
               </div>
+              <p className="dmsans text-xs text-gray-400 mt-1">
+                Selected:{' '}
+                <span className="font-semibold text-[#155dfc]">
+                  {selectedSize}
+                </span>
+              </p>
             </div>
 
             <div>
