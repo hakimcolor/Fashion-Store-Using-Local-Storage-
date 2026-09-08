@@ -63,6 +63,11 @@ const CartStyle = ({ products }) => {
               <span className="absolute top-3 left-3 rounded-full bg-[#155dfc] px-3 py-1 text-xs font-semibold text-white shadow">
                 {product.category}
               </span>
+              {product.rating >= 4.9 && (
+                <span className="absolute bottom-3 left-3 rounded-full bg-green-500 px-2.5 py-0.5 text-xs font-bold text-white shadow">
+                  ★ Top Pick
+                </span>
+              )}
               <span className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-white/90 dark:bg-gray-900/90 px-2.5 py-1 text-xs font-bold text-gray-800 dark:text-white shadow">
                 <FaStar className="text-yellow-400 text-xs" />
                 {product.rating}
