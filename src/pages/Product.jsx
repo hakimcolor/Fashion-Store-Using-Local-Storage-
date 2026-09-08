@@ -149,10 +149,28 @@ const Product = () => {
         {/* Products grid */}
         <main className="flex-1">
           {filteredProducts.length > 0 && (
-            <p className="dmsans text-sm text-gray-500 dark:text-gray-400 mb-4">
-              {filteredProducts.length}{' '}
-              {filteredProducts.length === 1 ? 'product' : 'products'} found
-            </p>
+            <div className="flex items-center justify-between mb-4">
+              <p className="dmsans text-sm text-gray-500 dark:text-gray-400">
+                {filteredProducts.length}{' '}
+                {filteredProducts.length === 1 ? 'product' : 'products'} found
+              </p>
+              {(search ||
+                selectedCategory !== 'all' ||
+                priceRange !== 'all' ||
+                sortBy !== 'default') && (
+                <button
+                  onClick={() => {
+                    setSearch('');
+                    setSelectedCategory('all');
+                    setPriceRange('all');
+                    setSortBy('default');
+                  }}
+                  className="dmsans text-xs text-red-500 hover:text-red-700 underline cursor-pointer transition-colors"
+                >
+                  Clear all filters
+                </button>
+              )}
+            </div>
           )}
           {filteredProducts.length > 0 ? (
             <CartStyle products={filteredProducts} />
