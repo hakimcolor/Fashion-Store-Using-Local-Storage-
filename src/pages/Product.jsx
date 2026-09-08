@@ -9,19 +9,27 @@ const Product = () => {
   const products = useLoaderData();
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('default');
   const { lang } = useLang();
 
   const categories = ['all', ...new Set(products.map((p) => p.category))];
 
-  const filteredProducts = products.filter((product) => {
-    const text = search.toLowerCase();
-    const matchSearch =
-      product.name.toLowerCase().includes(text) ||
-      product.category.toLowerCase().includes(text);
-    const matchCategory =
-      selectedCategory === 'all' || product.category === selectedCategory;
-    return matchSearch && matchCategory;
-  });
+  const filteredProducts = products
+    .filter((product) => {
+      const text = search.toLowerCase();
+      const matchSearch =
+        product.name.toLowerCase().includes(text) ||
+        product.category.toLowerCase().includes(text);
+      const matchCategory =
+        selectedCategory === 'all' || product.category === selectedCategory;
+      return matchSearch && matchCategory;
+    })
+    .sort((a, b) => {
+      if (sortBy === 'price_asc') return a.price - b.price;
+      if (sortBy === 'price_desc') return b.price - a.price;
+      if (sortBy === 'rating') return b.rating - a.rating;
+      return 0;
+    });
 
   const catLabel = (cat) => (cat === 'all' ? tr('products_all', lang) : cat);
 
@@ -39,8 +47,8 @@ const Product = () => {
         </p>
       </div>
 
-      {/* Search */}
-      <div className="mb-8 flex justify-center">
+      {/* Search + Sort */}
+      <div className="mb-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
         <div className="relative w-full max-w-xl">
           <HiMagnifyingGlass className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
           <input
@@ -51,6 +59,16 @@ const Product = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="shrink-0 py-3.5 px-4 rounded-2xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 dmsans text-sm shadow-sm outline-none focus:border-[#155dfc] cursor-pointer"
+        >
+          <option value="default">Sort: Default</option>
+          <option value="price_asc">Price: Low to High</option>
+          <option value="price_desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
       </div>
 
       <div className="flex flex-col gap-8 lg:flex-row">
