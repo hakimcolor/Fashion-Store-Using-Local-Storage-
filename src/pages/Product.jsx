@@ -97,6 +97,12 @@ const Product = () => {
 
         {/* Products grid */}
         <main className="flex-1">
+          {filteredProducts.length > 0 && (
+            <p className="dmsans text-sm text-gray-500 dark:text-gray-400 mb-4">
+              {filteredProducts.length}{' '}
+              {filteredProducts.length === 1 ? 'product' : 'products'} found
+            </p>
+          )}
           {filteredProducts.length > 0 ? (
             <CartStyle products={filteredProducts} />
           ) : (
