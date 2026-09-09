@@ -134,19 +134,30 @@ const Product = () => {
               {tr('products_categories', lang)}
             </h2>
             <div className="space-y-1.5">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`w-full cursor-pointer rounded-xl px-4 py-3 text-left text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === cat
-                      ? 'text-white shadow-md bg-[#155dfc]'
-                      : 'bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#155dfc] hover:text-white'
-                  }`}
-                >
-                  {catLabel(cat)}
-                </button>
-              ))}
+              {categories.map((cat) => {
+                const count =
+                  cat === 'all'
+                    ? products.length
+                    : products.filter((p) => p.category === cat).length;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`w-full cursor-pointer rounded-xl px-4 py-3 text-left text-sm font-medium transition-all duration-300 flex items-center justify-between ${
+                      selectedCategory === cat
+                        ? 'text-white shadow-md bg-[#155dfc]'
+                        : 'bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#155dfc] hover:text-white'
+                    }`}
+                  >
+                    <span>{catLabel(cat)}</span>
+                    <span
+                      className={`text-xs px-2 py-0.5 rounded-full font-bold ${selectedCategory === cat ? 'bg-white/20 text-white' : 'bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300'}`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </aside>
