@@ -191,26 +191,29 @@ const Product = () => {
           {filteredProducts.length > 0 ? (
             <CartStyle products={filteredProducts} />
           ) : (
-            <div className="flex flex-col items-center justify-center gap-4 py-20 rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-              <div className="relative w-20 h-20">
-                <img
-                  src="/logo (2).png"
-                  alt="oxistyle"
-                  className="w-full h-full object-contain rounded-full opacity-20"
-                />
-                <span className="absolute inset-0 flex items-center justify-center text-3xl text-[#155dfc]">
-                  🔍
-                </span>
+            <div className="flex flex-col items-center justify-center gap-5 py-24 rounded-3xl border-2 border-dashed border-blue-100 dark:border-gray-700 bg-gradient-to-br from-blue-50/50 to-white dark:from-gray-800/50 dark:to-gray-900">
+              <div className="w-20 h-20 rounded-full bg-[#155dfc]/10 flex items-center justify-center text-4xl">
+                🔍
               </div>
-              <p className="arbutus-slab text-lg font-bold dark:text-white">
-                OXI<span style={{ color: '#155dfc' }}>STYLE</span>
-              </p>
-              <h2 className="arbutus-slab text-xl text-gray-500 dark:text-gray-400">
-                {tr('products_not_found_title', lang)}
-              </h2>
-              <p className="dmsans text-sm text-gray-400">
-                {tr('products_not_found_sub', lang)}
-              </p>
+              <div className="text-center space-y-1">
+                <p className="arbutus-slab text-xl font-bold text-gray-800 dark:text-white">
+                  {tr('products_not_found_title', lang)}
+                </p>
+                <p className="dmsans text-sm text-gray-400">
+                  {tr('products_not_found_sub', lang)}
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  setSearch('');
+                  setSelectedCategory('all');
+                  setPriceRange('all');
+                  setSortBy('default');
+                }}
+                className="dmsans text-sm px-6 py-2.5 rounded-xl bg-[#155dfc] text-white hover:bg-blue-700 transition-all cursor-pointer shadow"
+              >
+                Reset Filters
+              </button>
             </div>
           )}
         </main>
