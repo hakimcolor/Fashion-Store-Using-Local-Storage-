@@ -58,7 +58,7 @@ const ProductDetails = () => {
         {/* Image */}
         <div
           data-aos="fade-right"
-          className="overflow-hidden rounded-3xl bg-gray-100 dark:bg-gray-800 shadow-xl h-[90%] sm:h-96 lg:h-[720px]"
+          className="overflow-hidden rounded-3xl bg-gradient-to-br from-blue-50 to-gray-100 dark:from-gray-700 dark:to-gray-900 shadow-xl h-[90%] sm:h-96 lg:h-[720px]"
         >
           <img
             src={product.image}
