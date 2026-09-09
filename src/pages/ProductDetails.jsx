@@ -234,6 +234,30 @@ const ProductDetails = () => {
       </div>
 
       <ProductSugation></ProductSugation>
+
+      {/* Mobile sticky add to cart */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 px-4 py-3 flex items-center gap-3 shadow-2xl">
+        <div className="flex-1">
+          <p className="dmsans text-xs text-gray-500 dark:text-gray-400 truncate">
+            {product.name}
+          </p>
+          <p className="font-bold text-[#155dfc] flex items-center text-lg">
+            <TbCurrencyTaka />
+            {totalAmount.toLocaleString()}
+          </p>
+        </div>
+        <button
+          onClick={handleAddToCart}
+          disabled={!product.inStock}
+          className="flex items-center gap-2 bg-[#155dfc] hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-semibold dmsans text-sm transition-all active:scale-95 disabled:bg-gray-400 shadow-lg cursor-pointer"
+        >
+          <FaShoppingCart />
+          {product.inStock
+            ? tr('detail_add_cart', lang)
+            : tr('detail_outstock', lang)}
+        </button>
+      </div>
+      <div className="h-20 lg:hidden" />
     </div>
   );
 };
