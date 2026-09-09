@@ -44,12 +44,17 @@ const Product = () => {
   return (
     <div className="max-w-[95%] mx-auto py-10">
       <div className="text-center mb-10" data-aos="fade-up">
-        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
+        <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-3 text-[#155dfc]">
           {tr('products_label', lang)}
         </p>
-        <h1 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
+        <h1 className="arbutus-slab text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-[#155dfc] to-gray-900 dark:from-white dark:via-[#155dfc] dark:to-white bg-clip-text text-transparent">
           {tr('products_title', lang)}
         </h1>
+        <div className="flex items-center justify-center gap-3 mt-4 mb-2">
+          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#155dfc]" />
+          <span className="w-2 h-2 rounded-full bg-[#155dfc]" />
+          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#155dfc]" />
+        </div>
         <p className="dmsans text-gray-500 dark:text-gray-400 mt-2 max-w-md mx-auto">
           {tr('products_sub', lang)}
         </p>
