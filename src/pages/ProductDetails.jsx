@@ -85,9 +85,14 @@ const ProductDetails = () => {
             {product.name}
           </h1>
 
-          <div className="flex items-center text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-            <TbCurrencyTaka className="text-2xl" />
-            {product.price.toLocaleString()}
+          <div className="flex items-center gap-3 flex-wrap">
+            <div className="flex items-center text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+              <TbCurrencyTaka className="text-2xl" />
+              {product.price.toLocaleString()}
+            </div>
+            <span className="text-xs font-semibold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-3 py-1 rounded-full dmsans">
+              🚚 Free Delivery
+            </span>
           </div>
 
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed dmsans text-sm sm:text-base">
