@@ -77,6 +77,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#0f172a] dark:bg-[#020817] text-white mt-16">
+      {/* Gradient accent line */}
+      <div className="h-1 w-full bg-gradient-to-r from-[#155dfc] via-purple-500 to-pink-500" />
       <div className="w-full overflow-hidden leading-none">
         <svg
           viewBox="0 0 1440 60"
