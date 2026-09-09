@@ -58,7 +58,7 @@ const CartStyle = ({ products }) => {
           <div
             ref={(el) => (cardRefs.current[i] = el)}
             key={product.id}
-            className="product-card group relative flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl transition-shadow duration-300 hover:-translate-y-2"
+            className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#155dfc]/20 transition-all duration-300 hover:-translate-y-2"
             style={{ transitionDelay: `${(i % 4) * 80}ms` }}
           >
             <div className="relative overflow-hidden h-52 sm:h-60 lg:h-72 bg-gray-100 dark:bg-gray-700">
