@@ -144,7 +144,10 @@ const Contact = () => {
     {
       icon: <FaGift className="text-2xl" />,
       title: { en: 'Easy Returns', bn: 'সহজ রিটার্ন' },
-      desc: { en: '7-day returns', bn: '৭ দিনের রিটার্ন' },
+      desc: {
+        en: '7-day hassle-free returns',
+        bn: '৭ দিনের ঝামেলামুক্ত রিটার্ন',
+      },
       color: '#e11d48',
       bg: '#fff1f2',
     },
