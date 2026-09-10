@@ -258,7 +258,7 @@ const Contact = () => {
       </section>
 
       {/* Fashion Gallery */}
-      <section className="max-w-[95%] mx-auto py-14">
+      <section className="max-w-[95%] mx-auto py-16">
         <div className="text-center mb-10" data-aos="fade-up">
           <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
             {lang === 'bn' ? 'আমাদের কালেকশন' : 'our collection'}
