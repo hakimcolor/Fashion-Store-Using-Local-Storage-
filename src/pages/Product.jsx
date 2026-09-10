@@ -44,7 +44,7 @@ const GENDER_TABS = [
     label: { en: 'Kids', bn: 'শিশু' },
     icon: '🎒',
     banner:
-      'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=1200&q=80',
+      'https://images.unsplash.com/photo-1543373014-cfe4f4bc1cdf?w=1200&q=80',
     tagline: {
       en: 'Cute & comfy styles for little ones',
       bn: 'ছোটদের জন্য আরামদায়ক পোশাক',
