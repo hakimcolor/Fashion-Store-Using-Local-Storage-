@@ -146,7 +146,7 @@ const Product = () => {
                 onClick={() => handleGenderChange(tab.key)}
                 className={`flex items-center gap-2 px-6 py-4 text-sm font-semibold dmsans whitespace-nowrap border-b-2 transition-all duration-300 cursor-pointer shrink-0 ${
                   activeGender === tab.key
-                    ? 'border-[#155dfc] text-[#155dfc]'
+                    ? 'border-[#155dfc] text-[#155dfc] bg-blue-50/50 dark:bg-blue-900/10'
                     : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-[#155dfc] hover:border-[#155dfc]/40'
                 }`}
               >
