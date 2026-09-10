@@ -271,6 +271,11 @@ const Contact = () => {
               ? 'পুরুষ, নারী এবং শিশুদের জন্য আমাদের কালেকশন দেখুন'
               : 'Explore our curated collections for men, women, and kids'}
           </p>
+          <div className="flex items-center justify-center gap-3 mt-4">
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#155dfc]" />
+            <span className="w-2 h-2 rounded-full bg-[#155dfc]" />
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#155dfc]" />
+          </div>
         </div>
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[180px]"
