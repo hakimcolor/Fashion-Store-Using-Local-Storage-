@@ -210,7 +210,7 @@ const Contact = () => {
           alt="Fashion contact"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#155dfc]/90 via-[#1e40af]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#155dfc]/92 via-[#1e40af]/72 to-transparent" />
         <div
           className="absolute inset-0 flex flex-col justify-center max-w-[95%] mx-auto"
           data-aos="fade-up"
