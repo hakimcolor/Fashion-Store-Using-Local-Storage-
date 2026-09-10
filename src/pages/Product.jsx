@@ -300,7 +300,7 @@ const Product = () => {
               <CartStyle products={filteredProducts} />
             ) : (
               <div className="flex flex-col items-center justify-center gap-5 py-24 rounded-3xl border-2 border-dashed border-blue-100 dark:border-gray-700 bg-gradient-to-br from-blue-50/50 to-white dark:from-gray-800/50 dark:to-gray-900">
-                <div className="w-20 h-20 rounded-full bg-[#155dfc]/10 flex items-center justify-center text-4xl">
+                <div className="w-20 h-20 rounded-full bg-[#155dfc]/10 flex items-center justify-center text-5xl">
                   🔍
                 </div>
                 <div className="text-center space-y-1">
