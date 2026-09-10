@@ -482,7 +482,7 @@ const Contact = () => {
       </section>
 
       {/* Fashion CTA banner */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-24 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400&q=85"
           alt="Fashion"
