@@ -121,7 +121,7 @@ const Product = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16">
           <p className="dmsans text-sm font-semibold uppercase tracking-widest text-blue-300 mb-2">
-            {tr('products_label', lang)}
+            {lang === 'bn' ? 'আমাদের স্টোর' : 'our store'}
           </p>
           <h1 className="arbutus-slab text-4xl md:text-5xl text-white font-bold">
             {activeTab.icon} {activeTab.label[lang]}
