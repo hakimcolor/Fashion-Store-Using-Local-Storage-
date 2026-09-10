@@ -228,7 +228,7 @@ const Contact = () => {
       </section>
 
       {/* Features strip */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-8 border-b border-gray-100 dark:border-gray-800">
+      <section className="bg-gray-50 dark:bg-gray-900 py-10 border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-[95%] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {features.map((f, i) => (
             <div
