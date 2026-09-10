@@ -61,7 +61,8 @@ const Product = () => {
   const [activeGender, setActiveGender] = useState('all');
   const { lang } = useLang();
 
-  const activeTab = GENDER_TABS.find((t) => t.key === activeGender);
+  const activeTab =
+    GENDER_TABS.find((t) => t.key === activeGender) || GENDER_TABS[0];
 
   // Filter by gender first
   const genderFiltered =
