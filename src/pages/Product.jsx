@@ -118,7 +118,7 @@ const Product = () => {
           alt={activeTab.label[lang]}
           className="w-full h-full object-cover transition-all duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
         <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16">
           <p className="dmsans text-sm font-semibold uppercase tracking-widest text-blue-300 mb-2">
             {lang === 'bn' ? 'আমাদের স্টোর' : 'our store'}
