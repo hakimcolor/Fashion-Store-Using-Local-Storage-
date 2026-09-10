@@ -260,7 +260,7 @@ const Contact = () => {
           <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
             {lang === 'bn' ? 'আমাদের কালেকশন' : 'our collection'}
           </p>
-          <h2 className="arbutus-slab text-3xl text-gray-900 dark:text-white">
+          <h2 className="arbutus-slab text-3xl md:text-4xl text-gray-900 dark:text-white">
             {lang === 'bn' ? 'ফ্যাশন গ্যালারি' : 'Fashion Gallery'}
           </h2>
           <p className="dmsans text-gray-500 dark:text-gray-400 mt-2 max-w-md mx-auto text-sm">
