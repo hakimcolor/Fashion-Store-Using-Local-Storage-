@@ -126,7 +126,7 @@ const Product = () => {
           <h1 className="arbutus-slab text-4xl md:text-5xl text-white font-bold">
             {activeTab.icon} {activeTab.label[lang]}
           </h1>
-          <p className="dmsans text-blue-100 mt-2 text-base md:text-lg">
+          <p className="dmsans text-blue-100 mt-2 text-base md:text-lg max-w-lg">
             {activeTab.tagline[lang]}
           </p>
         </div>
