@@ -104,6 +104,7 @@ const Product = () => {
     setSearch('');
     setPriceRange('all');
     setSortBy('default');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
