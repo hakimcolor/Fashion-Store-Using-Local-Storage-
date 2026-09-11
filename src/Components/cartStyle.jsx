@@ -133,7 +133,7 @@ const CartStyle = ({ products }) => {
                 </div>
                 <Link
                   to={`/products/${product.id}`}
-                  className="flex items-center gap-1.5 rounded-xl bg-[#155dfc] px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 active:scale-95 transition-all duration-200 cursor-pointer shadow"
+                  className="flex items-center gap-1.5 rounded-xl bg-[#155dfc] px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
                 >
                   {tr('card_details', lang)}{' '}
                   <HiArrowRight className="text-sm" />
