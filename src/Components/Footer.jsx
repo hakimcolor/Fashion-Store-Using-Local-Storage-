@@ -93,7 +93,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4 lg:col-span-1">
-            <h2 className="text-3xl font-bold arbutus-slab flex items-center gap-2">
+            <h2 className="text-3xl font-bold arbutus-slab flex items-center gap-2.5">
               <img
                 src="/logo (2).png"
                 alt="H.K Style logo"
