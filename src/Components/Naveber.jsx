@@ -64,7 +64,7 @@ const Naveber = () => {
 
   const navStyle = (path) => {
     const isActive = location.pathname === path;
-    return `relative flex items-center gap-1.5 transition-all duration-300 font-medium text-sm cursor-pointer pb-1 ${
+    return `relative flex items-center gap-1.5 transition-all duration-300 font-medium text-sm cursor-pointer pb-1.5 ${
       isActive
         ? 'font-semibold text-[#155dfc] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#155dfc] after:rounded-full'
         : 'text-gray-600 dark:text-gray-300 hover:text-[#155dfc] dark:hover:text-[#155dfc] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#155dfc] after:rounded-full after:transition-all after:duration-300 hover:after:w-full'
