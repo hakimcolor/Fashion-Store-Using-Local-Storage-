@@ -121,20 +121,20 @@ const Product = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
         <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16">
-          <p className="dmsans text-sm font-semibold uppercase tracking-widest text-[#6b8f7a] mb-2">
+          <p className="dmsans text-sm font-semibold uppercase tracking-widest text-[#B9B28A] mb-2">
             {lang === 'bn' ? 'আমাদের স্টোর' : 'our store'}
           </p>
           <h1 className="arbutus-slab text-4xl md:text-5xl text-white font-bold">
             {activeTab.icon} {activeTab.label[lang]}
           </h1>
-          <p className="dmsans text-[#edf2ef] mt-2 text-base md:text-lg max-w-lg">
+          <p className="dmsans text-[#EBE5C2] mt-2 text-base md:text-lg max-w-lg">
             {activeTab.tagline[lang]}
           </p>
         </div>
       </div>
 
       {/* Gender Tabs */}
-      <div className="sticky top-0 z-30 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 shadow-sm">
+      <div className="sticky top-0 z-30 bg-white dark:bg-[#1e2922] border-b border-gray-100 dark:border-gray-800 shadow-sm">
         <div className="max-w-[95%] mx-auto flex gap-0 overflow-x-auto scrollbar-hide">
           {GENDER_TABS.map((tab) => {
             const count =
@@ -147,8 +147,8 @@ const Product = () => {
                 onClick={() => handleGenderChange(tab.key)}
                 className={`flex items-center gap-2 px-6 py-4 text-sm font-semibold dmsans whitespace-nowrap border-b-2 transition-all duration-300 cursor-pointer shrink-0 ${
                   activeGender === tab.key
-                    ? 'border-[#344E41] text-[#344E41] bg-[#f5f8f6]/50 dark:bg-[#344E41]/10'
-                    : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-[#344E41] hover:border-[#344E41]/40'
+                    ? 'border-[#3F4F44] text-[#3F4F44] bg-[#F8F3D9]/50 dark:bg-[#3F4F44]/10'
+                    : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-[#3F4F44] hover:border-[#3F4F44]/40'
                 }`}
               >
                 <span className="text-base">{tab.icon}</span>
@@ -156,7 +156,7 @@ const Product = () => {
                 <span
                   className={`text-xs px-2 py-0.5 rounded-full font-bold ${
                     activeGender === tab.key
-                      ? 'bg-[#344E41]/10 text-[#344E41]'
+                      ? 'bg-[#3F4F44]/10 text-[#3F4F44]'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-500'
                   }`}
                 >
@@ -176,7 +176,7 @@ const Product = () => {
             <input
               type="text"
               placeholder={tr('products_search', lang)}
-              className="w-full pl-11 pr-4 py-3.5 rounded-2xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white dmsans text-sm shadow-sm outline-none focus:border-[#344E41] focus:ring-2 focus:ring-[#344E41]/20 transition-all duration-300"
+              className="w-full pl-11 pr-4 py-3.5 rounded-2xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white dmsans text-sm shadow-sm outline-none focus:border-[#3F4F44] focus:ring-2 focus:ring-[#3F4F44]/20 transition-all duration-300"
               value={search}
               onChange={(e) => {
                 setSearch(e.target.value);
@@ -187,7 +187,7 @@ const Product = () => {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="shrink-0 py-3.5 px-4 rounded-2xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 dmsans text-sm shadow-sm outline-none focus:border-[#344E41] cursor-pointer"
+            className="shrink-0 py-3.5 px-4 rounded-2xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 dmsans text-sm shadow-sm outline-none focus:border-[#3F4F44] cursor-pointer"
           >
             <option value="default">Sort: Default</option>
             <option value="price_asc">Price: Low to High</option>
@@ -209,8 +209,8 @@ const Product = () => {
               onClick={() => setPriceRange(p.key)}
               className={`dmsans text-xs px-4 py-2 rounded-full border transition-all duration-200 cursor-pointer ${
                 priceRange === p.key
-                  ? 'bg-[#344E41] text-white border-[#344E41]'
-                  : 'border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-[#344E41] hover:text-[#344E41]'
+                  ? 'bg-[#3F4F44] text-white border-[#3F4F44]'
+                  : 'border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-[#3F4F44] hover:text-[#3F4F44]'
               }`}
             >
               {p.label}
@@ -227,7 +227,7 @@ const Product = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`shrink-0 cursor-pointer rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                   selectedCategory === cat
-                    ? 'text-white shadow-md bg-[#344E41]'
+                    ? 'text-white shadow-md bg-[#3F4F44]'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
@@ -254,8 +254,8 @@ const Product = () => {
                       onClick={() => setSelectedCategory(cat)}
                       className={`w-full cursor-pointer rounded-xl px-4 py-3 text-left text-sm font-medium transition-all duration-300 flex items-center justify-between ${
                         selectedCategory === cat
-                          ? 'text-white shadow-md bg-[#344E41]'
-                          : 'bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#344E41] hover:text-white'
+                          ? 'text-white shadow-md bg-[#3F4F44]'
+                          : 'bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#3F4F44] hover:text-white'
                       }`}
                     >
                       <span>{catLabel(cat)}</span>
@@ -290,7 +290,7 @@ const Product = () => {
                       setPriceRange('all');
                       setSortBy('default');
                     }}
-                    className="dmsans text-xs text-[#B7794B] hover:text-[#8a5a35] underline cursor-pointer transition-colors"
+                    className="dmsans text-xs text-[#B9B28A] hover:text-[#3F4F44] underline cursor-pointer transition-colors"
                   >
                     Clear all filters
                   </button>
@@ -300,8 +300,8 @@ const Product = () => {
             {filteredProducts.length > 0 ? (
               <CartStyle products={filteredProducts} />
             ) : (
-              <div className="flex flex-col items-center justify-center gap-5 py-24 rounded-3xl border-2 border-dashed border-[#edf2ef] dark:border-gray-700 bg-gradient-to-br from-[#f5f8f6]/50 to-white dark:from-gray-800/50 dark:to-gray-900">
-                <div className="w-20 h-20 rounded-full bg-[#344E41]/10 flex items-center justify-center text-5xl">
+              <div className="flex flex-col items-center justify-center gap-5 py-24 rounded-3xl border-2 border-dashed border-[#EBE5C2] dark:border-gray-700 bg-gradient-to-br from-[#F8F3D9]/50 to-white dark:from-gray-800/50 dark:to-gray-900">
+                <div className="w-20 h-20 rounded-full bg-[#3F4F44]/10 flex items-center justify-center text-5xl">
                   🔍
                 </div>
                 <div className="text-center space-y-1">
@@ -319,7 +319,7 @@ const Product = () => {
                     setPriceRange('all');
                     setSortBy('default');
                   }}
-                  className="dmsans text-sm px-6 py-2.5 rounded-xl bg-[#344E41] text-white hover:bg-[#2a3d33] transition-all cursor-pointer shadow"
+                  className="dmsans text-sm px-6 py-2.5 rounded-xl bg-[#3F4F44] text-white hover:bg-[#2e3b32] transition-all cursor-pointer shadow"
                 >
                   Reset Filters
                 </button>

@@ -50,10 +50,10 @@ const Cart = ({ onClose }) => {
             alt="oxistyle"
             className="w-full h-full object-contain rounded-full opacity-20"
           />
-          <FiShoppingCart className="absolute inset-0 m-auto text-4xl text-[#344E41]" />
+          <FiShoppingCart className="absolute inset-0 m-auto text-4xl text-[#3F4F44]" />
         </div>
         <p className="arbutus-slab text-lg font-bold dark:text-white">
-          OXI<span style={{ color: '#344E41' }}>STYLE</span>
+          OXI<span style={{ color: '#3F4F44' }}>STYLE</span>
         </p>
         <h2 className="arbutus-slab text-xl text-gray-500 dark:text-gray-400">
           {tr('cart_empty_title', lang)}
@@ -69,7 +69,7 @@ const Cart = ({ onClose }) => {
     <div className="flex items-center gap-3 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-300 group relative overflow-hidden">
       <div
         className="absolute left-0 top-0 h-full w-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-2xl"
-        style={{ background: 'linear-gradient(to bottom, #344E41, #3b82f6)' }}
+        style={{ background: 'linear-gradient(to bottom, #3F4F44, #3b82f6)' }}
       />
       <img
         src={item.image}
@@ -88,14 +88,14 @@ const Cart = ({ onClose }) => {
               attr && (
                 <span
                   key={idx}
-                  className="text-xs bg-[#f5f8f6] dark:bg-[#344E41]/30 px-2 py-0.5 rounded-full text-[#344E41]"
+                  className="text-xs bg-[#F8F3D9] dark:bg-[#3F4F44]/30 px-2 py-0.5 rounded-full text-[#3F4F44]"
                 >
                   {attr}
                 </span>
               )
           )}
         </div>
-        <p className="text-sm font-semibold flex items-center mt-1 text-[#344E41]">
+        <p className="text-sm font-semibold flex items-center mt-1 text-[#3F4F44]">
           <TbCurrencyTaka className="text-sm" />
           {item.price}
         </p>
@@ -103,7 +103,7 @@ const Cart = ({ onClose }) => {
       <div className="flex flex-col items-end gap-2 shrink-0">
         <button
           onClick={() => handleRemove(item.id)}
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-red-50 dark:bg-red-900/20 text-[#B7794B] hover:bg-[#B7794B] hover:text-white transition-all duration-200 cursor-pointer"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-red-50 dark:bg-red-900/20 text-[#B9B28A] hover:bg-[#B9B28A] hover:text-white transition-all duration-200 cursor-pointer"
         >
           <MdDeleteOutline className="text-lg" />
         </button>
@@ -111,7 +111,7 @@ const Cart = ({ onClose }) => {
           <button
             onClick={() => updateQuantity(item.id, -1)}
             disabled={item.quantity <= 1}
-            className="w-5 h-5 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-[#B7794B] hover:text-white hover:border-[#B7794B] active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
+            className="w-5 h-5 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-[#B9B28A] hover:text-white hover:border-[#B9B28A] active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer"
           >
             <FiMinus size={10} strokeWidth={3} />
           </button>
@@ -122,7 +122,7 @@ const Cart = ({ onClose }) => {
           </span>
           <button
             onClick={() => updateQuantity(item.id, 1)}
-            className="w-5 h-5 flex items-center justify-center rounded-full border text-white active:scale-95 transition-all duration-200 cursor-pointer bg-[#344E41] border-[#344E41]"
+            className="w-5 h-5 flex items-center justify-center rounded-full border text-white active:scale-95 transition-all duration-200 cursor-pointer bg-[#3F4F44] border-[#3F4F44]"
           >
             <FiPlus size={10} strokeWidth={3} />
           </button>
@@ -158,13 +158,13 @@ const Cart = ({ onClose }) => {
         <span className="arbutus-slab text-base dark:text-white">
           {tr('cart_total', lang)}
         </span>
-        <span className="arbutus-slab text-lg flex items-center font-bold text-[#344E41]">
+        <span className="arbutus-slab text-lg flex items-center font-bold text-[#3F4F44]">
           <TbCurrencyTaka className="text-lg" />
           {total}
         </span>
       </div>
       <button
-        className="w-full text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:opacity-90 active:scale-[.98] cursor-pointer bg-[#344E41]"
+        className="w-full text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:opacity-90 active:scale-[.98] cursor-pointer bg-[#3F4F44]"
         onClick={() => navigate('/checkout')}
       >
         {tr('cart_checkout', lang)}
@@ -199,7 +199,7 @@ const Cart = ({ onClose }) => {
           <CartItem key={item.id} item={item} compact />
         ))}
       </div>
-      <div className="shrink-0 border-t border-gray-100 dark:border-gray-700 px-4 py-4 bg-white dark:bg-gray-900">
+      <div className="shrink-0 border-t border-gray-100 dark:border-gray-700 px-4 py-4 bg-white dark:bg-[#1e2922]">
         <Summary compact />
       </div>
     </div>

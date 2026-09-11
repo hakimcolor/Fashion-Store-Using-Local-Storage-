@@ -22,23 +22,23 @@ const BrandBanner = () => {
           }}
         />
         <div className="relative z-10 max-w-[80%] mx-auto text-center text-white py-12">
-          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-3 text-[#c5d5cc]">
+          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-3 text-[#EBE5C2]">
             {tr('brand_label', lang)}
           </p>
           <h2 className="arbutus-slab text-3xl md:text-5xl font-bold mb-4 leading-tight">
             {tr('brand_title1', lang)}{' '}
-            <span className="text-[#d4a06e]">
+            <span className="text-[#B9B28A]">
               40% {tr('brand_title2', lang)}
             </span>{' '}
             <br className="hidden md:block" />
             {tr('brand_title3', lang)}
           </h2>
-          <p className="dmsans text-[#edf2ef] text-base md:text-lg mb-8 max-w-lg mx-auto">
+          <p className="dmsans text-[#EBE5C2] text-base md:text-lg mb-8 max-w-lg mx-auto">
             {tr('brand_sub', lang)}
           </p>
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#344E41] font-bold rounded-2xl hover:bg-[#f5f8f6] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#3F4F44] font-bold rounded-2xl hover:bg-[#F8F3D9] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
           >
             {tr('brand_cta', lang)} <HiArrowRight />
           </Link>

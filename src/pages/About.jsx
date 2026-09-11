@@ -17,7 +17,7 @@ const teamLinks = [
     icon: <FaGlobe />,
     label: 'Portfolio',
     url: 'https://hakimcolorportfolio.vercel.app/',
-    color: '#344E41',
+    color: '#3F4F44',
   },
   {
     icon: <FaLinkedinIn />,
@@ -41,13 +41,13 @@ const teamLinks = [
     icon: <FaWhatsapp />,
     label: 'WhatsApp',
     url: 'https://wa.me/8801818777856',
-    color: '#25d366',
+    color: '#3F4F44',
   },
   {
     icon: <FaEnvelope />,
     label: 'Email',
     url: 'mailto:hakimcolor777@gmail.com',
-    color: '#ea4335',
+    color: '#B9B28A',
   },
 ];
 
@@ -59,28 +59,28 @@ const About = () => {
       icon: <FaHeart className="text-2xl" />,
       titleKey: 'about_val_passion',
       descKey: 'about_val_passion_desc',
-      color: '#B7794B',
+      color: '#B9B28A',
       bg: '#fff1f2',
     },
     {
       icon: <FaStar className="text-2xl" />,
       titleKey: 'about_val_quality',
       descKey: 'about_val_quality_desc',
-      color: '#B7794B',
+      color: '#B9B28A',
       bg: '#fffbeb',
     },
     {
       icon: <FaTruck className="text-2xl" />,
       titleKey: 'about_val_delivery',
       descKey: 'about_val_delivery_desc',
-      color: '#344E41',
+      color: '#3F4F44',
       bg: '#eff6ff',
     },
     {
       icon: <FaLock className="text-2xl" />,
       titleKey: 'about_val_trust',
       descKey: 'about_val_trust_desc',
-      color: '#344E41',
+      color: '#3F4F44',
       bg: '#f0fdf4',
     },
   ];
@@ -91,7 +91,7 @@ const About = () => {
       <section
         className="relative py-24 overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #344E41 0%, #2a3d33 100%)',
+          background: 'linear-gradient(135deg, #3F4F44 0%, #2e3b32 100%)',
         }}
       >
         <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-white/5 -translate-x-1/2 -translate-y-1/2" />
@@ -105,11 +105,11 @@ const About = () => {
           </span>
           <h1 className="arbutus-slab text-4xl md:text-6xl font-bold mb-6 leading-tight">
             {tr('about_hero_title1', lang)}{' '}
-            <span className="text-[#d4a06e]">
+            <span className="text-[#B9B28A]">
               {tr('about_hero_title2', lang)}
             </span>
           </h1>
-          <p className="dmsans text-lg text-[#edf2ef] max-w-2xl mx-auto leading-relaxed">
+          <p className="dmsans text-lg text-[#EBE5C2] max-w-2xl mx-auto leading-relaxed">
             {tr('about_hero_sub', lang)}
           </p>
         </div>
@@ -125,12 +125,12 @@ const About = () => {
                 alt="OXISTYLE store"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#344E41]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3F4F44]/60 to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
                 <p className="arbutus-slab text-2xl font-bold">
                   {tr('about_story_since', lang)}
                 </p>
-                <p className="dmsans text-sm text-[#edf2ef]">
+                <p className="dmsans text-sm text-[#EBE5C2]">
                   {tr('about_story_serving', lang)}
                 </p>
               </div>
@@ -138,7 +138,7 @@ const About = () => {
           </div>
 
           <div className="space-y-6" data-aos="fade-left">
-            <p className="dmsans text-lg font-semibold uppercase tracking-widest text-[#344E41]">
+            <p className="dmsans text-lg font-semibold uppercase tracking-widest text-[#3F4F44]">
               {tr('about_story_label', lang)}
             </p>
             <h2 className="arbutus-slab text-3xl md:text-4xl text-gray-900 dark:text-white leading-tight">
@@ -158,9 +158,9 @@ const About = () => {
               ].map(([val, labelKey]) => (
                 <div
                   key={labelKey}
-                  className="text-center p-4 rounded-2xl bg-[#f5f8f6] dark:bg-[#344E41]/20 border border-[#edf2ef] dark:border-blue-800"
+                  className="text-center p-4 rounded-2xl bg-[#F8F3D9] dark:bg-[#3F4F44]/20 border border-[#EBE5C2] dark:border-blue-800"
                 >
-                  <p className="arbutus-slab text-2xl font-bold text-[#344E41]">
+                  <p className="arbutus-slab text-2xl font-bold text-[#3F4F44]">
                     {val}
                   </p>
                   <p className="dmsans text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -174,10 +174,10 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-16">
+      <section className="bg-gray-50 dark:bg-[#1e2922] py-16">
         <div className="max-w-[95%] mx-auto">
           <div className="text-center mb-12" data-aos="fade-up">
-            <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
+            <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#3F4F44]">
               {tr('about_values_label', lang)}
             </p>
             <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -213,7 +213,7 @@ const About = () => {
       {/* Developer */}
       <section className="max-w-[95%] mx-auto py-20">
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
+          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#3F4F44]">
             {tr('about_team_label', lang)}
           </p>
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -225,13 +225,13 @@ const About = () => {
           data-aos="zoom-in"
           className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700 text-center"
         >
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#344E41] to-[#2a3d33] flex items-center justify-center text-white text-4xl font-bold arbutus-slab mx-auto mb-4 shadow-lg">
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#3F4F44] to-[#2e3b32] flex items-center justify-center text-white text-4xl font-bold arbutus-slab mx-auto mb-4 shadow-lg">
             H
           </div>
           <h3 className="arbutus-slab text-2xl font-bold text-gray-900 dark:text-white">
             Hakim Color
           </h3>
-          <p className="dmsans text-[#344E41] font-medium mt-1">
+          <p className="dmsans text-[#3F4F44] font-medium mt-1">
             {tr('about_dev_role', lang)}
           </p>
           <p className="dmsans text-gray-500 dark:text-gray-400 text-sm mt-3 leading-relaxed">
@@ -256,7 +256,7 @@ const About = () => {
             href="https://hakimcolorportfolio.vercel.app/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-[#344E41] text-white rounded-xl font-semibold dmsans text-sm hover:bg-[#2a3d33] active:scale-95 transition-all duration-200 cursor-pointer shadow"
+            className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-[#3F4F44] text-white rounded-xl font-semibold dmsans text-sm hover:bg-[#2e3b32] active:scale-95 transition-all duration-200 cursor-pointer shadow"
           >
             {tr('about_portfolio', lang)} <HiArrowRight />
           </a>
@@ -265,19 +265,19 @@ const About = () => {
 
       {/* CTA */}
       <section
-        className="bg-[#344E41] dark:bg-[#1a2a22] py-16 text-white text-center"
+        className="bg-[#3F4F44] dark:bg-[#1e2922] py-16 text-white text-center"
         data-aos="zoom-in"
       >
         <div className="max-w-[95%] mx-auto">
           <h2 className="arbutus-slab text-3xl md:text-4xl font-bold mb-4">
             {tr('about_cta_title', lang)}
           </h2>
-          <p className="dmsans text-[#edf2ef] text-lg mb-8 max-w-lg mx-auto">
+          <p className="dmsans text-[#EBE5C2] text-lg mb-8 max-w-lg mx-auto">
             {tr('about_cta_sub', lang)}
           </p>
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#344E41] font-bold rounded-2xl hover:bg-[#f5f8f6] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#3F4F44] font-bold rounded-2xl hover:bg-[#F8F3D9] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
           >
             {tr('about_cta_btn', lang)} <HiArrowRight />
           </Link>

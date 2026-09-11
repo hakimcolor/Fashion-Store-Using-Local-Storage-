@@ -22,7 +22,7 @@ const socialLinks = [
     icon: <FaGlobe />,
     label: 'Portfolio',
     url: 'https://hakimcolorportfolio.vercel.app/',
-    color: '#344E41',
+    color: '#3F4F44',
   },
   {
     icon: <FaLinkedinIn />,
@@ -93,21 +93,21 @@ const Contact = () => {
       label: { en: 'Email', bn: 'ইমেইল' },
       value: 'hakimcolor777@gmail.com',
       url: 'mailto:hakimcolor777@gmail.com',
-      color: '#ea4335',
+      color: '#B9B28A',
     },
     {
       icon: <FaWhatsapp className="text-xl" />,
       label: { en: 'WhatsApp', bn: 'হোয়াটসঅ্যাপ' },
       value: '+880 1818-777856',
       url: 'https://wa.me/8801818777856',
-      color: '#25d366',
+      color: '#3F4F44',
     },
     {
       icon: <MdLocationOn className="text-xl" />,
       label: { en: 'Location', bn: 'অবস্থান' },
       value: lang === 'bn' ? 'ঢাকা, বাংলাদেশ' : 'Dhaka, Bangladesh',
       url: null,
-      color: '#344E41',
+      color: '#3F4F44',
     },
     {
       icon: <MdAccessTime className="text-xl" />,
@@ -115,7 +115,7 @@ const Contact = () => {
       value:
         lang === 'bn' ? 'শনি–বৃহস্পতি, সকাল ৯টা–রাত ৮টা' : 'Sat–Thu, 9AM–8PM',
       url: null,
-      color: '#B7794B',
+      color: '#B9B28A',
     },
   ];
 
@@ -124,21 +124,21 @@ const Contact = () => {
       icon: <FaTruck className="text-2xl" />,
       title: { en: 'Free Shipping', bn: 'বিনামূল্যে ডেলিভারি' },
       desc: { en: 'On orders above ৳1,000', bn: '৳১,০০০-এর উপরে' },
-      color: '#344E41',
+      color: '#3F4F44',
       bg: '#eff6ff',
     },
     {
       icon: <FaLock className="text-2xl" />,
       title: { en: 'Secure Payment', bn: 'নিরাপদ পেমেন্ট' },
       desc: { en: '100% safe & encrypted', bn: '১০০% নিরাপদ' },
-      color: '#344E41',
+      color: '#3F4F44',
       bg: '#f0fdf4',
     },
     {
       icon: <FaHeadset className="text-2xl" />,
       title: { en: '24/7 Support', bn: '২৪/৭ সাপোর্ট' },
       desc: { en: 'Always here to help', bn: 'সবসময় আপনার পাশে' },
-      color: '#B7794B',
+      color: '#B9B28A',
       bg: '#fffbeb',
     },
     {
@@ -148,7 +148,7 @@ const Contact = () => {
         en: '7-day hassle-free returns',
         bn: '৭ দিনের ঝামেলামুক্ত রিটার্ন',
       },
-      color: '#B7794B',
+      color: '#B9B28A',
       bg: '#fff1f2',
     },
   ];
@@ -213,7 +213,7 @@ const Contact = () => {
           alt="Fashion contact"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#344E41]/92 via-[#2a3d33]/72 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3F4F44]/92 via-[#2e3b32]/72 to-transparent" />
         <div
           className="absolute inset-0 flex flex-col justify-center max-w-[95%] mx-auto"
           data-aos="fade-up"
@@ -224,14 +224,14 @@ const Contact = () => {
           <h1 className="arbutus-slab text-4xl md:text-6xl font-bold mb-3 text-white">
             {tr('contact_title', lang)}
           </h1>
-          <p className="dmsans text-lg text-[#edf2ef] max-w-xl">
+          <p className="dmsans text-lg text-[#EBE5C2] max-w-xl">
             {tr('contact_sub', lang)}
           </p>
         </div>
       </section>
 
       {/* Features strip */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-18 border-b border-gray-100 dark:border-gray-800">
+      <section className="bg-gray-50 dark:bg-[#1e2922] py-18 border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-[95%] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {features.map((f, i) => (
             <div
@@ -260,7 +260,7 @@ const Contact = () => {
       {/* Fashion Gallery */}
       <section className="max-w-[95%] mx-auto py-16">
         <div className="text-center mb-10" data-aos="fade-up">
-          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
+          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#3F4F44]">
             {lang === 'bn' ? 'আমাদের কালেকশন' : 'our collection'}
           </p>
           <h2 className="arbutus-slab text-3xl md:text-4xl text-gray-900 dark:text-white">
@@ -272,9 +272,9 @@ const Contact = () => {
               : 'Explore our curated collections for men, women, and kids'}
           </p>
           <div className="flex items-center justify-center gap-3 mt-4">
-            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#344E41]" />
-            <span className="w-2 h-2 rounded-full bg-[#344E41]" />
-            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#344E41]" />
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#3F4F44]" />
+            <span className="w-2 h-2 rounded-full bg-[#3F4F44]" />
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#3F4F44]" />
           </div>
         </div>
         <div
@@ -293,7 +293,7 @@ const Contact = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="dmsans text-white text-sm font-semibold bg-[#344E41] px-3 py-1.5 rounded-full">
+                <span className="dmsans text-white text-sm font-semibold bg-[#3F4F44] px-3 py-1.5 rounded-full">
                   {img.label}
                 </span>
               </div>
@@ -303,12 +303,12 @@ const Contact = () => {
       </section>
 
       {/* Contact info + Form */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-16">
+      <section className="bg-gray-50 dark:bg-[#1e2922] py-16">
         <div className="max-w-[95%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left info */}
           <div className="space-y-8" data-aos="fade-right">
             <div>
-              <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
+              <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#3F4F44]">
                 {tr('contact_reach_label', lang)}
               </p>
               <h2 className="arbutus-slab text-3xl text-gray-900 dark:text-white mb-4">
@@ -340,7 +340,7 @@ const Contact = () => {
                         href={item.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="dmsans text-sm font-semibold text-gray-800 dark:text-white hover:text-[#344E41] transition-colors"
+                        className="dmsans text-sm font-semibold text-gray-800 dark:text-white hover:text-[#3F4F44] transition-colors"
                       >
                         {item.value}
                       </a>
@@ -361,9 +361,9 @@ const Contact = () => {
                 alt="Dhaka"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-[#344E41]/30 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#3F4F44]/30 flex items-center justify-center">
                 <div className="bg-white dark:bg-gray-800 px-5 py-3 rounded-2xl shadow-xl flex items-center gap-2">
-                  <MdLocationOn className="text-[#344E41] text-xl" />
+                  <MdLocationOn className="text-[#3F4F44] text-xl" />
                   <span className="dmsans text-sm font-semibold text-gray-800 dark:text-white">
                     {lang === 'bn' ? 'ঢাকা, বাংলাদেশ' : 'Dhaka, Bangladesh'}
                   </span>
@@ -407,7 +407,7 @@ const Contact = () => {
                 <div>
                   <label className="dmsans text-sm text-gray-600 dark:text-gray-400 mb-1 block">
                     {tr('contact_name', lang)}{' '}
-                    <span className="text-[#B7794B]">*</span>
+                    <span className="text-[#B9B28A]">*</span>
                   </label>
                   <input
                     type="text"
@@ -415,13 +415,13 @@ const Contact = () => {
                     value={form.name}
                     onChange={handleChange}
                     placeholder={tr('contact_name_ph', lang)}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#344E41] focus:ring-2 focus:ring-[#344E41]/20 transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#3F4F44] focus:ring-2 focus:ring-[#3F4F44]/20 transition-all"
                   />
                 </div>
                 <div>
                   <label className="dmsans text-sm text-gray-600 dark:text-gray-400 mb-1 block">
                     {tr('contact_email', lang)}{' '}
-                    <span className="text-[#B7794B]">*</span>
+                    <span className="text-[#B9B28A]">*</span>
                   </label>
                   <input
                     type="email"
@@ -429,7 +429,7 @@ const Contact = () => {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#344E41] focus:ring-2 focus:ring-[#344E41]/20 transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#3F4F44] focus:ring-2 focus:ring-[#3F4F44]/20 transition-all"
                   />
                 </div>
               </div>
@@ -444,14 +444,14 @@ const Contact = () => {
                   value={form.subject}
                   onChange={handleChange}
                   placeholder={tr('contact_subject_ph', lang)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#344E41] focus:ring-2 focus:ring-[#344E41]/20 transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#3F4F44] focus:ring-2 focus:ring-[#3F4F44]/20 transition-all"
                 />
               </div>
 
               <div>
                 <label className="dmsans text-sm text-gray-600 dark:text-gray-400 mb-1 block">
                   {tr('contact_message', lang)}{' '}
-                  <span className="text-[#B7794B]">*</span>
+                  <span className="text-[#B9B28A]">*</span>
                 </label>
                 <textarea
                   name="message"
@@ -459,14 +459,14 @@ const Contact = () => {
                   onChange={handleChange}
                   rows={5}
                   placeholder={tr('contact_message_ph', lang)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#344E41] focus:ring-2 focus:ring-[#344E41]/20 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#3F4F44] focus:ring-2 focus:ring-[#3F4F44]/20 transition-all resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex items-center justify-center gap-2 py-4 bg-[#344E41] hover:bg-[#2a3d33] text-white font-semibold rounded-2xl dmsans transition-all duration-300 active:scale-[.98] shadow-lg cursor-pointer disabled:opacity-70"
+                className="w-full flex items-center justify-center gap-2 py-4 bg-[#3F4F44] hover:bg-[#2e3b32] text-white font-semibold rounded-2xl dmsans transition-all duration-300 active:scale-[.98] shadow-lg cursor-pointer disabled:opacity-70"
               >
                 {loading ? (
                   tr('contact_sending', lang)
@@ -488,18 +488,18 @@ const Contact = () => {
           alt="Fashion"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#344E41]/90 to-[#2a3d33]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3F4F44]/90 to-[#2e3b32]/80" />
         <div
           className="relative z-10 max-w-[95%] mx-auto text-center text-white"
           data-aos="zoom-in"
         >
-          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-3 text-[#c5d5cc]">
+          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-3 text-[#EBE5C2]">
             {lang === 'bn' ? 'আমাদের সাথে থাকুন' : 'stay connected'}
           </p>
           <h2 className="arbutus-slab text-3xl md:text-5xl font-bold mb-4">
             {lang === 'bn' ? 'ফ্যাশনে আপডেট থাকুন' : 'Stay Ahead in Fashion'}
           </h2>
-          <p className="dmsans text-[#edf2ef] text-lg mb-8 max-w-xl mx-auto">
+          <p className="dmsans text-[#EBE5C2] text-lg mb-8 max-w-xl mx-auto">
             {lang === 'bn'
               ? 'নতুন কালেকশন ও অফারের জন্য আজই যোগাযোগ করুন।'
               : 'Get in touch for new collections, deals, and style tips.'}
@@ -509,14 +509,14 @@ const Contact = () => {
               href="https://wa.me/8801818777856"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#25d366] text-white font-semibold rounded-2xl dmsans hover:bg-[#4a6b58] active:scale-95 transition-all shadow-xl cursor-pointer"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#25d366] text-white font-semibold rounded-2xl dmsans hover:bg-[#3F4F44] active:scale-95 transition-all shadow-xl cursor-pointer"
             >
               <FaWhatsapp className="text-xl" />
               {lang === 'bn' ? 'হোয়াটসঅ্যাপে লিখুন' : 'Chat on WhatsApp'}
             </a>
             <a
               href="mailto:hakimcolor777@gmail.com"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-[#344E41] font-semibold rounded-2xl dmsans hover:bg-[#f5f8f6] active:scale-95 transition-all shadow-xl cursor-pointer"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-[#3F4F44] font-semibold rounded-2xl dmsans hover:bg-[#F8F3D9] active:scale-95 transition-all shadow-xl cursor-pointer"
             >
               <FaEnvelope />
               {lang === 'bn' ? 'ইমেইল করুন' : 'Send Email'} <HiArrowRight />

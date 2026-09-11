@@ -25,12 +25,12 @@ const Field = ({ label, error, children }) => (
       {label}
     </label>
     {children}
-    {error && <p className="dmsans text-xs text-[#B7794B]">{error}</p>}
+    {error && <p className="dmsans text-xs text-[#B9B28A]">{error}</p>}
   </div>
 );
 
 const inputCls =
-  'w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#344E41] focus:ring-2 focus:ring-[#344E41]/20 transition-all duration-300';
+  'w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white dmsans text-sm outline-none focus:border-[#3F4F44] focus:ring-2 focus:ring-[#3F4F44]/20 transition-all duration-300';
 
 const Checkout = () => {
   const { cart, setCart } = useContext(CartContext);
@@ -100,7 +100,7 @@ const Checkout = () => {
         </p>
         <Link
           to="/products"
-          className="inline-flex items-center gap-2 mt-2 bg-[#344E41] text-white dmsans font-semibold px-6 py-3 rounded-xl hover:bg-[#2a3d33] transition-all"
+          className="inline-flex items-center gap-2 mt-2 bg-[#3F4F44] text-white dmsans font-semibold px-6 py-3 rounded-xl hover:bg-[#2e3b32] transition-all"
         >
           {tr('home_view_all', lang)} <HiArrowRight />
         </Link>
@@ -114,8 +114,8 @@ const Checkout = () => {
         className="w-[95%] mx-auto py-24 flex flex-col items-center gap-5 text-center"
         data-aos="zoom-in"
       >
-        <div className="w-20 h-20 rounded-full bg-[#edf2ef] dark:bg-[#344E41]/20 flex items-center justify-center">
-          <FiCheck className="text-4xl text-[#4a6b58]" strokeWidth={3} />
+        <div className="w-20 h-20 rounded-full bg-[#EBE5C2] dark:bg-[#3F4F44]/20 flex items-center justify-center">
+          <FiCheck className="text-4xl text-[#3F4F44]" strokeWidth={3} />
         </div>
         <h1 className="arbutus-slab text-3xl text-gray-900 dark:text-white">
           {lang === 'bn' ? 'অর্ডার সফল হয়েছে!' : 'Order Placed Successfully!'}
@@ -128,7 +128,7 @@ const Checkout = () => {
         <div className="flex flex-wrap gap-3 justify-center mt-2">
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 bg-[#344E41] text-white dmsans font-semibold px-6 py-3 rounded-xl hover:bg-[#2a3d33] transition-all"
+            className="inline-flex items-center gap-2 bg-[#3F4F44] text-white dmsans font-semibold px-6 py-3 rounded-xl hover:bg-[#2e3b32] transition-all"
           >
             {tr('home_view_all', lang)} <HiArrowRight />
           </Link>
@@ -147,19 +147,19 @@ const Checkout = () => {
     <div className="w-[95%] mx-auto py-10">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm dmsans mb-8 text-gray-500 dark:text-gray-400">
-        <Link to="/" className="hover:text-[#344E41] transition-colors">
+        <Link to="/" className="hover:text-[#3F4F44] transition-colors">
           {tr('nav_home', lang)}
         </Link>
         <span>/</span>
-        <Link to="/cart" className="hover:text-[#344E41] transition-colors">
+        <Link to="/cart" className="hover:text-[#3F4F44] transition-colors">
           {tr('cart_title', lang)}
         </Link>
         <span>/</span>
-        <span className="text-[#344E41]">{tr('checkout_title', lang)}</span>
+        <span className="text-[#3F4F44]">{tr('checkout_title', lang)}</span>
       </div>
 
       <div className="text-center mb-10" data-aos="fade-up">
-        <p className="dmsans text-sm font-semibold uppercase tracking-widest text-[#344E41] mb-2">
+        <p className="dmsans text-sm font-semibold uppercase tracking-widest text-[#3F4F44] mb-2">
           {tr('checkout_label', lang)}
         </p>
         <h1 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -264,19 +264,19 @@ const Checkout = () => {
                     onClick={() => setPayment(m.id)}
                     className={`flex items-center gap-3 p-3 rounded-xl border-2 text-left transition-all duration-200 cursor-pointer ${
                       payment === m.id
-                        ? 'border-[#344E41] bg-[#f5f8f6] dark:bg-[#344E41]/20'
-                        : 'border-gray-200 dark:border-gray-600 hover:border-[#344E41]/50'
+                        ? 'border-[#3F4F44] bg-[#F8F3D9] dark:bg-[#3F4F44]/20'
+                        : 'border-gray-200 dark:border-gray-600 hover:border-[#3F4F44]/50'
                     }`}
                   >
                     <span className="text-2xl">{m.icon}</span>
                     <span
-                      className={`dmsans text-sm font-semibold ${payment === m.id ? 'text-[#344E41]' : 'text-gray-700 dark:text-gray-300'}`}
+                      className={`dmsans text-sm font-semibold ${payment === m.id ? 'text-[#3F4F44]' : 'text-gray-700 dark:text-gray-300'}`}
                     >
                       {lang === 'bn' ? m.bn : m.en}
                     </span>
                     {payment === m.id && (
                       <FiCheck
-                        className="ml-auto text-[#344E41] shrink-0"
+                        className="ml-auto text-[#3F4F44] shrink-0"
                         strokeWidth={3}
                       />
                     )}
@@ -339,7 +339,7 @@ const Checkout = () => {
                   <span className="arbutus-slab text-base dark:text-white">
                     {tr('cart_total', lang)}
                   </span>
-                  <span className="arbutus-slab text-lg font-bold text-[#344E41] flex items-center">
+                  <span className="arbutus-slab text-lg font-bold text-[#3F4F44] flex items-center">
                     <TbCurrencyTaka className="text-lg" />
                     {total.toLocaleString()}
                   </span>
@@ -349,7 +349,7 @@ const Checkout = () => {
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 bg-[#344E41] hover:bg-[#2a3d33] text-white font-semibold py-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-[.98] cursor-pointer dmsans"
+              className="w-full flex items-center justify-center gap-2 bg-[#3F4F44] hover:bg-[#2e3b32] text-white font-semibold py-4 rounded-2xl transition-all duration-300 shadow-lg active:scale-[.98] cursor-pointer dmsans"
             >
               {tr('checkout_place_order', lang)} <HiArrowRight />
             </button>

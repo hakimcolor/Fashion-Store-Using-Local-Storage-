@@ -21,7 +21,7 @@ const FAQ = () => {
   return (
     <section className="max-w-[95%] mx-auto py-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
+        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#3F4F44]">
           {tr('faq_label', lang)}
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -47,7 +47,7 @@ const FAQ = () => {
               className="w-full flex items-center justify-between px-5 py-4 text-left gap-3 cursor-pointer bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
             >
               <div className="flex items-center gap-3">
-                <FaQuestionCircle className="text-lg shrink-0 text-[#344E41]" />
+                <FaQuestionCircle className="text-lg shrink-0 text-[#3F4F44]" />
                 <span className="arbutus-slab text-base font-bold text-gray-800 dark:text-white">
                   {tr(faq.qKey, lang)}
                 </span>
@@ -61,7 +61,7 @@ const FAQ = () => {
               </span>
             </button>
             {openIndex === i && (
-              <div className="px-5 pb-4 pt-1 bg-[#f5f8f6]/40 dark:bg-[#344E41]/10 border-t border-gray-100 dark:border-gray-700">
+              <div className="px-5 pb-4 pt-1 bg-[#F8F3D9]/40 dark:bg-[#3F4F44]/10 border-t border-gray-100 dark:border-gray-700">
                 <p className="dmsans text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                   {tr(faq.aKey, lang)}
                 </p>

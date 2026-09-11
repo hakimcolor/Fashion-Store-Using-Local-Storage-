@@ -25,7 +25,7 @@ const Home = () => {
 
       <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-8" data-aos="fade-up">
-          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
+          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#3F4F44]">
             {tr('home_featured_label', lang)}
           </p>
           <h1 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -39,7 +39,7 @@ const Home = () => {
         <div className="flex justify-center mt-6 mb-10" data-aos="fade-up">
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-[#344E41] text-white font-semibold dmsans hover:bg-[#2a3d33] active:scale-95 transition-all duration-300 shadow-lg cursor-pointer"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-[#3F4F44] text-white font-semibold dmsans hover:bg-[#2e3b32] active:scale-95 transition-all duration-300 shadow-lg cursor-pointer"
           >
             {tr('home_view_all', lang)} <HiArrowRight />
           </Link>

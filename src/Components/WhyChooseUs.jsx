@@ -11,35 +11,35 @@ const WhyChooseUs = () => {
       descKey: 'why_f1_desc',
       icon: <FaTruck className="text-3xl" />,
       bg: '#eff6ff',
-      accent: '#344E41',
+      accent: '#3F4F44',
     },
     {
       titleKey: 'why_f2_title',
       descKey: 'why_f2_desc',
       icon: <FaLock className="text-3xl" />,
       bg: '#f0fdf4',
-      accent: '#344E41',
+      accent: '#3F4F44',
     },
     {
       titleKey: 'why_f3_title',
       descKey: 'why_f3_desc',
       icon: <FaStar className="text-3xl" />,
       bg: '#fffbeb',
-      accent: '#B7794B',
+      accent: '#B9B28A',
     },
     {
       titleKey: 'why_f4_title',
       descKey: 'why_f4_desc',
       icon: <FaUndo className="text-3xl" />,
       bg: '#fdf4ff',
-      accent: '#B7794B',
+      accent: '#B9B28A',
     },
   ];
 
   return (
     <section className="max-w-[95%] mx-auto py-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
+        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#3F4F44]">
           {tr('why_label', lang)}
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
