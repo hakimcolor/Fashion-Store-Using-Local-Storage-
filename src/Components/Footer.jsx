@@ -112,7 +112,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={s.name}
-                  className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white hover:scale-110 active:scale-95 transition-all duration-200"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:scale-110 active:scale-95 transition-all duration-200 text-base"
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.background = s.color)
                   }
