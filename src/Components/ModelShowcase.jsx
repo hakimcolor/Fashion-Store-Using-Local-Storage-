@@ -11,7 +11,7 @@ const looks = [
     tagKey: 'model_tag_eid',
     titleKey: 'model_title_panjabi',
     price: 1490,
-    color: '#155dfc',
+    color: '#344E41',
   },
   {
     image:
@@ -19,7 +19,7 @@ const looks = [
     tagKey: 'model_tag_trendy',
     titleKey: 'model_title_kurti',
     price: 2190,
-    color: '#9333ea',
+    color: '#B7794B',
   },
   {
     image:
@@ -27,7 +27,7 @@ const looks = [
     tagKey: 'model_tag_new',
     titleKey: 'model_title_festival',
     price: 3290,
-    color: '#d97706',
+    color: '#B7794B',
   },
   {
     image:
@@ -35,7 +35,7 @@ const looks = [
     tagKey: 'model_tag_best',
     titleKey: 'model_title_dress',
     price: 3490,
-    color: '#e11d48',
+    color: '#B7794B',
   },
 ];
 
@@ -46,7 +46,7 @@ const ModelShowcase = () => {
     <section className="bg-gray-50 dark:bg-gray-900 py-16">
       <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
+          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
             {tr('model_label', lang)}
           </p>
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">

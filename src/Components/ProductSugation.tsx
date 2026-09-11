@@ -74,7 +74,7 @@ const ProductSugation = () => {
     <section className="mt-16 mb-4">
       {/* Header */}
       <div className="text-center mb-8" data-aos="fade-up">
-        <p className="dmsans text-sm font-semibold uppercase tracking-widest text-[#155dfc] mb-2">
+        <p className="dmsans text-sm font-semibold uppercase tracking-widest text-[#344E41] mb-2">
           {tr('suggest_label', lang)}
         </p>
         <h2 className="arbutus-slab text-3xl text-gray-900 dark:text-white">
@@ -91,7 +91,7 @@ const ProductSugation = () => {
           onClick={() => setActive('related')}
           className={`cursor-pointer dmsans text-sm font-semibold px-5 py-2 rounded-full transition-all duration-300 ${
             active === 'related'
-              ? 'bg-[#155dfc] text-white shadow-md'
+              ? 'bg-[#344E41] text-white shadow-md'
               : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
           }`}
         >
@@ -101,7 +101,7 @@ const ProductSugation = () => {
           onClick={() => setActive('all')}
           className={`cursor-pointer dmsans text-sm font-semibold px-5 py-2 rounded-full transition-all duration-300 ${
             active === 'all'
-              ? 'bg-[#155dfc] text-white shadow-md'
+              ? 'bg-[#344E41] text-white shadow-md'
               : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
           }`}
         >
@@ -115,7 +115,7 @@ const ProductSugation = () => {
         <button
           onClick={() => scroll('l')}
           aria-label="Scroll left"
-          className="hidden sm:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg items-center justify-center text-gray-700 dark:text-white hover:bg-[#155dfc] hover:text-white hover:border-[#155dfc] transition-all duration-300 cursor-pointer"
+          className="hidden sm:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg items-center justify-center text-gray-700 dark:text-white hover:bg-[#344E41] hover:text-white hover:border-[#344E41] transition-all duration-300 cursor-pointer"
         >
           <svg
             className="w-4 h-4"
@@ -152,11 +152,11 @@ const ProductSugation = () => {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
-                <span className="absolute top-2 left-2 rounded-full bg-[#155dfc] px-2.5 py-0.5 text-[10px] font-semibold text-white shadow truncate max-w-[80%]">
+                <span className="absolute top-2 left-2 rounded-full bg-[#344E41] px-2.5 py-0.5 text-[10px] font-semibold text-white shadow truncate max-w-[80%]">
                   {product.category}
                 </span>
                 <span className="absolute top-2 right-2 flex items-center gap-1 rounded-full bg-white/90 dark:bg-gray-900/90 px-2 py-0.5 text-[10px] font-bold text-gray-800 dark:text-white shadow">
-                  <FaStar className="text-yellow-400 text-[9px]" />
+                  <FaStar className="text-[#B7794B] text-[9px]" />
                   {product.rating}
                 </span>
               </div>
@@ -193,7 +193,7 @@ const ProductSugation = () => {
                   </div>
                   <Link
                     to={`/products/${product.id}`}
-                    className="flex items-center gap-1 rounded-lg bg-[#155dfc] px-2.5 py-1.5 text-xs font-semibold text-white hover:bg-blue-700 active:scale-95 transition-all duration-200 cursor-pointer shadow"
+                    className="flex items-center gap-1 rounded-lg bg-[#344E41] px-2.5 py-1.5 text-xs font-semibold text-white hover:bg-[#2a3d33] active:scale-95 transition-all duration-200 cursor-pointer shadow"
                   >
                     {tr('card_details', lang)}{' '}
                     <HiArrowRight className="text-xs" />
@@ -208,7 +208,7 @@ const ProductSugation = () => {
         <button
           onClick={() => scroll('r')}
           aria-label="Scroll right"
-          className="hidden sm:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg items-center justify-center text-gray-700 dark:text-white hover:bg-[#155dfc] hover:text-white hover:border-[#155dfc] transition-all duration-300 cursor-pointer"
+          className="hidden sm:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg items-center justify-center text-gray-700 dark:text-white hover:bg-[#344E41] hover:text-white hover:border-[#344E41] transition-all duration-300 cursor-pointer"
         >
           <svg
             className="w-4 h-4"
@@ -230,7 +230,7 @@ const ProductSugation = () => {
       <div className="text-center mt-8">
         <Link
           to="/products"
-          className="inline-flex items-center gap-2 dmsans text-sm font-semibold text-[#155dfc] hover:text-blue-700 transition-colors"
+          className="inline-flex items-center gap-2 dmsans text-sm font-semibold text-[#344E41] hover:text-blue-700 transition-colors"
         >
           {tr('home_view_all', lang)} <HiArrowRight className="text-sm" />
         </Link>

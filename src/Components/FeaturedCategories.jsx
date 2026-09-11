@@ -8,42 +8,42 @@ const categories = [
     image:
       'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=80',
     count: { en: '20+ Styles', bn: '২০+ স্টাইল' },
-    color: '#155dfc',
+    color: '#344E41',
   },
   {
     name: { en: 'Saree & Kurti', bn: 'শাড়ি ও কুর্তি' },
     image:
       'https://images.unsplash.com/photo-1614251056216-f748f76cd228?w=600&q=80',
     count: { en: '30+ Designs', bn: '৩০+ ডিজাইন' },
-    color: '#9333ea',
+    color: '#B7794B',
   },
   {
     name: { en: 'Casual Wear', bn: 'ক্যাজুয়াল পোশাক' },
     image:
       'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80',
     count: { en: '50+ Items', bn: '৫০+ আইটেম' },
-    color: '#16a34a',
+    color: '#344E41',
   },
   {
     name: { en: 'Formal Shirts', bn: 'ফর্মাল শার্ট' },
     image:
       'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&q=80',
     count: { en: '15+ Picks', bn: '১৫+ পিক' },
-    color: '#d97706',
+    color: '#B7794B',
   },
   {
     name: { en: 'Accessories', bn: 'আনুষাঙ্গিক' },
     image:
       'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80',
     count: { en: '25+ Items', bn: '২৫+ আইটেম' },
-    color: '#e11d48',
+    color: '#B7794B',
   },
   {
     name: { en: 'Footwear', bn: 'জুতা' },
     image:
       'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80',
     count: { en: '10+ Pairs', bn: '১০+ জোড়া' },
-    color: '#0891b2',
+    color: '#344E41',
   },
 ];
 
@@ -53,7 +53,7 @@ const FeaturedCategories = () => {
   return (
     <section className="max-w-[95%] mx-auto py-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
+        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
           {tr('cat_label', lang)}
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">

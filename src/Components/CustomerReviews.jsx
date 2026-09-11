@@ -12,7 +12,7 @@ const reviews = [
       bn: 'অসাধারণ মানের পণ্য এবং অত্যন্ত দ্রুত ডেলিভারি। আমি মাসের পর মাস এখানে কেনাকাটা করছি এবং কখনো হতাশ হইনি!',
     },
     avatar: 'R',
-    color: '#155dfc',
+    color: '#344E41',
   },
   {
     name: 'Sadia Islam',
@@ -23,7 +23,7 @@ const reviews = [
       bn: 'রিটার্ন প্রক্রিয়া অত্যন্ত সহজ ছিল এবং কাস্টমার সাপোর্ট টিম খুবই সহায়ক ছিল। OXISTYLE কে দৃঢ়ভাবে সুপারিশ করছি!',
     },
     avatar: 'S',
-    color: '#16a34a',
+    color: '#344E41',
   },
   {
     name: 'Arif Hossain',
@@ -34,7 +34,7 @@ const reviews = [
       bn: 'যুক্তিসঙ্গত মূল্যে বাংলাদেশি পোশাকের দারুণ সংগ্রহ। সাইজ গাইড নির্ভুল এবং প্যাকেজিং প্রিমিয়াম।',
     },
     avatar: 'A',
-    color: '#d97706',
+    color: '#B7794B',
   },
 ];
 
@@ -45,7 +45,7 @@ const CustomerReviews = () => {
     <section className="py-16 bg-[#f8faff] dark:bg-gray-900">
       <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#155dfc]">
+          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#344E41]">
             {tr('review_label', lang)}
           </p>
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -63,7 +63,7 @@ const CustomerReviews = () => {
               data-aos-delay={i * 100}
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 flex flex-col gap-4"
             >
-              <FaQuoteLeft className="text-2xl text-[#155dfc] opacity-30" />
+              <FaQuoteLeft className="text-2xl text-[#344E41] opacity-30" />
               <p className="dmsans text-base text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
                 {r.text[lang]}
               </p>

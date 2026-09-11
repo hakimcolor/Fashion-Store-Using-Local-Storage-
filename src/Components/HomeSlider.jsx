@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-const accents = ['#155dfc', '#9333ea', '#16a34a', '#d97706'];
+const accents = ['#344E41', '#B7794B', '#344E41', '#B7794B'];
 
 const HomeSlider = () => {
   const [slides, setSlides] = useState([]);

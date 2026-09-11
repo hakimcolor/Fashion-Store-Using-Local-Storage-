@@ -58,7 +58,7 @@ const CartStyle = ({ products }) => {
           <div
             ref={(el) => (cardRefs.current[i] = el)}
             key={product.id}
-            className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#155dfc]/30 transition-all duration-300 hover:-translate-y-2"
+            className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#344E41]/30 transition-all duration-300 hover:-translate-y-2"
             style={{ transitionDelay: `${(i % 4) * 80}ms` }}
           >
             <div className="relative overflow-hidden h-52 sm:h-60 lg:h-72 bg-gray-100 dark:bg-gray-700">
@@ -69,11 +69,11 @@ const CartStyle = ({ products }) => {
               />
               {/* hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="absolute top-3 left-3 rounded-full bg-[#155dfc] px-3 py-1 text-xs font-semibold text-white shadow">
+              <span className="absolute top-3 left-3 rounded-full bg-[#344E41] px-3 py-1 text-xs font-semibold text-white shadow">
                 {product.category}
               </span>
               {product.rating >= 4.9 && (
-                <span className="absolute bottom-3 left-3 rounded-full bg-green-500 px-2.5 py-0.5 text-xs font-bold text-white shadow">
+                <span className="absolute bottom-3 left-3 rounded-full bg-[#4a6b58] px-2.5 py-0.5 text-xs font-bold text-white shadow">
                   ★ Top Pick
                 </span>
               )}
@@ -87,13 +87,13 @@ const CartStyle = ({ products }) => {
                 }
               >
                 {wishlist.includes(product.id) ? (
-                  <FaHeart className="text-red-500 text-sm" />
+                  <FaHeart className="text-[#B7794B] text-sm" />
                 ) : (
                   <FaRegHeart className="text-gray-400 text-sm" />
                 )}
               </button>
               <span className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-white/90 dark:bg-gray-900/90 px-2.5 py-1 text-xs font-bold text-gray-800 dark:text-white shadow">
-                <FaStar className="text-yellow-400 text-xs" />
+                <FaStar className="text-[#B7794B] text-xs" />
                 {product.rating}
               </span>
             </div>
@@ -124,7 +124,7 @@ const CartStyle = ({ products }) => {
                     {product.price.toLocaleString()}
                   </div>
                   <span
-                    className={`text-xs font-semibold dmsans ${product.inStock ? 'text-green-600' : 'text-red-500'}`}
+                    className={`text-xs font-semibold dmsans ${product.inStock ? 'text-[#344E41]' : 'text-[#B7794B]'}`}
                   >
                     {product.inStock
                       ? tr('card_instock', lang)
@@ -133,7 +133,7 @@ const CartStyle = ({ products }) => {
                 </div>
                 <Link
                   to={`/products/${product.id}`}
-                  className="flex items-center gap-1.5 rounded-xl bg-[#155dfc] px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+                  className="flex items-center gap-1.5 rounded-xl bg-[#344E41] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#2a3d33] active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
                 >
                   {tr('card_details', lang)}{' '}
                   <HiArrowRight className="text-sm" />

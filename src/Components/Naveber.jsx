@@ -66,8 +66,8 @@ const Naveber = () => {
     const isActive = location.pathname === path;
     return `relative flex items-center gap-1.5 transition-all duration-300 font-medium text-sm cursor-pointer pb-1.5 ${
       isActive
-        ? 'font-semibold text-[#155dfc] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#155dfc] after:rounded-full'
-        : 'text-gray-600 dark:text-gray-300 hover:text-[#155dfc] dark:hover:text-[#155dfc] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#155dfc] after:rounded-full after:transition-all after:duration-300 hover:after:w-full'
+        ? 'font-semibold text-[#344E41] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#344E41] after:rounded-full'
+        : 'text-gray-600 dark:text-gray-300 hover:text-[#344E41] dark:hover:text-[#344E41] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#344E41] after:rounded-full after:transition-all after:duration-300 hover:after:w-full'
     }`;
   };
 
@@ -89,7 +89,7 @@ const Naveber = () => {
               className="h-10 w-10 object-contain rounded-full"
             />
             <span className="text-2xl font-bold dark:text-white arbutus-slab">
-              H.K <span className="text-[#155dfc]">Style</span>
+              H.K <span className="text-[#344E41]">Style</span>
             </span>
           </Link>
 
@@ -101,7 +101,7 @@ const Naveber = () => {
                 to={menu.path}
                 className={navStyle(menu.path)}
                 style={
-                  location.pathname === menu.path ? { color: '#155dfc' } : {}
+                  location.pathname === menu.path ? { color: '#344E41' } : {}
                 }
               >
                 {menu.icon}
@@ -118,7 +118,7 @@ const Naveber = () => {
               title="Switch language"
               className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer text-xs font-bold dmsans text-gray-700 dark:text-gray-300"
             >
-              <HiOutlineGlobeAlt className="text-base text-[#155dfc]" />
+              <HiOutlineGlobeAlt className="text-base text-[#344E41]" />
               {lang === 'en' ? 'বাং' : 'EN'}
             </button>
 
@@ -129,7 +129,7 @@ const Naveber = () => {
               aria-label="Toggle theme"
             >
               {dark ? (
-                <FaSun className="text-yellow-400 text-base" />
+                <FaSun className="text-[#B7794B] text-base" />
               ) : (
                 <FaMoon className="text-gray-600 text-base" />
               )}
@@ -142,7 +142,7 @@ const Naveber = () => {
                 className="relative flex items-center justify-center w-11 h-11 border border-gray-200 dark:border-gray-600 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-sm cursor-pointer"
               >
                 <FaShoppingCart className="text-base text-gray-700 dark:text-gray-300" />
-                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#155dfc] text-white text-xs font-bold rounded-full flex items-center justify-center shadow">
+                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#344E41] text-white text-xs font-bold rounded-full flex items-center justify-center shadow">
                   {cart.length}
                 </span>
               </button>
@@ -151,8 +151,8 @@ const Naveber = () => {
                 <div className="fixed right-0 top-20 w-full sm:w-[420px] h-[calc(100vh-80px)] bg-white dark:bg-gray-900 shadow-2xl border-l border-t border-gray-200 dark:border-gray-700 z-50 flex flex-col">
                   <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-700 shrink-0">
                     <div className="flex items-center gap-2">
-                      <FaShoppingCart className="text-[#155dfc] text-lg" />
-                      <h2 className="arbutus-slab text-xl text-[#155dfc]">
+                      <FaShoppingCart className="text-[#344E41] text-lg" />
+                      <h2 className="arbutus-slab text-xl text-[#344E41]">
                         {lang === 'en' ? 'Shopping Cart' : 'শপিং কার্ট'}
                       </h2>
                     </div>
@@ -175,7 +175,7 @@ const Naveber = () => {
               aria-label="Menu"
             >
               {open ? (
-                <FaTimes className="hover:text-red-500 transition-all duration-300" />
+                <FaTimes className="hover:text-[#B7794B] transition-all duration-300" />
               ) : (
                 <FaBars className="transition-all duration-300" />
               )}
@@ -192,7 +192,7 @@ const Naveber = () => {
                 to={menu.path}
                 className={navStyle(menu.path)}
                 style={
-                  location.pathname === menu.path ? { color: '#155dfc' } : {}
+                  location.pathname === menu.path ? { color: '#344E41' } : {}
                 }
                 onClick={() => setOpen(false)}
               >

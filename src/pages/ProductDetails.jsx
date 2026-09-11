@@ -37,19 +37,19 @@ const ProductDetails = () => {
       <div className="flex items-center gap-2 text-sm dmsans mb-8">
         <Link
           to="/"
-          className="text-gray-500 dark:text-gray-400 hover:text-[#155dfc] transition-colors"
+          className="text-gray-500 dark:text-gray-400 hover:text-[#344E41] transition-colors"
         >
           {tr('detail_breadcrumb_home', lang)}
         </Link>
         <span className="text-gray-400">/</span>
         <Link
           to="/products"
-          className="text-gray-500 dark:text-gray-400 hover:text-[#155dfc] transition-colors"
+          className="text-gray-500 dark:text-gray-400 hover:text-[#344E41] transition-colors"
         >
           {tr('detail_breadcrumb_products', lang)}
         </Link>
         <span className="text-gray-400">/</span>
-        <span className="text-[#155dfc]">
+        <span className="text-[#344E41]">
           {tr('detail_breadcrumb_detail', lang)}
         </span>
       </div>
@@ -58,7 +58,7 @@ const ProductDetails = () => {
         {/* Image */}
         <div
           data-aos="fade-right"
-          className="overflow-hidden rounded-3xl bg-gradient-to-br from-blue-50 to-gray-100 dark:from-gray-700 dark:to-gray-900 shadow-xl h-[90%] sm:h-96 lg:h-[720px]"
+          className="overflow-hidden rounded-3xl bg-gradient-to-br from-[#f5f8f6] to-gray-100 dark:from-gray-700 dark:to-gray-900 shadow-xl h-[90%] sm:h-96 lg:h-[720px]"
         >
           <img
             src={product.image}
@@ -70,12 +70,12 @@ const ProductDetails = () => {
         {/* Details */}
         <div className="space-y-5" data-aos="fade-left">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="bg-[#155dfc] text-white px-4 py-1.5 rounded-full text-sm dmsans font-semibold">
+            <span className="bg-[#344E41] text-white px-4 py-1.5 rounded-full text-sm dmsans font-semibold">
               {product.category}
             </span>
-            <div className="flex items-center gap-2 bg-yellow-100 dark:bg-yellow-900/30 px-3 py-1.5 rounded-full">
-              <FaStar className="text-yellow-500 text-sm" />
-              <span className="text-sm font-bold text-gray-800 dark:text-yellow-300">
+            <div className="flex items-center gap-2 bg-[#F3EBDD] dark:bg-[#B7794B]/20 px-3 py-1.5 rounded-full">
+              <FaStar className="text-[#B7794B] text-sm" />
+              <span className="text-sm font-bold text-gray-800 dark:text-[#d4a06e]">
                 {product.rating}
               </span>
             </div>
@@ -90,7 +90,7 @@ const ProductDetails = () => {
               <TbCurrencyTaka className="text-2xl" />
               {product.price.toLocaleString()}
             </div>
-            <span className="text-xs font-semibold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-3 py-1 rounded-full dmsans">
+            <span className="text-xs font-semibold bg-[#edf2ef] dark:bg-[#344E41]/20 text-green-700 dark:text-[#4a6b58] px-3 py-1 rounded-full dmsans">
               🚚 Free Delivery
             </span>
           </div>
@@ -104,7 +104,7 @@ const ProductDetails = () => {
               {tr('detail_stock_label', lang)}{' '}
             </span>
             <span
-              className={`font-bold ${product.inStock ? 'text-green-600' : 'text-red-500'}`}
+              className={`font-bold ${product.inStock ? 'text-[#344E41]' : 'text-[#B7794B]'}`}
             >
               {product.inStock
                 ? tr('detail_instock', lang)
@@ -124,7 +124,7 @@ const ProductDetails = () => {
                     onClick={() => setSelectedColor(color)}
                     className={`w-9 h-9 rounded-full border-[3px] transition-all cursor-pointer hover:scale-110 ${
                       selectedColor === color
-                        ? 'border-[#155dfc] scale-110 ring-2 ring-[#155dfc]/30'
+                        ? 'border-[#344E41] scale-110 ring-2 ring-[#344E41]/30'
                         : 'border-gray-300 dark:border-gray-600'
                     }`}
                     style={{
@@ -149,7 +149,7 @@ const ProductDetails = () => {
               </div>
               <p className="dmsans text-xs text-gray-400 mt-1">
                 Selected:{' '}
-                <span className="font-semibold text-[#155dfc]">
+                <span className="font-semibold text-[#344E41]">
                   {selectedColor}
                 </span>
               </p>
@@ -160,7 +160,7 @@ const ProductDetails = () => {
                 {tr('detail_sizes', lang)}
                 <span
                   title="S=36, M=38, L=40, XL=42, XXL=44 inches"
-                  className="cursor-help text-[#155dfc] text-xs border border-[#155dfc] rounded-full w-4 h-4 inline-flex items-center justify-center leading-none"
+                  className="cursor-help text-[#344E41] text-xs border border-[#344E41] rounded-full w-4 h-4 inline-flex items-center justify-center leading-none"
                 >
                   ?
                 </span>
@@ -172,8 +172,8 @@ const ProductDetails = () => {
                     onClick={() => setSelectedSize(size)}
                     className={`w-10 h-10 rounded-xl border font-semibold transition-all cursor-pointer text-sm hover:scale-105 ${
                       selectedSize === size
-                        ? 'bg-[#155dfc] text-white border-[#155dfc] shadow-md'
-                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-[#155dfc] hover:text-white hover:border-[#155dfc]'
+                        ? 'bg-[#344E41] text-white border-[#344E41] shadow-md'
+                        : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-[#344E41] hover:text-white hover:border-[#344E41]'
                     }`}
                   >
                     {size}
@@ -182,7 +182,7 @@ const ProductDetails = () => {
               </div>
               <p className="dmsans text-xs text-gray-400 mt-1">
                 Selected:{' '}
-                <span className="font-semibold text-[#155dfc]">
+                <span className="font-semibold text-[#344E41]">
                   {selectedSize}
                 </span>
               </p>
@@ -212,11 +212,11 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-gray-100 dark:border-gray-700 bg-blue-50/50 dark:bg-blue-900/10 px-5 py-4">
+          <div className="rounded-2xl border border-gray-100 dark:border-gray-700 bg-[#f5f8f6]/50 dark:bg-[#344E41]/10 px-5 py-4">
             <p className="dmsans text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1">
               {tr('detail_total', lang)}
             </p>
-            <h2 className="text-2xl font-bold flex items-center text-[#155dfc]">
+            <h2 className="text-2xl font-bold flex items-center text-[#344E41]">
               <TbCurrencyTaka className="text-2xl" />
               {totalAmount.toLocaleString()}
             </h2>
@@ -228,7 +228,7 @@ const ProductDetails = () => {
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
-            className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#155dfc] hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 cursor-pointer disabled:bg-gray-400 dmsans active:scale-[.98] shadow-lg"
+            className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#344E41] hover:bg-[#2a3d33] text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 cursor-pointer disabled:bg-gray-400 dmsans active:scale-[.98] shadow-lg"
           >
             <FaShoppingCart />
             {product.inStock
@@ -246,7 +246,7 @@ const ProductDetails = () => {
           <p className="dmsans text-xs text-gray-500 dark:text-gray-400 truncate">
             {product.name}
           </p>
-          <p className="font-bold text-[#155dfc] flex items-center text-lg">
+          <p className="font-bold text-[#344E41] flex items-center text-lg">
             <TbCurrencyTaka />
             {totalAmount.toLocaleString()}
           </p>
@@ -254,7 +254,7 @@ const ProductDetails = () => {
         <button
           onClick={handleAddToCart}
           disabled={!product.inStock}
-          className="flex items-center gap-2 bg-[#155dfc] hover:bg-blue-700 text-white px-6 py-3 rounded-2xl font-semibold dmsans text-sm transition-all active:scale-95 disabled:bg-gray-400 shadow-lg cursor-pointer"
+          className="flex items-center gap-2 bg-[#344E41] hover:bg-[#2a3d33] text-white px-6 py-3 rounded-2xl font-semibold dmsans text-sm transition-all active:scale-95 disabled:bg-gray-400 shadow-lg cursor-pointer"
         >
           <FaShoppingCart />
           {product.inStock
