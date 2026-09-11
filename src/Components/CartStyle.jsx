@@ -58,7 +58,7 @@ const CartStyle = ({ products }) => {
           <div
             ref={(el) => (cardRefs.current[i] = el)}
             key={product.id}
-            className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#3F4F44]/30 transition-all duration-300 hover:-translate-y-2"
+            className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#8FA28A]/30 transition-all duration-300 hover:-translate-y-2"
             style={{ transitionDelay: `${(i % 4) * 80}ms` }}
           >
             <div className="relative overflow-hidden h-52 sm:h-60 lg:h-72 bg-gray-100 dark:bg-gray-700">
@@ -69,17 +69,17 @@ const CartStyle = ({ products }) => {
               />
               {/* hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="absolute top-3 left-3 rounded-full bg-[#3F4F44] px-3 py-1 text-xs font-semibold text-white shadow">
+              <span className="absolute top-3 left-3 rounded-full bg-[#8FA28A] px-3 py-1 text-xs font-semibold text-white shadow">
                 {product.category}
               </span>
               {product.rating >= 4.9 && (
-                <span className="absolute bottom-3 left-3 rounded-full bg-[#3F4F44] px-2.5 py-0.5 text-xs font-bold text-white shadow">
+                <span className="absolute bottom-3 left-3 rounded-full bg-[#8FA28A] px-2.5 py-0.5 text-xs font-bold text-white shadow">
                   ★ Top Pick
                 </span>
               )}
               <button
                 onClick={() => toggleWishlist(product.id)}
-                className="absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 dark:bg-[#1e2922]/90 shadow hover:scale-110 transition-transform cursor-pointer"
+                className="absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 dark:bg-[#2d3d35]/90 shadow hover:scale-110 transition-transform cursor-pointer"
                 title={
                   wishlist.includes(product.id)
                     ? 'Remove from wishlist'
@@ -87,13 +87,13 @@ const CartStyle = ({ products }) => {
                 }
               >
                 {wishlist.includes(product.id) ? (
-                  <FaHeart className="text-[#B9B28A] text-sm" />
+                  <FaHeart className="text-[#C8A96B] text-sm" />
                 ) : (
                   <FaRegHeart className="text-gray-400 text-sm" />
                 )}
               </button>
-              <span className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-white/90 dark:bg-[#1e2922]/90 px-2.5 py-1 text-xs font-bold text-gray-800 dark:text-white shadow">
-                <FaStar className="text-[#B9B28A] text-xs" />
+              <span className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-white/90 dark:bg-[#2d3d35]/90 px-2.5 py-1 text-xs font-bold text-gray-800 dark:text-white shadow">
+                <FaStar className="text-[#C8A96B] text-xs" />
                 {product.rating}
               </span>
             </div>
@@ -124,7 +124,7 @@ const CartStyle = ({ products }) => {
                     {product.price.toLocaleString()}
                   </div>
                   <span
-                    className={`text-xs font-semibold dmsans ${product.inStock ? 'text-[#3F4F44]' : 'text-[#B9B28A]'}`}
+                    className={`text-xs font-semibold dmsans ${product.inStock ? 'text-[#8FA28A]' : 'text-[#C8A96B]'}`}
                   >
                     {product.inStock
                       ? tr('card_instock', lang)
@@ -133,7 +133,7 @@ const CartStyle = ({ products }) => {
                 </div>
                 <Link
                   to={`/products/${product.id}`}
-                  className="flex items-center gap-1.5 rounded-xl bg-[#3F4F44] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#2e3b32] active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+                  className="flex items-center gap-1.5 rounded-xl bg-[#8FA28A] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#6b8578] active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
                 >
                   {tr('card_details', lang)}{' '}
                   <HiArrowRight className="text-sm" />

@@ -18,7 +18,7 @@ const FashionBanner = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           <div className="absolute bottom-8 left-8 text-white">
-            <span className="bg-[#3F4F44] text-xs font-bold px-3 py-1 rounded-full dmsans mb-3 inline-block">
+            <span className="bg-[#8FA28A] text-xs font-bold px-3 py-1 rounded-full dmsans mb-3 inline-block">
               {tr('fashion_badge1', lang)}
             </span>
             <h3 className="arbutus-slab text-2xl md:text-3xl font-bold mb-3 leading-tight whitespace-pre-line">
@@ -26,7 +26,7 @@ const FashionBanner = () => {
             </h3>
             <Link
               to="/styles"
-              className="inline-flex items-center gap-2 bg-white text-[#3F4F44] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-[#3F4F44] hover:text-white transition-all duration-300 cursor-pointer dmsans shadow-lg"
+              className="inline-flex items-center gap-2 bg-white text-[#8FA28A] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-[#8FA28A] hover:text-white transition-all duration-300 cursor-pointer dmsans shadow-lg"
             >
               {tr('fashion_cta1', lang)} <HiArrowRight />
             </Link>
@@ -43,7 +43,7 @@ const FashionBanner = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
-              <span className="bg-[#B9B28A] text-xs font-bold px-3 py-1 rounded-full dmsans mb-2 inline-block">
+              <span className="bg-[#C8A96B] text-xs font-bold px-3 py-1 rounded-full dmsans mb-2 inline-block">
                 {tr('fashion_badge2', lang)}
               </span>
               <h3 className="arbutus-slab text-xl font-bold">
@@ -60,7 +60,7 @@ const FashionBanner = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
-              <span className="bg-[#3F4F44] text-xs font-bold px-3 py-1 rounded-full dmsans mb-2 inline-block">
+              <span className="bg-[#8FA28A] text-xs font-bold px-3 py-1 rounded-full dmsans mb-2 inline-block">
                 {tr('fashion_badge3', lang)}
               </span>
               <h3 className="arbutus-slab text-xl font-bold">

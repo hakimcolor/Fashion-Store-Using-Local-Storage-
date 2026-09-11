@@ -28,8 +28,8 @@ body {
 
 /* Dark body bg */
 html.dark body {
-  background-color: #1e2922;
-  color: #F8F3D9;
+  background-color: #2d3d35;
+  color: #F7F4ED;
 }
 
 /* ─── Smooth theme transitions ───────────────────────── */
@@ -76,9 +76,9 @@ html.dark body {
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #F8F3D9 20%,
-    #B9B28A 45%,
-    #EBE5C2 55%,
+    #F7F4ED 20%,
+    #C8A96B 45%,
+    #C7D3C0 55%,
     #ffffff 80%
   );
   background-size: 300% auto;
@@ -134,11 +134,11 @@ html.dark body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3F4F4444;
+  background: #8FA28A44;
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3F4F44;
+  background: #8FA28A;
 }
 
 /* ─── Swiper overrides ───────────────────────────────── */
@@ -155,7 +155,7 @@ html.dark body {
 }
 .hero-swiper .swiper-button-next:hover,
 .hero-swiper .swiper-button-prev:hover {
-  background: rgba(63, 79, 68, 0.8);
+  background: rgba(143, 162, 138, 0.4);
 }
 .hero-swiper .swiper-button-next::after,
 .hero-swiper .swiper-button-prev::after {
@@ -170,7 +170,7 @@ html.dark body {
 }
 .hero-swiper .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #3F4F44;
+  background: #8FA28A;
   width: 24px;
   border-radius: 99px;
   transition: width 0.3s;
@@ -178,12 +178,12 @@ html.dark body {
 
 /* ─── Card hover glow ────────────────────────────────── */
 .card-glow:hover {
-  box-shadow: 0 20px 60px -10px rgba(63, 79, 68, 0.8);
+  box-shadow: 0 20px 60px -10px rgba(143, 162, 138, 0.4);
 }
 
 /* ─── Gradient text utility ──────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #3F4F44, #B9B28A);
+  background: linear-gradient(135deg, #8FA28A, #C8A96B);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

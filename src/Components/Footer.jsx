@@ -41,7 +41,7 @@ const Footer = () => {
       name: 'Portfolio',
       url: 'https://hakimcolorportfolio.vercel.app/',
       icon: <FaGlobe />,
-      color: '#3F4F44',
+      color: '#8FA28A',
     },
     {
       name: 'LinkedIn',
@@ -65,20 +65,20 @@ const Footer = () => {
       name: 'WhatsApp',
       url: 'https://wa.me/8801818777856',
       icon: <FaWhatsapp />,
-      color: '#3F4F44',
+      color: '#8FA28A',
     },
     {
       name: 'Email',
       url: 'mailto:hakimcolor777@gmail.com',
       icon: <FaEnvelope />,
-      color: '#B9B28A',
+      color: '#C8A96B',
     },
   ];
 
   return (
-    <footer className="bg-[#1e2922] dark:bg-[#1e2922] text-white mt-20">
+    <footer className="bg-[#2d3d35] dark:bg-[#2d3d35] text-white mt-20">
       {/* Gradient accent line */}
-      <div className="h-1 w-full bg-gradient-to-r from-[#3F4F44] via-purple-500 to-pink-500" />
+      <div className="h-1 w-full bg-gradient-to-r from-[#8FA28A] via-purple-500 to-pink-500" />
       <div className="w-full overflow-hidden leading-none">
         <svg
           viewBox="0 0 1440 60"
@@ -99,7 +99,7 @@ const Footer = () => {
                 alt="H.K Style logo"
                 className="h-10 w-10 object-contain rounded-full"
               />
-              H.K <span style={{ color: '#3F4F44' }}>Style</span>
+              H.K <span style={{ color: '#8FA28A' }}>Style</span>
             </h2>
             <p className="dmsans text-sm text-gray-400 leading-relaxed max-w-xs">
               {tr('footer_desc', lang)}
@@ -140,7 +140,7 @@ const Footer = () => {
                   >
                     <span
                       className="text-base transition-transform duration-200 group-hover:translate-x-1"
-                      style={{ color: '#3F4F44' }}
+                      style={{ color: '#8FA28A' }}
                     >
                       {link.icon}
                     </span>
@@ -164,7 +164,7 @@ const Footer = () => {
                   rel="noreferrer"
                   className="flex items-center gap-2 hover:text-white transition-colors duration-200"
                 >
-                  <FaGlobe style={{ color: '#3F4F44' }} /> Portfolio
+                  <FaGlobe style={{ color: '#8FA28A' }} /> Portfolio
                 </a>
               </li>
               <li>
@@ -201,7 +201,7 @@ const Footer = () => {
                   href="mailto:hakimcolor777@gmail.com"
                   className="flex items-center gap-2 hover:text-white transition-colors duration-200"
                 >
-                  <FaEnvelope style={{ color: '#B9B28A' }} />{' '}
+                  <FaEnvelope style={{ color: '#C8A96B' }} />{' '}
                   hakimcolor777@gmail.com
                 </a>
               </li>
@@ -212,7 +212,7 @@ const Footer = () => {
                   rel="noreferrer"
                   className="flex items-center gap-2 hover:text-white transition-colors duration-200"
                 >
-                  <FaWhatsapp style={{ color: '#3F4F44' }} /> +880 1818-777856
+                  <FaWhatsapp style={{ color: '#8FA28A' }} /> +880 1818-777856
                 </a>
               </li>
               <li>
@@ -238,14 +238,14 @@ const Footer = () => {
             {tr('footer_rights', lang)}
           </p>
           <p>
-            {tr('footer_made', lang)} <span className="text-[#B9B28A]">♥</span>{' '}
+            {tr('footer_made', lang)} <span className="text-[#C8A96B]">♥</span>{' '}
             {tr('footer_by', lang)}{' '}
             <a
               href="https://hakimcolorportfolio.vercel.app/"
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition-colors duration-200"
-              style={{ color: '#3F4F44' }}
+              style={{ color: '#8FA28A' }}
             >
               hakimcolor
             </a>

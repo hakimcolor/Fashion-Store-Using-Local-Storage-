@@ -66,7 +66,7 @@ const Newsletter = () => {
       <div
         className="rounded-3xl px-6 py-14 flex flex-col items-center text-center gap-6 relative overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #3F4F44 0%, #2e3b32 100%)',
+          background: 'linear-gradient(135deg, #8FA28A 0%, #6b8578 100%)',
         }}
       >
         <div className="absolute top-0 left-0 w-40 h-40 rounded-full opacity-10 bg-white -translate-x-1/2 -translate-y-1/2" />
@@ -80,7 +80,7 @@ const Newsletter = () => {
           <h2 className="arbutus-slab text-3xl sm:text-4xl text-white">
             {tr('newsletter_title', lang)}
           </h2>
-          <p className="dmsans text-lg text-[#EBE5C2] max-w-md mx-auto">
+          <p className="dmsans text-lg text-[#C7D3C0] max-w-md mx-auto">
             {tr('newsletter_sub', lang)}
           </p>
         </div>
@@ -102,8 +102,8 @@ const Newsletter = () => {
           <button
             type="submit"
             disabled={loading}
-            className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white font-semibold dmsans text-sm hover:bg-[#F8F3D9] active:scale-95 transition-all duration-200 cursor-pointer shadow-md whitespace-nowrap disabled:opacity-70"
-            style={{ color: '#3F4F44' }}
+            className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white font-semibold dmsans text-sm hover:bg-[#F7F4ED] active:scale-95 transition-all duration-200 cursor-pointer shadow-md whitespace-nowrap disabled:opacity-70"
+            style={{ color: '#8FA28A' }}
           >
             <FiSend className="text-base" />
             {loading
