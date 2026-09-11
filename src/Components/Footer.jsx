@@ -231,7 +231,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500 dmsans">
+        <div className="mt-12 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500 dmsans">
           <p>
             © {currentYear}{' '}
             <span className="text-white font-semibold">H.K Style</span>.{' '}
