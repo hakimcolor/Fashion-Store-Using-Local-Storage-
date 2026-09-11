@@ -125,7 +125,7 @@ const Naveber = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer"
+              className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer"
               aria-label="Toggle theme"
             >
               {dark ? (
