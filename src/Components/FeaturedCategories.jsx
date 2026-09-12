@@ -53,7 +53,7 @@ const FeaturedCategories = () => {
   return (
     <section className="max-w-[95%] mx-auto py-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#8FA28A]">
+        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
           {tr('cat_label', lang)}
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -71,7 +71,7 @@ const FeaturedCategories = () => {
             key={cat.name.en}
             data-aos="zoom-in"
             data-aos-delay={i * 60}
-            className="group relative overflow-hidden rounded-2xl cursor-pointer"
+            className="group relative overflow-hidden rounded-2xl cursor-pointer border-2 border-transparent hover:border-[#C8A96B] transition-all duration-300"
           >
             <div className="h-44 overflow-hidden rounded-2xl">
               <img

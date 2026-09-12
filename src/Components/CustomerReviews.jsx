@@ -42,10 +42,10 @@ const CustomerReviews = () => {
   const { lang } = useLang();
 
   return (
-    <section className="py-16 bg-[#f8faff] dark:bg-[#2d3d35]">
+    <section className="py-16 bg-[#F7F4ED] dark:bg-[#2d3d35]">
       <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#8FA28A]">
+          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
             {tr('review_label', lang)}
           </p>
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -63,7 +63,7 @@ const CustomerReviews = () => {
               data-aos-delay={i * 100}
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 flex flex-col gap-4"
             >
-              <FaQuoteLeft className="text-2xl text-[#8FA28A] opacity-30" />
+              <FaQuoteLeft className="text-2xl text-[#C8A96B] opacity-40" />
               <p className="dmsans text-base text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
                 {r.text[lang]}
               </p>

@@ -26,7 +26,7 @@ const FashionBanner = () => {
             </h3>
             <Link
               to="/styles"
-              className="inline-flex items-center gap-2 bg-white text-[#8FA28A] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-[#8FA28A] hover:text-white transition-all duration-300 cursor-pointer dmsans shadow-lg"
+              className="flex items-center gap-2 bg-white text-[#2d3d35] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-[#8FA28A] hover:text-white transition-all duration-300 cursor-pointer dmsans shadow-lg"
             >
               {tr('fashion_cta1', lang)} <HiArrowRight />
             </Link>

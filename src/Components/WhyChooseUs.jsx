@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
   return (
     <section className="max-w-[95%] mx-auto py-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#8FA28A]">
+        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
           {tr('why_label', lang)}
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
             key={f.titleKey}
             data-aos="fade-up"
             data-aos-delay={i * 100}
-            className="group rounded-2xl p-6 flex flex-col items-center text-center gap-4 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-800"
+            className="group rounded-2xl p-6 flex flex-col items-center text-center gap-4 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white dark:bg-gray-800"
           >
             <div
               className="w-16 h-16 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"

@@ -18,7 +18,7 @@ const BrandBanner = () => {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, rgba(21,93,252,0.92) 0%, rgba(30,64,175,0.80) 60%, rgba(0,0,0,0.3) 100%)',
+              'linear-gradient(135deg, rgba(45,61,53,0.92) 0%, rgba(30,64,175,0.80) 60%, rgba(0,0,0,0.3) 100%)',
           }}
         />
         <div className="relative z-10 max-w-[80%] mx-auto text-center text-white py-12">
@@ -38,7 +38,7 @@ const BrandBanner = () => {
           </p>
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#8FA28A] font-bold rounded-2xl hover:bg-[#F7F4ED] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#2d3d35] font-bold rounded-2xl hover:bg-[#C8A96B] hover:text-white active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
           >
             {tr('brand_cta', lang)} <HiArrowRight />
           </Link>

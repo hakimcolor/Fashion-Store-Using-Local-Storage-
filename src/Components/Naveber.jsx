@@ -125,7 +125,7 @@ const Naveber = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleTheme}
-              className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer"
+              className="w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-600 hover:bg-[#F7F4ED] dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer"
               aria-label="Toggle theme"
             >
               {dark ? (
@@ -142,7 +142,7 @@ const Naveber = () => {
                 className="relative flex items-center justify-center w-11 h-11 border border-gray-200 dark:border-gray-600 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-sm cursor-pointer"
               >
                 <FaShoppingCart className="text-base text-gray-700 dark:text-gray-300" />
-                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#8FA28A] text-white text-xs font-bold rounded-full flex items-center justify-center shadow">
+                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#C8A96B] text-white text-xs font-bold rounded-full flex items-center justify-center shadow">
                   {cart.length}
                 </span>
               </button>
@@ -152,7 +152,7 @@ const Naveber = () => {
                   <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-700 shrink-0">
                     <div className="flex items-center gap-2">
                       <FaShoppingCart className="text-[#8FA28A] text-lg" />
-                      <h2 className="arbutus-slab text-xl text-[#8FA28A]">
+                      <h2 className="arbutus-slab text-xl text-[#C8A96B]">
                         {lang === 'en' ? 'Shopping Cart' : 'শপিং কার্ট'}
                       </h2>
                     </div>

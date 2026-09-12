@@ -46,7 +46,7 @@ const ModelShowcase = () => {
     <section className="bg-gray-50 dark:bg-[#2d3d35] py-16">
       <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#8FA28A]">
+          <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
             {tr('model_label', lang)}
           </p>
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -63,7 +63,7 @@ const ModelShowcase = () => {
               key={look.titleKey}
               data-aos="fade-up"
               data-aos-delay={i * 80}
-              className="group relative overflow-hidden rounded-3xl cursor-pointer"
+              className="group relative overflow-hidden rounded-3xl cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-300"
             >
               <div className="h-72 sm:h-96 overflow-hidden rounded-3xl">
                 <img

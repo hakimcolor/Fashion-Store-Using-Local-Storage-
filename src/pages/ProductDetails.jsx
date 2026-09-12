@@ -228,7 +228,7 @@ const ProductDetails = () => {
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
-            className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#8FA28A] hover:bg-[#6b8578] text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 cursor-pointer disabled:bg-gray-400 dmsans active:scale-[.98] shadow-lg"
+            className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#2d3d35] hover:bg-[#8FA28A] text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 cursor-pointer disabled:bg-gray-400 dmsans active:scale-[.98] shadow-lg"
           >
             <FaShoppingCart />
             {product.inStock
@@ -254,7 +254,7 @@ const ProductDetails = () => {
         <button
           onClick={handleAddToCart}
           disabled={!product.inStock}
-          className="flex items-center gap-2 bg-[#8FA28A] hover:bg-[#6b8578] text-white px-6 py-3 rounded-2xl font-semibold dmsans text-sm transition-all active:scale-95 disabled:bg-gray-400 shadow-lg cursor-pointer"
+          className="flex items-center gap-2 bg-[#2d3d35] hover:bg-[#8FA28A] text-white px-6 py-3 rounded-2xl font-semibold dmsans text-sm transition-all active:scale-95 disabled:bg-gray-400 shadow-lg cursor-pointer"
         >
           <FaShoppingCart />
           {product.inStock

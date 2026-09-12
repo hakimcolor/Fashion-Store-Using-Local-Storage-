@@ -58,7 +58,7 @@ const CartStyle = ({ products }) => {
           <div
             ref={(el) => (cardRefs.current[i] = el)}
             key={product.id}
-            className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#8FA28A]/30 transition-all duration-300 hover:-translate-y-2"
+            className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#C8A96B]/30 transition-all duration-300 hover:-translate-y-2"
             style={{ transitionDelay: `${(i % 4) * 80}ms` }}
           >
             <div className="relative overflow-hidden h-52 sm:h-60 lg:h-72 bg-gray-100 dark:bg-gray-700">
@@ -73,7 +73,7 @@ const CartStyle = ({ products }) => {
                 {product.category}
               </span>
               {product.rating >= 4.9 && (
-                <span className="absolute bottom-3 left-3 rounded-full bg-[#8FA28A] px-2.5 py-0.5 text-xs font-bold text-white shadow">
+                <span className="absolute bottom-3 left-3 rounded-full bg-[#C8A96B] px-2.5 py-0.5 text-xs font-bold text-white shadow">
                   ★ Top Pick
                 </span>
               )}
@@ -133,7 +133,7 @@ const CartStyle = ({ products }) => {
                 </div>
                 <Link
                   to={`/products/${product.id}`}
-                  className="flex items-center gap-1.5 rounded-xl bg-[#8FA28A] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#6b8578] active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
+                  className="flex items-center gap-1.5 rounded-xl bg-[#2d3d35] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#8FA28A] active:scale-95 transition-all duration-200 cursor-pointer shadow-md"
                 >
                   {tr('card_details', lang)}{' '}
                   <HiArrowRight className="text-sm" />

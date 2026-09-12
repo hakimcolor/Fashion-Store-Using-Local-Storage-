@@ -21,7 +21,7 @@ const FAQ = () => {
   return (
     <section className="max-w-[95%] mx-auto py-16">
       <div className="text-center mb-12" data-aos="fade-up">
-        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#8FA28A]">
+        <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
           {tr('faq_label', lang)}
         </p>
         <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -44,10 +44,10 @@ const FAQ = () => {
           >
             <button
               onClick={() => toggle(i)}
-              className="w-full flex items-center justify-between px-5 py-4 text-left gap-3 cursor-pointer bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+              className="w-full flex items-center justify-between px-5 py-4 text-left gap-3 cursor-pointer bg-white dark:bg-gray-800 hover:bg-[#F7F4ED] dark:hover:bg-gray-700 transition-colors duration-200"
             >
               <div className="flex items-center gap-3">
-                <FaQuestionCircle className="text-lg shrink-0 text-[#8FA28A]" />
+                <FaQuestionCircle className="text-lg shrink-0 text-[#C8A96B]" />
                 <span className="arbutus-slab text-base font-bold text-gray-800 dark:text-white">
                   {tr(faq.qKey, lang)}
                 </span>
