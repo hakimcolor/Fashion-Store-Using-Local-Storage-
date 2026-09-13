@@ -256,7 +256,7 @@ const About = () => {
             href="https://hakimcolorportfolio.vercel.app/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-[#8FA28A] text-white rounded-xl font-semibold dmsans text-sm hover:bg-[#6b8578] active:scale-95 transition-all duration-200 cursor-pointer shadow"
+            className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-[#2d3d35] text-white rounded-xl font-semibold dmsans text-sm hover:bg-[#C8A96B] active:scale-95 transition-all duration-200 cursor-pointer shadow"
           >
             {tr('about_portfolio', lang)} <HiArrowRight />
           </a>
