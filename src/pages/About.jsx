@@ -158,7 +158,7 @@ const About = () => {
               ].map(([val, labelKey]) => (
                 <div
                   key={labelKey}
-                  className="text-center p-4 rounded-2xl bg-[#F7F4ED] dark:bg-[#8FA28A]/20 border border-[#C7D3C0] dark:border-blue-800"
+                  className="text-center p-4 rounded-2xl bg-[#F7F4ED] dark:bg-[#8FA28A]/20 border border-[#C8A96B]/40 dark:border-[#C8A96B]/30"
                 >
                   <p className="arbutus-slab text-2xl font-bold text-[#8FA28A]">
                     {val}
