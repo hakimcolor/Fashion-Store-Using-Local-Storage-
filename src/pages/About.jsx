@@ -177,7 +177,7 @@ const About = () => {
       <section className="bg-gray-50 dark:bg-[#2d3d35] py-16">
         <div className="max-w-[95%] mx-auto">
           <div className="text-center mb-12" data-aos="fade-up">
-            <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#8FA28A]">
+            <p className="dmsans text-lg font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
               {tr('about_values_label', lang)}
             </p>
             <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
