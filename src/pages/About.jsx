@@ -100,7 +100,7 @@ const About = () => {
           className="max-w-[95%] mx-auto text-center text-white relative z-10"
           data-aos="fade-up"
         >
-          <span className="inline-block bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold mb-6 dmsans border border-white/20">
+          <span className="inline-block bg-white/20 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold mb-6 dmsans border border-[#C8A96B]/60">
             {tr('about_badge', lang)}
           </span>
           <h1 className="arbutus-slab text-4xl md:text-6xl font-bold mb-6 leading-tight">
