@@ -125,7 +125,7 @@ const About = () => {
                 alt="OXISTYLE store"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#8FA28A]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2d3d35]/70 to-transparent" />
               <div className="absolute bottom-6 left-6 text-white">
                 <p className="arbutus-slab text-2xl font-bold">
                   {tr('about_story_since', lang)}
