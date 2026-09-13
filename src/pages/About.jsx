@@ -91,7 +91,7 @@ const About = () => {
       <section
         className="relative py-24 overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #8FA28A 0%, #6b8578 100%)',
+          background: 'linear-gradient(135deg, #2d3d35 0%, #8FA28A 100%)',
         }}
       >
         <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-white/5 -translate-x-1/2 -translate-y-1/2" />
