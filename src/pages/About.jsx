@@ -160,7 +160,7 @@ const About = () => {
                   key={labelKey}
                   className="text-center p-4 rounded-2xl bg-[#F7F4ED] dark:bg-[#8FA28A]/20 border border-[#C8A96B]/40 dark:border-[#C8A96B]/30"
                 >
-                  <p className="arbutus-slab text-2xl font-bold text-[#8FA28A]">
+                  <p className="arbutus-slab text-2xl font-bold text-[#C8A96B]">
                     {val}
                   </p>
                   <p className="dmsans text-sm text-gray-500 dark:text-gray-400 mt-1">
