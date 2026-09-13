@@ -190,7 +190,7 @@ const About = () => {
                 key={v.titleKey}
                 data-aos="fade-up"
                 data-aos-delay={i * 100}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center gap-4"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center gap-4"
               >
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center"
