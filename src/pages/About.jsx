@@ -138,7 +138,7 @@ const About = () => {
           </div>
 
           <div className="space-y-6" data-aos="fade-left">
-            <p className="dmsans text-lg font-semibold uppercase tracking-widest text-[#8FA28A]">
+            <p className="dmsans text-lg font-semibold uppercase tracking-widest text-[#C8A96B]">
               {tr('about_story_label', lang)}
             </p>
             <h2 className="arbutus-slab text-3xl md:text-4xl text-gray-900 dark:text-white leading-tight">
