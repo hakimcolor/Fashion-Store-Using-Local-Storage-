@@ -237,6 +237,9 @@ const About = () => {
           <p className="dmsans text-gray-500 dark:text-gray-400 text-sm mt-3 leading-relaxed">
             {tr('about_dev_desc', lang)}
           </p>
+          <span className="inline-block mt-3 text-xs px-3 py-1 rounded-full bg-[#F7F4ED] dark:bg-[#8FA28A]/20 text-[#8FA28A] font-semibold dmsans border border-[#C8A96B]/30">
+            🇧🇩 Bangladesh
+          </span>
           <div className="flex justify-center gap-3 mt-5 flex-wrap">
             {teamLinks.map((link) => (
               <a
