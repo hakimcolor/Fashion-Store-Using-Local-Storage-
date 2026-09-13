@@ -265,7 +265,7 @@ const About = () => {
 
       {/* CTA */}
       <section
-        className="bg-[#8FA28A] dark:bg-[#2d3d35] py-16 text-white text-center"
+        className="bg-[#2d3d35] dark:bg-[#2d3d35] py-16 text-white text-center"
         data-aos="zoom-in"
       >
         <div className="max-w-[95%] mx-auto">
