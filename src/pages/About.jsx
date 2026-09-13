@@ -277,7 +277,7 @@ const About = () => {
           </p>
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#8FA28A] font-bold rounded-2xl hover:bg-[#F7F4ED] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A96B] text-white font-bold rounded-2xl hover:bg-[#b8994a] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
           >
             {tr('about_cta_btn', lang)} <HiArrowRight />
           </Link>
