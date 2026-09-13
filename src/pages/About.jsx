@@ -231,7 +231,7 @@ const About = () => {
           <h3 className="arbutus-slab text-2xl font-bold text-gray-900 dark:text-white">
             Hakim Color
           </h3>
-          <p className="dmsans text-[#8FA28A] font-medium mt-1">
+          <p className="dmsans text-[#C8A96B] font-medium mt-1">
             {tr('about_dev_role', lang)}
           </p>
           <p className="dmsans text-gray-500 dark:text-gray-400 text-sm mt-3 leading-relaxed">
