@@ -158,7 +158,7 @@ const Cart = ({ onClose }) => {
         <span className="arbutus-slab text-base dark:text-white">
           {tr('cart_total', lang)}
         </span>
-        <span className="arbutus-slab text-lg flex items-center font-bold text-[#8FA28A]">
+        <span className="arbutus-slab text-lg flex items-center font-bold text-[#C8A96B]">
           <TbCurrencyTaka className="text-lg" />
           {total}
         </span>
