@@ -69,7 +69,7 @@ const Cart = ({ onClose }) => {
     <div className="flex items-center gap-3 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-300 group relative overflow-hidden">
       <div
         className="absolute left-0 top-0 h-full w-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-2xl"
-        style={{ background: 'linear-gradient(to bottom, #8FA28A, #3b82f6)' }}
+        style={{ background: 'linear-gradient(to bottom, #C8A96B, #8FA28A)' }}
       />
       <img
         src={item.image}
