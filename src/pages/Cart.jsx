@@ -164,7 +164,7 @@ const Cart = ({ onClose }) => {
         </span>
       </div>
       <button
-        className="w-full text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:opacity-90 active:scale-[.98] cursor-pointer bg-[#8FA28A]"
+        className="w-full text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 shadow-md hover:opacity-90 active:scale-[.98] cursor-pointer bg-[#2d3d35] hover:bg-[#8FA28A]"
         onClick={() => navigate('/checkout')}
       >
         {tr('cart_checkout', lang)}
