@@ -111,7 +111,7 @@ const Styles = () => {
       <section
         className="relative py-24 overflow-hidden text-white text-center"
         style={{
-          background: 'linear-gradient(135deg, #155dfc 0%, #7c3aed 100%)',
+          background: 'linear-gradient(135deg, #2d3d35 0%, #8FA28A 100%)',
         }}
       >
         <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-white/5 -translate-x-1/2 -translate-y-1/2" />
