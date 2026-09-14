@@ -488,7 +488,7 @@ const Contact = () => {
           alt="Fashion"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#8FA28A]/90 to-[#6b8578]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2d3d35]/90 to-[#8FA28A]/80" />
         <div
           className="relative z-10 max-w-[95%] mx-auto text-center text-white"
           data-aos="zoom-in"
