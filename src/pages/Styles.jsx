@@ -221,7 +221,7 @@ const Styles = () => {
       <section
         className="py-20 text-white text-center"
         style={{
-          background: 'linear-gradient(135deg, #155dfc 0%, #1e40af 100%)',
+          background: 'linear-gradient(135deg, #2d3d35 0%, #C8A96B 100%)',
         }}
         data-aos="zoom-in"
       >
