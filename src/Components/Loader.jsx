@@ -13,7 +13,7 @@ const Loader = () => (
     <p className="arbutus-slab text-2xl font-bold tracking-wide dark:text-white">
       OXI<span style={{ color: '#8FA28A' }}>STYLE</span>
     </p>
-    <p className="dmsans text-sm text-gray-400">loading, please wait...</p>
+    <p className="dmsans text-sm text-gray-400">loading, please wait... ✨</p>
   </div>
 );
 
