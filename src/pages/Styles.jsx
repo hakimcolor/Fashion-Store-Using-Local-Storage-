@@ -238,8 +238,8 @@ const Styles = () => {
           </p>
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-white font-bold hover:bg-blue-50 active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans"
-            style={{ color: '#155dfc' }}
+            className="inline-flex items-center gap-2 px-10 py-4 bg-white font-bold hover:bg-[#F7F4ED] active:scale-95 transition-all duration-300 shadow-xl cursor-pointer dmsans rounded-2xl"
+            style={{ color: '#2d3d35' }}
           >
             {lang === 'en' ? 'Browse All Products' : 'সব পণ্য দেখুন'}{' '}
             <HiArrowRight />
