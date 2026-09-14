@@ -293,7 +293,7 @@ const Contact = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="dmsans text-white text-sm font-semibold bg-[#8FA28A] px-3 py-1.5 rounded-full">
+                <span className="dmsans text-white text-sm font-semibold bg-[#C8A96B] px-3 py-1.5 rounded-full">
                   {img.label}
                 </span>
               </div>
