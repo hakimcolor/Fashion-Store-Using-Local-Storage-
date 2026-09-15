@@ -233,7 +233,7 @@ const About = () => {
 
         <div
           data-aos="zoom-in"
-          className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700 text-center"
+          className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border border-[#C8A96B]/20 dark:border-gray-700 text-center"
         >
           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#C8A96B] to-[#8FA28A] flex items-center justify-center text-white text-4xl font-bold arbutus-slab mx-auto mb-4 shadow-lg ring-4 ring-[#C8A96B]/20">
             H
