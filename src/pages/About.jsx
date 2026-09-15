@@ -224,6 +224,11 @@ const About = () => {
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
             {tr('about_team_title', lang)}
           </h2>
+          <div className="flex items-center justify-center gap-3 mt-3">
+            <span className="h-px w-12 bg-[#C8A96B]" />
+            <span className="w-2 h-2 rounded-full bg-[#C8A96B]" />
+            <span className="h-px w-12 bg-[#C8A96B]" />
+          </div>
         </div>
 
         <div
