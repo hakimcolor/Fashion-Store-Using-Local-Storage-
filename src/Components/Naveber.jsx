@@ -151,7 +151,7 @@ const Naveber = () => {
                 <div className="fixed right-0 top-20 w-full sm:w-[420px] h-[calc(100vh-80px)] bg-white dark:bg-[#2d3d35] shadow-2xl border-l border-t border-gray-200 dark:border-gray-700 z-50 flex flex-col">
                   <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-700 shrink-0">
                     <div className="flex items-center gap-2">
-                      <FaShoppingCart className="text-[#8FA28A] text-lg" />
+                      <FaShoppingCart className="text-[#C8A96B] text-lg" />
                       <h2 className="arbutus-slab text-xl text-[#C8A96B]">
                         {lang === 'en' ? 'Shopping Cart' : 'শপিং কার্ট'}
                       </h2>
