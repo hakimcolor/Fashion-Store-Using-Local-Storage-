@@ -11,7 +11,7 @@ const Loader = () => (
       </div>
     </div>
     <p className="arbutus-slab text-2xl font-bold tracking-wide dark:text-white">
-      OXI<span style={{ color: '#8FA28A' }}>STYLE</span>
+      OXI<span style={{ color: '#C8A96B' }}>STYLE</span>
     </p>
     <p className="dmsans text-sm text-gray-400 dark:text-gray-500">
       loading, please wait... ✨
