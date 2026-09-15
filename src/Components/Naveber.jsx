@@ -116,7 +116,7 @@ const Naveber = () => {
             <button
               onClick={toggleLang}
               title="Switch language"
-              className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer text-xs font-bold dmsans text-gray-700 dark:text-gray-300"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-gray-200 dark:border-gray-600 hover:bg-[#F7F4ED] dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer text-xs font-bold dmsans text-gray-700 dark:text-gray-300"
             >
               <HiOutlineGlobeAlt className="text-base text-[#8FA28A]" />
               {lang === 'en' ? 'বাং' : 'EN'}
