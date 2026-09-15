@@ -89,7 +89,7 @@ const Naveber = () => {
               className="h-10 w-10 object-contain rounded-full"
             />
             <span className="text-2xl font-bold dark:text-white arbutus-slab">
-              H.K <span className="text-[#8FA28A]">Style</span>
+              H.K <span className="text-[#C8A96B]">Style</span>
             </span>
           </Link>
 
