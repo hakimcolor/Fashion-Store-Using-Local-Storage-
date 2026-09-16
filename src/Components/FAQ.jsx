@@ -34,7 +34,7 @@ const FAQ = () => {
       </div>
 
       <div
-        className="max-w-2xl mx-auto space-y-3"
+        className="max-w-3xl mx-auto space-y-3"
         data-aos="fade-up"
         data-aos-delay="100"
       >
