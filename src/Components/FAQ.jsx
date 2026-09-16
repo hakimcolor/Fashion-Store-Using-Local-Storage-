@@ -61,13 +61,17 @@ const FAQ = () => {
                 )}
               </span>
             </button>
-            {openIndex === i && (
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
               <div className="px-5 pb-4 pt-1 bg-[#F7F4ED]/40 dark:bg-[#8FA28A]/10 border-t border-gray-100 dark:border-gray-700">
                 <p className="dmsans text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                   {tr(faq.aKey, lang)}
                 </p>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>
