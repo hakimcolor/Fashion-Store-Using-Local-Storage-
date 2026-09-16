@@ -41,7 +41,7 @@ const FAQ = () => {
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+            className=" border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <button
               onClick={() => toggle(i)}
