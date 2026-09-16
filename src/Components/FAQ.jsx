@@ -14,6 +14,7 @@ const FAQ = () => {
     { qKey: 'faq_q3', aKey: 'faq_a3' },
     { qKey: 'faq_q4', aKey: 'faq_a4' },
     { qKey: 'faq_q5', aKey: 'faq_a5' },
+    { qKey: 'faq_q6', aKey: 'faq_a6' },
   ];
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);

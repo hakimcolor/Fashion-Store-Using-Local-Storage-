@@ -148,6 +148,14 @@ const t = {
     en: 'Every product on OXISTYLE is 100% authentic and sourced directly from verified suppliers and brands.',
     bn: 'OXISTYLE-এর প্রতিটি পণ্য ১০০% আসল এবং সরাসরি যাচাইকৃত সরবরাহকারী ও ব্র্যান্ড থেকে সংগ্রহ করা।',
   },
+  faq_q6: {
+    en: 'Can I change or cancel my order after placing it?',
+    bn: 'অর্ডার দেওয়ার পরে কি পরিবর্তন বা বাতিল করা যাবে?',
+  },
+  faq_a6: {
+    en: 'You can change or cancel your order within 1 hour of placing it. After that, the order enters processing and changes may not be possible. Contact us immediately via WhatsApp for urgent requests.',
+    bn: 'অর্ডার দেওয়ার ১ ঘণ্টার মধ্যে পরিবর্তন বা বাতিল করতে পারবেন। এরপর অর্ডার প্রক্রিয়াকরণে চলে যায় এবং পরিবর্তন সম্ভব নাও হতে পারে। জরুরি অনুরোধের জন্য হোয়াটসঅ্যাপে যোগাযোগ করুন।',
+  },
 
   // Newsletter
   newsletter_title: { en: 'Stay in the Loop', bn: 'আপডেট পান' },
