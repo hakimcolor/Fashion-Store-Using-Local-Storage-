@@ -48,7 +48,9 @@ const FAQ = () => {
               className="w-full flex items-center justify-between px-5 py-4 text-left gap-3 cursor-pointer bg-white dark:bg-gray-800 hover:bg-[#F7F4ED] dark:hover:bg-gray-700 transition-colors duration-200"
             >
               <div className="flex items-center gap-3">
-                <FaQuestionCircle className="text-lg shrink-0 text-[#C8A96B]" />
+                <FaQuestionCircle
+                  className={`text-lg shrink-0 transition-colors duration-200 ${openIndex === i ? 'text-[#C8A96B]' : 'text-gray-400 dark:text-gray-500'}`}
+                />
                 <span className="arbutus-slab text-base font-bold text-gray-800 dark:text-white">
                   {tr(faq.qKey, lang)}
                 </span>
