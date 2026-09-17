@@ -195,7 +195,7 @@ const Footer = () => {
                   className="flex items-center gap-2 hover:text-[#C8A96B] transition-colors duration-200 break-all"
                 >
                   <FaEnvelope className="text-[#C8A96B] shrink-0" />
-                  hakimcolor777@gmail.
+                  hakimcolor777@gmail.com
                 </a>
               </li>
               <li>
