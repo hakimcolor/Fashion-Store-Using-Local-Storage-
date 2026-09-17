@@ -177,7 +177,7 @@ const Footer = () => {
                   rel="noreferrer"
                   className="flex items-center gap-2 hover:text-white transition-colors duration-200"
                 >
-                  <FaGithub className="text-gray-400" /> GitHub
+                  <FaGithub className="text-gray-400" /> Git
                 </a>
               </li>
             </ul>
