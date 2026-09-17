@@ -167,7 +167,7 @@ const Footer = () => {
                   rel="noreferrer"
                   className="flex items-center gap-2 hover:text-[#0a66c2] transition-colors duration-200"
                 >
-                  <FaLinkedinIn className="text-[#0a66c2]" /> LinkedIn
+                  <FaLinkedinIn className="text-[#0a66c2]" /> Link
                 </a>
               </li>
               <li>
