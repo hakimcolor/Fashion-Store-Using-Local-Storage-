@@ -9,7 +9,7 @@ const reviews = [
     rating: 5,
     text: {
       en: 'Amazing quality products and super fast delivery. I have been shopping here for months and never disappointed!',
-      bn: '',
+      bn: 'অসাধারণ মানের পণ্য এবং অত্যন্ত দ্রুত ডেলিভারি। আমি মাসের পর মাস এখানে কেনাকাটা করছি এবং কখনো হতাশ হইনি!',
     },
     avatar: 'R',
     color: '#8FA28A',
