@@ -16,7 +16,7 @@ const reviews = [
   },
   {
     name: 'Sadia Islam',
-    role: { en: 'Verified Buyer', bn: 'যাচাইকৃত ক্রেতা' },
+    role: { en: 'Verified Buyer', bn: '' },
     rating: 5,
     text: {
       en: 'The return process was so easy and the customer support team was very helpful. Highly recommend OXISTYLE!',
