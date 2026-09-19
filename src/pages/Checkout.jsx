@@ -14,7 +14,7 @@ const PAYMENT_METHODS = [
   {
     id: 'card',
     en: 'Debit / Credit Card',
-    bn: 'ডেবিট /  কার্ড',
+    bn: 'ডেবিট / ক্রেডিট কার্ড',
     icon: '💳',
   },
 ];
