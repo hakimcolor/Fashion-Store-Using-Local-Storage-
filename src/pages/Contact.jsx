@@ -96,6 +96,7 @@ const Contact = () => {
       icon: <FaWhatsapp className="text-xl" />,
       label: { en: 'WhatsApp', bn: 'হোয়াটসঅ্যাপ' },
       value: '+880 1818-777856',
+      url: 'https://wa.me/8801818777856',
       color: '#8FA28A',
     },
     {
