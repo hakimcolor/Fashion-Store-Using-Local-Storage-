@@ -32,7 +32,6 @@ const GENDER_TABS = [
     label: { en: 'Men', bn: 'পুরুষ' },
     icon: '👔',
     banner:
-      'https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=1200&q=80',
     tagline: {
       en: 'Sharp styles for the modern man',
       bn: 'আধুনিক পুরুষের জন্য স্মার্ট স্টাইল',
