@@ -79,10 +79,7 @@ const fashionGallery = [
 
 const Contact = () => {
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+  
   });
   const [loading, setLoading] = useState(false);
   const { lang } = useLang();
