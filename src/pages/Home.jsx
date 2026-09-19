@@ -41,7 +41,6 @@ const Home = () => {
             to="/products"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-[#8FA28A] text-white font-semibold dmsans hover:bg-[#6b8578] active:scale-95 transition-all duration-300 shadow-lg cursor-pointer"
           >
-            {tr('home_view_all', lang)} <HiArrowRight />
           </Link>
         </div>
       </div>
