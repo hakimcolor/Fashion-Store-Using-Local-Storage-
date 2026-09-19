@@ -16,7 +16,7 @@ const Cart = ({ onClose }) => {
   const handleRemove = (id) => {
     setCart(cart.filter((item) => item.id !== id));
     toast.success(
-      lang === 'bn' ? 'কার্ট থেকে সরানো হয়েছে' : 'Item removed from cart'
+      lang === 'bn' ? ' : 'Item removed from cart'
     );
   };
 
