@@ -45,7 +45,7 @@ const CustomerReviews = () => {
     <section className="py-16 bg-[#F7F4ED] dark:bg-[#2d3d35]">
       <div className="max-w-[95%] mx-auto">
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
+          {/* <p className="dmsans text-sm font-semibold uppercase tracking-widest mb-2 text-[#C8A96B]">
             {tr('review_label', lang)}
           </p>
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
@@ -53,7 +53,7 @@ const CustomerReviews = () => {
           </h2>
           <p className="dmsans text-lg text-gray-500 dark:text-gray-400 mt-3 max-w-xl mx-auto">
             {tr('review_sub', lang)}
-          </p>
+          </p> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((r, i) => (
