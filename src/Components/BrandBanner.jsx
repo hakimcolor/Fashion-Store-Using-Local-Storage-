@@ -9,11 +9,11 @@ const BrandBanner = () => {
   return (
     <section className="max-w-[95%] mx-auto py-10" data-aos="zoom-in">
       <div className="relative overflow-hidden rounded-3xl min-h-[260px] flex items-center">
-        {/* <img
+        <img
           src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&q=85"
           alt="Fashion store"
           className="absolute inset-0 w-full h-full object-cover object-center"
-        /> */}
+        />
         <div
           className="absolute inset-0"
           style={{
