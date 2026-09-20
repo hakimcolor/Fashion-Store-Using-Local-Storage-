@@ -53,13 +53,13 @@ const CartStyle = ({ products }) => {
 
   return (
     <section className="py-4">
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product, i) => (
           <div
             ref={(el) => (cardRefs.current[i] = el)}
             key={product.id}
             className="product-card group relative flex flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-2xl hover:ring-2 hover:ring-[#C8A96B]/30 transition-all duration-300 hover:-translate-y-2"
-            style={{ transitionDelay: `${(i % 4) * 80}ms` }}
+            style={{ transitionDelay: `${(i % 4) * 80}ms` }} */}
           >
             <div className="relative overflow-hidden h-52 sm:h-60 lg:h-72 bg-gray-100 dark:bg-gray-700">
               <img
