@@ -35,15 +35,15 @@ const Newsletter = () => {
             subscriber_email: email,
             message: `New subscriber: ${email}`,
           }),
-        }
-      );
-      if (res.ok) {
-        toast.success(
-          lang === 'bn'
-            ? 'সাবস্ক্রাইব হয়েছে! OXISTYLE-এ স্বাগতম 🎉'
-            : 'Subscribed! Welcome to OXISTYLE 🎉'
-        );
-        setEmail('');
+      //   }
+      // );
+      // if (res.ok) {
+      //   toast.success(
+      //     lang === 'bn'
+      //       ? 'সাবস্ক্রাইব হয়েছে! OXISTYLE-এ স্বাগতম 🎉'
+      //       : 'Subscribed! Welcome to OXISTYLE 🎉'
+      //   );
+      //   setEmail('');
       } else throw new Error('Failed');
     } catch {
       toast.success(
