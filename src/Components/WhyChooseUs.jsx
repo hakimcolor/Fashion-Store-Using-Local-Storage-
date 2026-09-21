@@ -12,13 +12,13 @@ const WhyChooseUs = () => {
       icon: <FaTruck className="text-3xl" />,
       bg: '#eff6ff',
       accent: '#8FA28A',
-    },
-    {
-      titleKey: 'why_f2_title',
-      descKey: 'why_f2_desc',
-      icon: <FaLock className="text-3xl" />,
-      bg: '#f0fdf4',
-      accent: '#8FA28A',
+    // },
+    // {
+    //   titleKey: 'why_f2_title',
+    //   descKey: 'why_f2_desc',
+    //   icon: <FaLock className="text-3xl" />,
+    //   bg: '#f0fdf4',
+    //   accent: '#8FA28A',
     },
     {
       titleKey: 'why_f3_title',
