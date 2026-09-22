@@ -8,14 +8,14 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const { lang } = useLang();
 
-  // const faqs = [
-  //   { qKey: 'faq_q1', aKey: 'faq_a1' },
-  //   { qKey: 'faq_q2', aKey: 'faq_a2' },
-  //   { qKey: 'faq_q3', aKey: 'faq_a3' },
-  //   { qKey: 'faq_q4', aKey: 'faq_a4' },
-  //   { qKey: 'faq_q5', aKey: 'faq_a5' },
-  //   { qKey: 'faq_q6', aKey: 'faq_a6' },
-  // ];
+  const faqs = [
+    { qKey: 'faq_q1', aKey: 'faq_a1' },
+    { qKey: 'faq_q2', aKey: 'faq_a2' },
+    { qKey: 'faq_q3', aKey: 'faq_a3' },
+    { qKey: 'faq_q4', aKey: 'faq_a4' },
+    { qKey: 'faq_q5', aKey: 'faq_a5' },
+    { qKey: 'faq_q6', aKey: 'faq_a6' },
+  ];
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
