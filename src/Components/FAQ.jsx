@@ -16,7 +16,7 @@ const FAQ = () => {
     { qKey: 'faq_q5', aKey: 'faq_a5' },
     { qKey: 'faq_q6', aKey: 'faq_a6' },
   ];
-debugger 
+
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
