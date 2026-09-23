@@ -51,9 +51,7 @@ const CustomerReviews = () => {
           <h2 className="arbutus-slab text-4xl text-gray-900 dark:text-white">
             {tr('review_title', lang)}
           </h2>
-          <p className="dmsans text-lg text-gray-500 dark:text-gray-400 mt-3 max-w-xl mx-auto">
-            {tr('review_sub', lang)}
-          </p>
+         
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((r, i) => (
