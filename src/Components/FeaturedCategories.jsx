@@ -11,11 +11,11 @@ const categories = [
     color: '#8FA28A',
   },
   {
-    // name: { en: 'Saree & Kurti', bn: 'শাড়ি ও কুর্তি' },
-    // image:
-    //   'https://images.unsplash.com/photo-1614251056216-f748f76cd228?w=600&q=80',
-    // count: { en: '30+ Designs', bn: '৩০+ ডিজাইন' },
-    // color: '#C8A96B',
+    name: { en: 'Saree & Kurti', bn: 'শাড়ি ও কুর্তি' },
+    image:
+      'https://images.unsplash.com/photo-1614251056216-f748f76cd228?w=600&q=80',
+    count: { en: '30+ Designs', bn: '৩০+ ডিজাইন' },
+    color: '#C8A96B',
   },
   {
     name: { en: 'Casual Wear', bn: 'ক্যাজুয়াল পোশাক' },
